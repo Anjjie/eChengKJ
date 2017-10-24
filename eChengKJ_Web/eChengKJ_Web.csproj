@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56A9B7FA-86F4-48C8-B7BD-AE20EF3C86DA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eChengKJ_Web</RootNamespace>
+    <AssemblyName>eChengKJ_Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Web_Front\css\Front_2.css" />
+    <Content Include="Web_Front\css\Front_Index.css" />
+    <Content Include="Web_Front\css\Front_Login.css" />
+    <Content Include="Web_Front\css\Front_Master.css" />
+    <Content Include="Web_Front\css\Front_PansonelInfo.css" />
+    <Content Include="Web_Front\Front_Index.aspx" />
+    <Content Include="Web_Front\Front_Login.aspx" />
+    <Content Include="Web_Front\Front_PansonelInfo.aspx" />
+    <Content Include="Web_Front\image\121b87af493473a467132787859a62a6.png" />
+    <Content Include="Web_Front\image\ad1.png" />
+    <Content Include="Web_Front\image\ad2.jpg" />
+    <Content Include="Web_Front\image\ad3.jpg" />
+    <Content Include="Web_Front\image\ad4.jpg" />
+    <Content Include="Web_Front\image\buttomServer.jpg" />
+    <Content Include="Web_Front\image\buttomServers.jpg" />
+    <Content Include="Web_Front\image\Dianhua.png" />
+    <Content Include="Web_Front\image\File.png" />
+    <Content Include="Web_Front\image\Gongju.png" />
+    <Content Include="Web_Front\image\Gouwuche.png" />
+    <Content Include="Web_Front\image\login_ad.jpg" />
+    <Content Include="Web_Front\image\Logo.png" />
+    <Content Include="Web_Front\image\Logo_ico.ico" />
+    <Content Include="Web_Front\image\Logo_ICO.png" />
+    <Content Include="Web_Front\image\ProcessPurchases.png" />
+    <Content Include="Web_Front\image\Shouji.png" />
+    <Content Include="Web_Front\image\Sousuo.png" />
+    <Content Include="Web_Front\image\Tongzhi.png" />
+    <Content Include="Web_Front\image\WuShou.png" />
+    <Content Include="Web_Front\image\Yes.png" />
+    <Content Include="Web_Front\image\Youxiang.png" />
+    <Content Include="Web_Front\image\十.png" />
+    <Content Include="Web_Front\js\Front_Index.js" />
+    <Content Include="Web_Front\js\Front_Login.js" />
+    <Content Include="Web_Front\js\Front_Master_js.js" />
+    <Content Include="Web_Front\js\JQ_File\jquery-3.2.1.js" />
+    <Content Include="Web_Front\js\JQ_File\jquery-3.2.1.min.js" />
+    <Content Include="Web_Front\js\JQ_File\jquery-ui-1.8.20.custom.min.js" />
+    <Content Include="Web_Front\js\JQ_File\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Web_Front\PansoneMaster.aspx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Web_Front\eChengKJ_FrontSite.Master">
+      <BrowseToURL>~/Web_Front/eChengKJ_FrontSite.Master</BrowseToURL>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HtmlPage1.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web_Front\eChengKJ_FrontSite.Master.cs">
+      <DependentUpon>eChengKJ_FrontSite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\eChengKJ_FrontSite.Master.designer.cs">
+      <DependentUpon>eChengKJ_FrontSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Index.aspx.cs">
+      <DependentUpon>Front_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Index.aspx.designer.cs">
+      <DependentUpon>Front_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Login.aspx.cs">
+      <DependentUpon>Front_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Login.aspx.designer.cs">
+      <DependentUpon>Front_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_PansonelInfo.aspx.cs">
+      <DependentUpon>Front_PansonelInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_PansonelInfo.aspx.designer.cs">
+      <DependentUpon>Front_PansonelInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\PansoneMaster.aspx.cs">
+      <DependentUpon>PansoneMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\PansoneMaster.aspx.designer.cs">
+      <DependentUpon>PansoneMaster.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Web_Backstage\css\" />
+    <Folder Include="Web_Backstage\image\" />
+    <Folder Include="Web_Backstage\js\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>24214</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:24214/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此项目引用这台计算机上缺少的 NuGet 程序包。使用 NuGet 程序包还原可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

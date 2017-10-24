@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="eChengKJ_FrontSite.Master.cs" Inherits="eChengKJ_Web.Web_Front.eChengKJ_Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>e诚科技 - 每一刻都有科技陪伴</title>
+    <%-- LOGO ICO --%>
+    <link href="image/Logo_ico.ico" rel="icon" />
+    <!-- 样式文件与JQ脚本文件 -->
+    <link href="css/Front_Master.css" rel="stylesheet" />
+    <script src="js/JQ_File/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="js/JQ_File/jquery-ui-1.8.20.custom.min.js"></script>
+    <script src="js/JQ_File/jquery.ui.datepicker-zh-CN.js"></script>
+
+    <asp:ContentPlaceHolder ID="conPlaceHolder_Css" runat="server">
+        <%-- 放置引用CSS样式文件或者编写样式代码地方 --%>
+    </asp:ContentPlaceHolder>
+   
+    <asp:ContentPlaceHolder ID="conPlaceHolder_JS" runat="server">
+        <%-- 放置引用JS脚本文件或者编写脚本代码地方（已默认引入JQ压缩文件） --%>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+       <div class="Front_Div_All">
+        <!-- 头 -->
+        <div class="Front_Div_All_top">
+           <!-- 固定顶部导航块 -->
+           <div id="topNavigation" style="background-color:#ffffff;margin-top:-10px;padding:0;width:100%;z-index:100">
+               <!-- Logo -->
+               <div class="Front_Div_Logo">
+                   <div class="Front_Div_Logo_div">
+                       <img src="image/Logo.png" class="Front_Div_Logo_img" />
+                   </div>
+                   <div style="border:0px solid red; height:100%;width:80%;float:right;">
+                       <div style="border:0px solid #000000; height:40px;text-align:right;">
+                           <ul class="Front_Div_Logo_ul">
+                               <a href="#"></a>
+                           </ul>
+                           <ul class="Front_Div_Logo_ul">
+                               <a href="Front_Login.aspx">登录</a>
+                           </ul>
+                           <ul class="Front_Div_Logo_ul">
+                               <a href="#"></a>
+                           </ul>
+                           <ul style="float:right;margin:0;">
+                               <b style="font-size:16pt;color:#b01212">联系方式：400-1234567</b>
+                           </ul>
+                       </div>
+                        <asp:ContentPlaceHolder runat="server" ID="conPlaceHolder_Navigation">
+            
+                        </asp:ContentPlaceHolder>
+                       <div id="Slider"></div>
+                   </div>
+               </div>
+               <!-- 导航 -->
+               <div class="Front_Div_Navigation">
+                   <!-- 以下为导航选择显示模块，里面的内容请填完整 -->
+                   <!-- 导航：产品模块 -->
+                   <div id="Navigation_div1" class="Front_Div_Navigation_div">
+                       <ul style="float:left;line-height:40px;font-size:14pt;">
+                           <a href="#"><li class="Front_Div_Navigation_div_li">财务管理</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">生产服务</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">采购清单</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">移动办公</li></a>
+                       </ul>
+                   </div>
+                   <!-- 导航：提供服务模块 -->
+                   <div id="Navigation_div2" class="Front_Div_Navigation_div">
+                       <ul style="float:left;line-height:40px;font-size:14pt;">
+                           <a href="#"><li class="Front_Div_Navigation_div_li">客户（实施）服务</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">开发者（技术）服务</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">系统升级</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">售后服务</li></a>
+                       </ul>
+                   </div>
+                   <!-- 导航：解决方案模块 -->
+                   <div id="Navigation_div3" class="Front_Div_Navigation_div">
+                       <ul style="float:left;line-height:40px;font-size:14pt;">
+                           <a href="#"><li class="Front_Div_Navigation_div_li">产品常见问题</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">购买流程</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">如何申请试用产品？</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">在线指南</li></a>
+                       </ul>
+                   </div>
+                   <!-- 导航：新闻中心模块 -->
+                   <div id="Navigation_div4" class="Front_Div_Navigation_div">
+                       <ul style="float:left;line-height:40px;font-size:14pt;">
+                           <a href="#"><li class="Front_Div_Navigation_div_li">热门信息</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">最新动态</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">行业知识</li></a>
+                       </ul>
+                   </div>
+                   <!-- 导航：关于我们模块 -->
+                   <div id="Navigation_div5" class="Front_Div_Navigation_div">
+                       <ul style="float:left;line-height:40px;font-size:14pt;">
+                           <a href="#"><li class="Front_Div_Navigation_div_li">关于我们</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">成长历程</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">企业信誉</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">加入我们</li></a>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </div>
+        <!-- 中 -->
+        <div class="Front_Div_All_middle">
+            <asp:ContentPlaceHolder runat="server" ID="conPlaceHolder_Content">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- 尾 -->
+        <div class="Front_Div_All_buttom">
+            <!-- 提供服务 -->
+            <div class="Front_Div_All_buttom_Service">
+                <div class="Front_Div_All_buttom_Service_divTitle">ERP，我们诚心服务！</div>
+                <div class="Front_Div_All_buttom_Service_divContent">
+                    <div class="Front_Div_All_buttom_Service_divContent_div">
+                        <div style="text-align:left;margin-top:20px;">提供服务</div>
+                        <div style="margin-top:20px;">
+                            <ul style="float:left;text-align:left;">
+                                <li><a href="#">实施安装</a></li>
+                                <li><a href="#">系统升级</a></li>
+                                <li><a href="#">售后服务</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Front_Div_All_buttom_Service_divContent_div">
+                        <div style="text-align:left;margin-top:20px;">解决方案</div>
+                        <div style="margin-top:20px;">
+                            <ul style="float:left;text-align:left;">
+                                <li ><a href="#">线上线下一体化O2O模式</a></li>
+                                <li ><a href="#">业务财政一体化</a></li>
+                                <li ><a href="#">系统常见问题</a></li>
+                                <li><a href="#">其它</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Front_Div_All_buttom_Service_divContent_div">
+                        <div style="text-align:left;margin-top:20px;">技术支持</div>
+                        <div style="margin-top:20px;">
+                            <ul style="float:left;text-align:left;">
+                                <li><a href="#">客户反馈</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 公司信息 -->
+            <div class="Front_Div_All_buttom_MyCompanyInfo">
+                <ul class="Front_Div_All_buttom_MyCompanyInfo_li">
+                    <li>热线电话：400-123-4567
+                    &nbsp;&nbsp;&nbsp;&nbsp;邮箱：Anjjiewm@163.com</li>
+                    <li>广东省珠海市斗门区白蕉南路29号 南方IT学院教学133室</li>
+                    <li>Copyright © <a href="#" class="Front_Div_All_buttom_MyCompanyInfo_li_a">eChengKJ.com</a> All Rights Reserved. </li>
+                </ul>
+            </div>
+          
+        </div>
+    </div>
+</body>
+</html>
