@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:是否热门产品表
     /// </summary>
-    interface IHotProductTable_Server
+    public interface IHotProductTable_Server
     {
         /// <summary>
         /// 获取全部的是否热门产品表信息
         /// </summary>
         /// <returns></returns>
-        HotProduct_Table GetHotProductTableAll();
+        List<HotProduct_Table> GetHotProductTableAll();
 
         /// <summary>
         /// 添加是否热门产品表信息

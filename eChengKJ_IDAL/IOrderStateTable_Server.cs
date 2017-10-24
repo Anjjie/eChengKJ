@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口：订单状态表
     /// </summary>
-    interface IOrderStateTable_Server
+    public interface IOrderStateTable_Server
     {
         /// <summary>
         /// 获取全部的订单状态表信息
         /// </summary>
         /// <returns></returns>
-        OrderState_Table GetOrderStateTableAll();
+        List<OrderState_Table> GetOrderStateTableAll();
 
         /// <summary>
         /// 添加订单状态表信息

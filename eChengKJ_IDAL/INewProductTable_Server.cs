@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:是否新产品表
     /// </summary>
-    interface INewProductTable_Server
+    public interface INewProductTable_Server
     {
         /// <summary>
         /// 获取全部的是否新产品表信息
         /// </summary>
         /// <returns></returns>
-        NewProduct_Table GetNewProductTableAll();
+        List<NewProduct_Table> GetNewProductTableAll();
 
         /// <summary>
         /// 添加是否新产品表信息

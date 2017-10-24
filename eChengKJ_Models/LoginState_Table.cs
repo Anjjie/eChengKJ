@@ -14,10 +14,10 @@ namespace eChengKJ_Models
         /// <summary>
         /// 登录状态编号
         /// </summary>
-        int LS_id { get; set; }
+        public int LS_id { get; set; }
         /// <summary>
         /// 登录状态名称
         /// </summary>
-        string LS_Name { get; set; }
+        public string LS_Name { get; set; }
     }
 }

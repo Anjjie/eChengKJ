@@ -14,10 +14,10 @@ namespace eChengKJ_Models
         /// <summary>
         /// 新品编号
         /// </summary>
-        int NP_id { get; set; }
+        public int NP_id { get; set; }
         /// <summary>
         /// 是否新品
         /// </summary>
-        string NP_Name { get; set; }
+        public string NP_Name { get; set; }
     }
 }

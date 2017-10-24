@@ -14,22 +14,22 @@ namespace eChengKJ_Models
         /// <summary>
         /// 编号
         /// </summary>
-        int Feed_id { get; set; }
+        public int Feed_id { get; set; }
         /// <summary>
         /// 用户ID
         /// </summary>
-        int U_id { get; set; }
+        public int U_id { get; set; }
         /// <summary>
         /// 产品ID
         /// </summary>
-        int P_id { get; set; }
+        public int P_id { get; set; }
         /// <summary>
         /// 反馈内容
         /// </summary>
-        string Feed_Content { get; set; }
+        public string Feed_Content { get; set; }
         /// <summary>
         /// 时间
         /// </summary>
-        DateTime Feed_Datetime { get; set; }
+        public DateTime Feed_Datetime { get; set; }
     }
 }

@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:部门表
     /// </summary>
-    interface IDepartmentTable_Server
+    public interface IDepartmentTable_Server
     {
         /// <summary>
         /// 获取全部的部门
         /// </summary>
         /// <returns></returns>
-        Department_Table GetDepartmentTableAll();
+        List<Department_Table> GetDepartmentTableAll();
 
         /// <summary>
         /// 添加部门

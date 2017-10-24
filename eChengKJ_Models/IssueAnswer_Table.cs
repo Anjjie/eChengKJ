@@ -14,34 +14,34 @@ namespace eChengKJ_Models
         /// <summary>
         /// 编号
         /// </summary>
-        int IA_id  {get;set;}
+        public int IA_id  {get;set;}
         /// <summary>
         /// 用户账号
         /// </summary>
-        string U_UserName { get; set; }
+        public string U_UserName { get; set; }
         /// <summary>
         /// 问题1
         /// </summary>
-        string IA_Issue1 { get; set; }
+        public string IA_Issue1 { get; set; }
         /// <summary>
         /// 问题2
         /// </summary>
-        string IA_Issue2 { get; set; }
+        public string IA_Issue2 { get; set; }
         /// <summary>
         /// 问题3
         /// </summary>
-        string IA_Issue3 { get; set; }
+        public string IA_Issue3 { get; set; }
         /// <summary>
         /// 答案1
         /// </summary>
-        string IA_Answer1 { get; set; }
+        public string IA_Answer1 { get; set; }
         /// <summary>
         /// 答案2
         /// </summary>
-        string IA_Answer2 { get; set; }
+        public string IA_Answer2 { get; set; }
         /// <summary>
         /// 答案3
         /// </summary>
-        string IA_Answer3 { get; set; } 			
+        public string IA_Answer3 { get; set; } 			
     }
 }

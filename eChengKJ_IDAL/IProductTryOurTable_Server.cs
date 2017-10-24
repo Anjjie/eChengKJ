@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:产品试用申请试用申请表
     /// </summary>
-    interface IProductTryOurTryOurTable_Server
+    public interface IProductTryOurTryOurTable_Server
     {
         /// <summary>
         /// 获取全部的产品试用申请表信息
         /// </summary>
         /// <returns></returns>
-        ProductTryOur_Table GetProductTryOurTableAll();
+        List<ProductTryOur_Table> GetProductTryOurTableAll();
 
         /// <summary>
         /// 添加产品试用申请表信息

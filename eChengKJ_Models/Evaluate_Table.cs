@@ -14,22 +14,22 @@ namespace eChengKJ_Models
         /// <summary>
         /// 编号
         /// </summary>
-        int Eva_id { get; set; }
+        public int Eva_id { get; set; }
         /// <summary>
         /// 用户ID
         /// </summary>
-        int U_id { get; set; }
+        public int U_id { get; set; }
         /// <summary>
         /// 产品ID
         /// </summary>
-        int P_id { get; set; }
+        public int P_id { get; set; }
         /// <summary>
         /// 评价内容
         /// </summary>
-        string Eva_Content { get; set; }
+        public string Eva_Content { get; set; }
         /// <summary>
         /// 时间
         /// </summary>
-        DateTime Eva_Datetime { get; set; }			
+        public DateTime Eva_Datetime { get; set; }			
     }
 }

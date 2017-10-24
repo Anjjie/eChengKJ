@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:用户表
     /// </summary>
-    interface IUserTable_Server
+    public interface IUserTable_Server
     {
         /// <summary>
         /// 获取全部的用户信息
         /// </summary>
         /// <returns></returns>
-        User_Table GetProductTryOurTableAll();
+        List<User_Table> GetProductTryOurTableAll();
 
         /// <summary>
         /// 添加用户信息

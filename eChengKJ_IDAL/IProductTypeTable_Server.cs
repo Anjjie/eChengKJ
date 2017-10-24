@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:产品类型表
     /// </summary>
-    interface IProductTypeTable_Server
+    public interface IProductTypeTable_Server
     {
         /// <summary>
         /// 获取全部的产品类型表信息
         /// </summary>
         /// <returns></returns>
-       ProductType_Table GetProductTryOurTableAll();
+        List<ProductType_Table> GetProductTryOurTableAll();
 
         /// <summary>
         /// 添加产品类型表信息

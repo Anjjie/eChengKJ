@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:邮箱表
     /// </summary>
-    interface IMailTable_Server
+    public interface IMailTable_Server
     {
         /// <summary>
         /// 获取全部的邮箱表信息
         /// </summary>
         /// <returns></returns>
-        Mail_Table GetMailTableAll();
+        List<Mail_Table> GetMailTableAll();
 
         /// <summary>
         /// 添加邮箱表信息

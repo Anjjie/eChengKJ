@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:招聘岗位表
     /// </summary>
-    interface IJoinUsPostTable_Server
+    public interface IJoinUsPostTable_Server
     {
         /// <summary>
         /// 获取全部的招聘岗位表信息
         /// </summary>
         /// <returns></returns>
-       JoinUsPost_Table GetJoinUsPostTableAll();
+        List<JoinUsPost_Table> GetJoinUsPostTableAll();
 
         /// <summary>
         /// 添加招聘岗位表信息

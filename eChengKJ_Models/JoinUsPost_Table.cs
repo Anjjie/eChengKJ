@@ -14,14 +14,14 @@ namespace eChengKJ_Models
         /// <summary>
         /// 编号
         /// </summary>
-        int JUP_id { get; set; }
+        public int JUP_id { get; set; }
         /// <summary>
         /// 岗位名称
         /// </summary>
-        string JUP_Name { get; set; }
+        public string JUP_Name { get; set; }
         /// <summary>
         /// 招聘人数
         /// </summary>
-        int JUP_Number { get; set; }				
+        public int JUP_Number { get; set; }				
     }
 }

@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:解决方案表
     /// </summary>
-    interface ISolutionTable_Server
+    public interface ISolutionTable_Server
     {
         /// <summary>
         /// 获取全部的解决方案表信息
         /// </summary>
         /// <returns></returns>
-        Solution_Table GetProductTryOurTableAll();
+        List<Solution_Table> GetProductTryOurTableAll();
 
         /// <summary>
         /// 添加解决方案表信息

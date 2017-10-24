@@ -14,22 +14,22 @@ namespace eChengKJ_Models
         /// <summary>
         /// 编号
         /// </summary>
-        int News_id { get; set; }
+        public int News_id { get; set; }
         /// <summary>
         /// 新闻标题
         /// </summary>
-        string News_Name { get; set; }
+        public string News_Name { get; set; }
         /// <summary>
         /// 新闻内容
         /// </summary>
-        string News_Content { get; set; }
+        public string News_Content { get; set; }
         /// <summary>
         /// 新闻作者
         /// </summary>
-        string News_Anthor { get; set; }
+        public string News_Anthor { get; set; }
         /// <summary>
         /// 发布时间
         /// </summary>
-        string News_Date { get; set; }                
+        public string News_Date { get; set; }                
     }
 }

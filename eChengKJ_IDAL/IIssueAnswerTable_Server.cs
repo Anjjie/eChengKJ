@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:密保表
     /// </summary>
-    interface IIssueAnswerTable_Server
+    public interface IIssueAnswerTable_Server
     {
         /// <summary>
         /// 获取全部的密保表信息
         /// </summary>
         /// <returns></returns>
-        IssueAnswer_Table GetIssueAnswerTableAll();
+        List<IssueAnswer_Table> GetIssueAnswerTableAll();
 
         /// <summary>
         /// 添加密保表信息

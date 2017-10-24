@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:新闻表
     /// </summary>
-    interface INewsTable_Server
+    public interface INewsTable_Server
     {
         /// <summary>
         /// 获取全部的新闻表信息
         /// </summary>
         /// <returns></returns>
-        News_Table GetNewsTableAll();
+        List<News_Table> GetNewsTableAll();
 
         /// <summary>
         /// 添加新闻表信息

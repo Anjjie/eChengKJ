@@ -14,23 +14,23 @@ namespace eChengKJ_Models
         /// <summary>
         /// 编号
         /// </summary>
-        int Com_id { get; set; }
+        public int Com_id { get; set; }
         /// <summary>
         /// 名称
         /// </summary>
-        string Com_Name { get; set; }
+        public string Com_Name { get; set; }
         /// <summary>
         /// Logo
         /// </summary>
-        Byte[] Com_Logo { get; set; }
+        public Byte[] Com_Logo { get; set; }
         /// <summary>
         /// 介绍
         /// </summary>
-        string Com_Introduce { get; set; }
+        public string Com_Introduce { get; set; }
         /// <summary>
         /// 荣誉
         /// </summary>
-        string Com_Honer { get; set; }
+        public string Com_Honer { get; set; }
         /// <summary>
         /// 销售范围
         /// </summary>
@@ -38,14 +38,14 @@ namespace eChengKJ_Models
         /// <summary>
         /// 规模
         /// </summary>
-        string Com_Scale { get; set; }
+        public string Com_Scale { get; set; }
         /// <summary>
         /// 发展历程
         /// </summary>
-        string Com_Course { get; set; }
+        public string Com_Course { get; set; }
         /// <summary>
         /// 宗旨
         /// </summary>
-        string Com_Purpose { get; set; }                
+        public string Com_Purpose { get; set; }                
     }
 }

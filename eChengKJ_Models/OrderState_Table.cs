@@ -11,13 +11,13 @@ namespace eChengKJ_Models
     /// </summary>
    public class OrderState_Table
     {
-       /// <summary>
-       /// 订单状态编号
-       /// </summary>
-       int OState_id {get;set;}  
-       /// <summary>
-       /// 订单状态名称
-       /// </summary>
-       string OState_Name { get; set; }                 
+        /// <summary>
+        /// 订单状态编号
+        /// </summary>
+        public int OState_id {get;set;}
+        /// <summary>
+        /// 订单状态名称
+        /// </summary>
+        public string OState_Name { get; set; }                 
     }
 }

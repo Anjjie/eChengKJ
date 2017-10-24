@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:试用审核状态表
     /// </summary>
-    interface ITryOutTable_Server
+    public interface ITryOutTable_Server
     {
         /// <summary>
         /// 获取全部的解决方案表信息
         /// </summary>
         /// <returns></returns>
-        TryOut_Table GetProductTryOurTableAll();
+        List<TryOut_Table> GetProductTryOurTableAll();
 
         /// <summary>
         /// 添加解决方案表信息

@@ -14,42 +14,42 @@ namespace eChengKJ_Models
         /// <summary>
         /// 产品编号
         /// </summary>
-        int P_id {get;set;}
+        public int P_id {get;set;}
         /// <summary>
         /// 自定义产品编号
         /// </summary>
-        string P_No { get; set; }
+        public string P_No { get; set; }
         /// <summary>
         /// 产品名称
         /// </summary>
-        string P_Name { get; set; }				
+        public string P_Name { get; set; }
         /// <summary>
-       /// 产品价格
-       /// </summary>
-        double P_Price { get; set; }					
+        /// 产品价格
+        /// </summary>
+        public double P_Price { get; set; }
         /// <summary>
-       /// 类型
-       /// </summary>
-        int PT_id { get; set; }		
+        /// 类型
+        /// </summary>
+        public int PT_id { get; set; }
         /// <summary>
-       /// 是否热门
-       /// </summary>
-        int HP_id { get; set; }	
+        /// 是否热门
+        /// </summary>
+        public int HP_id { get; set; }
         /// <summary>
-       /// 是否新品
-       /// </summary>
-        int NP_id { get; set; }
+        /// 是否新品
+        /// </summary>
+        public int NP_id { get; set; }
         /// <summary>
         /// 发布日期
         /// </summary>
-        DateTime P_Date  {get;set;} 
+        public DateTime P_Date  {get;set;}
         /// <summary>
         /// 出品公司
         /// </summary>
-        string P_Company { get; set; }
+        public string P_Company { get; set; }
         /// <summary>
         /// 操作人
         /// </summary>
-        int E_id { get; set; }							
+        public int E_id { get; set; }							
     }
 }

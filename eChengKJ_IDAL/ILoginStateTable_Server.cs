@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:登录状态表
     /// </summary>
-    interface ILoginStateTable_Server
+    public interface ILoginStateTable_Server
     {
         /// <summary>
         /// 获取全部的登录状态表信息
         /// </summary>
         /// <returns></returns>
-        LoginState_Table GetLoginStateTableAll();
+        List<LoginState_Table> GetLoginStateTableAll();
 
         /// <summary>
         /// 添加登录状态表信息

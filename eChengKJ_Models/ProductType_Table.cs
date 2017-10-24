@@ -14,10 +14,10 @@ namespace eChengKJ_Models
         /// <summary>
         /// 类型编号
         /// </summary>
-        int PT_id { get; set; }
+        public int PT_id { get; set; }
         /// <summary>
         /// 类型名称
         /// </summary>
-        string PT_Name { get; set; }
+        public string PT_Name { get; set; }
     }
 }

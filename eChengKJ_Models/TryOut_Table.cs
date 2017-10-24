@@ -14,10 +14,10 @@ namespace eChengKJ_Models
         /// <summary>
         /// 状态编号
         /// </summary>
-        int TO_id { get; set; }
+        public int TO_id { get; set; }
         /// <summary>
         /// 状态名称
         /// </summary>
-        string TO_Name { get; set; }	
+        public string TO_Name { get; set; }	
     }
 }

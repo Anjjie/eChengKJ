@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:反馈表
     /// </summary>
-    interface IFeedbackTable_Server
+    public interface IFeedbackTable_Server
     {
         /// <summary>
         /// 获取全部的反馈
         /// </summary>
         /// <returns></returns>
-        Feedback_Table GetFeedbackTableAll();
+        List<Feedback_Table> GetFeedbackTableAll();
 
         /// <summary>
         /// 添加反馈

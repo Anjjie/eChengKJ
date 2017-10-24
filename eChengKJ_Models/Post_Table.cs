@@ -14,10 +14,10 @@ namespace eChengKJ_Models
         /// <summary>
         /// 职位编号
         /// </summary>
-        int Post_id { get; set; }
+        public int Post_id { get; set; }
         /// <summary>
         /// 职位名称
         /// </summary>
-        string Post_Name { get; set; }
+        public string Post_Name { get; set; }
     }
 }

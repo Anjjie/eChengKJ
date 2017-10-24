@@ -14,10 +14,10 @@ namespace eChengKJ_Models
         /// <summary>
         /// 部门编号
         /// </summary>
-        int Dep_id { get; set; }
+        public int Dep_id { get; set; }
         /// <summary>
         /// 部门名称
         /// </summary>
-        string Dep_Name { get; set; }               
+        public string Dep_Name { get; set; }               
     }
 }

@@ -14,10 +14,10 @@ namespace eChengKJ_Models
         /// <summary>
         /// 编号
         /// </summary>
-        int IDT_id { get; set; }
+        public int IDT_id { get; set; }
         /// <summary>
         /// 证件名称
         /// </summary>
-        string IDT_Name { get; set; }
+        public string IDT_Name { get; set; }
     }
 }

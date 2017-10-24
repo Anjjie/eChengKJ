@@ -10,14 +10,14 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口：订单
     /// </summary>
-    interface IOrderTable_Server
+    public interface IOrderTable_Server
     {
-       
-            /// <summary>
-            /// 获取全部的订单表信息
-            /// </summary>
-            /// <returns></returns>
-            Order_Table GetOrderTableAll();
+
+        /// <summary>
+        /// 获取全部的订单表信息
+        /// </summary>
+        /// <returns></returns>
+        List<Order_Table> GetOrderTableAll();
 
             /// <summary>
             /// 添加订单表信息

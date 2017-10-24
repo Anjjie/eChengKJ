@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:评价表
     /// </summary>
-    interface IEvaluateTable_Server
+    public interface IEvaluateTable_Server
     {
         /// <summary>
         /// 获取全部的评价
         /// </summary>
         /// <returns></returns>
-        Evaluate_Table GetEvaluateTableAll();
+        List<Evaluate_Table> GetEvaluateTableAll();
 
         /// <summary>
         /// 添加评价

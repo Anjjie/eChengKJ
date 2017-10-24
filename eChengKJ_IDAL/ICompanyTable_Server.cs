@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:公司信息表
     /// </summary>
-    interface ICompanyTable_Server
+    public interface ICompanyTable_Server
     {
         /// <summary>
         /// 获取全部的公司信息
         /// </summary>
         /// <returns></returns>
-        Company_Table GetCompanyTableAll();
+        List<Company_Table> GetCompanyTableAll();
 
         /// <summary>
         /// 添加公司信息

@@ -14,14 +14,14 @@ namespace eChengKJ_Models
         /// <summary>
         /// 编号
         /// </summary>
-        int M_id {get;set;}
+        public int M_id {get;set;}
         /// <summary>
         /// 邮箱号
         /// </summary>
-        string M_Mail { get; set; }
+        public string M_Mail { get; set; }
         /// <summary>
         /// 是否激活
         /// </summary>
-        string M_YesNo { get; set; }               
+        public string M_YesNo { get; set; }               
     }
 }

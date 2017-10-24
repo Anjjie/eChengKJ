@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:证件类型表
     /// </summary>
-    interface IIDTypeTable_Server
+    public interface IIDTypeTable_Server
     {
         /// <summary>
         /// 获取全部的证件类型表信息
         /// </summary>
         /// <returns></returns>
-        IDType_Table GetIDTypeTableAll();
+        List<IDType_Table> GetIDTypeTableAll();
 
         /// <summary>
         /// 添加证件类型表信息

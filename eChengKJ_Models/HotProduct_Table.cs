@@ -14,10 +14,10 @@ namespace eChengKJ_Models
         /// <summary>
         /// 热门编号
         /// </summary>
-        int HP_id { get; set; }
+        public int HP_id { get; set; }
         /// <summary>
         /// 是否热门
         /// </summary>
-        string HP_Name { get; set; }			
+        public string HP_Name { get; set; }			
     }
 }

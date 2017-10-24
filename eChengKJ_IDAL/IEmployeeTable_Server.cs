@@ -10,13 +10,13 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:员工表
     /// </summary>
-    interface IEmployeeTable_Server
+    public interface IEmployeeTable_Server
     {
         /// <summary>
         /// 获取全部的员工
         /// </summary>
         /// <returns></returns>
-        Employee_Table GetEmployeeTableAll();
+        List<Employee_Table> GetEmployeeTableAll();
 
         /// <summary>
         /// 添加员工

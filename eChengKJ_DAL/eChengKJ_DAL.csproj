@@ -41,9 +41,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CompanyTable_Server.cs" />
+    <Compile Include="DepartmentTable_Server.cs" />
+    <Compile Include="EmployeeTable_Server.cs" />
+    <Compile Include="EvaluateTable_Server.cs" />
+    <Compile Include="FeedbackTable_Server.cs" />
+    <Compile Include="HotProductTable_Server.cs" />
+    <Compile Include="IDTypeTable_Server.cs" />
+    <Compile Include="IssueAnswerTable_Server.cs" />
+    <Compile Include="JoinUsPostTable_Server.cs" />
+    <Compile Include="JoinUsTable_Server.cs" />
+    <Compile Include="LoginStateTable_Server.cs" />
+    <Compile Include="MailTable_Server.cs" />
+    <Compile Include="NewProductTable_Server.cs" />
+    <Compile Include="NewsTable_Server.cs" />
+    <Compile Include="OrderStateTable_Server.cs" />
+    <Compile Include="OrderTable_Server.cs" />
     <Compile Include="DBHerlper.cs" />
+    <Compile Include="PostTable_Server.cs" />
+    <Compile Include="ProductTable_Server.cs" />
+    <Compile Include="ProductTryOurTable_Server.cs" />
+    <Compile Include="ProductTypeTable_Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolutionTable_Server.cs" />
+    <Compile Include="TryOutTable_Server.cs" />
+    <Compile Include="UserTable_Server.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eChengKJ_IDAL\eChengKJ_IDAL.csproj">
