@@ -40,7 +40,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ICompanyTable_Server.cs" />
+    <Compile Include="IDepartmentTable_Server.cs" />
+    <Compile Include="IEmployeeTable_Server.cs" />
+    <Compile Include="IEvaluateTable_Server.cs" />
+    <Compile Include="IFeedbackTable_Server.cs" />
+    <Compile Include="IHotProductTable_Server.cs" />
+    <Compile Include="IIDTypeTable_Server.cs" />
+    <Compile Include="IIssueAnswerTable_Server.cs" />
+    <Compile Include="IJoinUsPostTable_Server.cs" />
+    <Compile Include="IJoinUsTable_Server.cs" />
+    <Compile Include="ILoginStateTable_Server.cs" />
+    <Compile Include="IMailTable_Server.cs" />
+    <Compile Include="INewProductTable_Server.cs" />
+    <Compile Include="INewsTable_Server.cs" />
+    <Compile Include="IOrderStateTable_Server.cs" />
+    <Compile Include="IOrderTable_Server.cs" />
+    <Compile Include="IProductTable_Server.cs" />
+    <Compile Include="IProductTryOurTable_Server.cs" />
+    <Compile Include="IProductTypeTable_Server.cs" />
+    <Compile Include="ISolutionTable_Server.cs" />
+    <Compile Include="ITryOutTable_Server.cs" />
+    <Compile Include="IUserTable_Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
