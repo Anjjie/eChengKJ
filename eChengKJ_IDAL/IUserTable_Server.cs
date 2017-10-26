@@ -16,27 +16,34 @@ namespace eChengKJ_IDAL
         /// 获取全部的用户信息
         /// </summary>
         /// <returns></returns>
-        List<User_Table> GetProductTryOurTableAll();
+        List<User_Table> GetUserTableAll();
+
+        /// <summary>
+        /// 获取某条用户信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        User_Table GetUserTableByConn(string con);
 
         /// <summary>
         /// 添加用户信息
         /// </summary>
         /// <param name="obj">带入参数</param>
         /// <returns></returns>
-        int Insert_ProductTryOurTableData(ProductTryOur_Table obj);
+        int Insert_UserTableData(User_Table obj);
 
         /// <summary>
         /// 更改用户信息
         /// </summary>
         /// <param name="obj">带入参数</param>
         /// <returns></returns>
-        int Update_ProductTryOurTableData(ProductTryOur_Table obj);
+        int Update_UserTableData(User_Table obj);
 
         /// <summary>
         /// 移除用户信息
         /// </summary>
         /// <param name="con">参数条件</param>
         /// <returns></returns>
-        int Delete_ProductTryOurTableData(string con);
+        int Delete_UserTableData(string con);
     }
 }

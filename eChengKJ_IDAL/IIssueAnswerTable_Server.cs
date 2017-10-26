@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<IssueAnswer_Table> GetIssueAnswerTableAll();
 
         /// <summary>
+        /// 获取某条【密保】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        IssueAnswer_Table GetIssueAnswerTableByConn(string con);
+
+        /// <summary>
         /// 添加密保表信息
         /// </summary>
         /// <param name="obj">带入参数</param>

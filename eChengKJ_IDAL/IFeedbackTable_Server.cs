@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<Feedback_Table> GetFeedbackTableAll();
 
         /// <summary>
+        /// 获取某条【反馈】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        Feedback_Table GetFeedbackTableByConn(string con);
+
+        /// <summary>
         /// 添加反馈
         /// </summary>
         /// <param name="obj">带入参数</param>

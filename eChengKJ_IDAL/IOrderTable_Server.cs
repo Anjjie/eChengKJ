@@ -13,11 +13,18 @@ namespace eChengKJ_IDAL
     public interface IOrderTable_Server
     {
 
-        /// <summary>
-        /// 获取全部的订单表信息
-        /// </summary>
-        /// <returns></returns>
-        List<Order_Table> GetOrderTableAll();
+            /// <summary>
+            /// 获取全部的订单表信息
+            /// </summary>
+            /// <returns></returns>
+            List<Order_Table> GetOrderTableAll();
+
+            /// <summary>
+            /// 获取某条【订单】信息
+            /// </summary>
+            /// <param name="con">参数条件</param>
+            /// <returns></returns>
+            Order_Table GetOrderTableByConn(string con);
 
             /// <summary>
             /// 添加订单表信息

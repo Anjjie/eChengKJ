@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<Company_Table> GetCompanyTableAll();
 
         /// <summary>
+        /// 获取某条【公司信息】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        Company_Table GetCompanyTableByConn(string con);
+
+        /// <summary>
         /// 添加公司信息
         /// </summary>
         /// <param name="obj">带入参数</param>

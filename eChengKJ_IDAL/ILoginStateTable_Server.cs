@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<LoginState_Table> GetLoginStateTableAll();
 
         /// <summary>
+        /// 获取某条【登录状态】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        LoginState_Table GetLoginStateTableByConn(string con);
+
+        /// <summary>
         /// 添加登录状态表信息
         /// </summary>
         /// <param name="obj">带入参数</param>

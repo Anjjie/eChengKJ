@@ -16,27 +16,27 @@ namespace eChengKJ_IDAL
         /// 获取全部的职位表信息
         /// </summary>
         /// <returns></returns>
-        List<Post_Table> GetProductTryOurTableAll();
+        List<Post_Table> GetPostTableAll();
 
         /// <summary>
         /// 添加职位表信息
         /// </summary>
         /// <param name="obj">带入参数</param>
         /// <returns></returns>
-        int Insert_ProductTryOurTableData(ProductTryOur_Table obj);
+        int Insert_PostTableData(Post_Table obj);
 
         /// <summary>
         /// 更改职位表信息
         /// </summary>
         /// <param name="obj">带入参数</param>
         /// <returns></returns>
-        int Update_ProductTryOurTableData(ProductTryOur_Table obj);
+        int Update_PostTableData(Post_Table obj);
 
         /// <summary>
         /// 移除职位表信息
         /// </summary>
         /// <param name="con">参数条件</param>
         /// <returns></returns>
-        int Delete_ProductTryOurTableData(string con);
+        int Delete_PostTableData(string con);
     }
 }

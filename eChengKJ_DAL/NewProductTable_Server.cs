@@ -13,7 +13,7 @@ namespace eChengKJ_DAL
     /// <summary>
     /// 数据访问:是否新产品表
     /// </summary>
-    public class NewProductTable_Server
+    public class NewProductTable_Server : INewProductTable_Server
     {
         #region 获取SQL存储过程（固定）
         /// <summary>
@@ -40,5 +40,104 @@ namespace eChengKJ_DAL
             return returnContene;
         }
         #endregion
+
+        #region 获取全部的是否新产品
+        /// <summary>
+        /// 获取全部的是否新产品
+        /// </summary>
+        /// <returns></returns>
+        public List<NewProduct_Table> GetNewProductTableAll()
+        {
+            List<NewProduct_Table> list = new List<NewProduct_Table>();
+            SqlDataReader dr = DBHerlper.ExecuteReader(GetSqlString("Select"),
+                CommandType.StoredProcedure);
+            while (dr.Read())
+            {
+                NewProduct_Table obj = new NewProduct_Table()
+                {
+                    NP_id = Convert.ToInt32(dr["NP_id"]),
+                    NP_Name = dr["NP_Name"].ToString()
+                };
+                list.Add(obj);
+            }
+            return list;
+        }
+        #endregion
+
+        #region 根据ID查询是否新产品信息
+        /// <summary>
+        /// 根据ID查询是否新产品信息
+        /// </summary>
+        /// <param name="con"></param>
+        /// <returns></returns>
+        public NewProduct_Table GetNewProductTableByConn(string con)
+        {
+            NewProduct_Table obj = null;
+            SqlDataReader dr = DBHerlper.ExecuteReader(
+                "Select * from NewProduct_Table where HP_id=@HP_id",
+                 CommandType.Text, new SqlParameter[] {
+                     new SqlParameter("@HP_id",con)
+                 });
+            if (dr.Read())
+            {
+                obj = new NewProduct_Table()
+                {
+                    NP_id = Convert.ToInt32(dr["NP_id"]),
+                    NP_Name = dr["NP_Name"].ToString()
+                };
+            }
+            return obj;
+        }
+        #endregion
+
+        #region 添加是否新产品
+        /// <summary>
+        /// 添加是否新产品
+        /// </summary>
+        /// <param name="obj">带入参数</param>
+        /// <returns></returns>
+        public int Insert_NewProductTableData(NewProduct_Table obj)
+        {
+            return DBHerlper.ExecuteNonQuery(GetSqlString("Insert"),
+                CommandType.StoredProcedure,
+                new SqlParameter[] {
+                    new SqlParameter("@NP_Name",obj.NP_Name)
+                });
+        }
+        #endregion
+
+        #region 更改是否新产品
+        /// <summary>
+        /// 更改是否新产品
+        /// </summary>
+        /// <param name="obj">带入参数</param>
+        /// <returns></returns>
+        public int Update_NewProductTableData(NewProduct_Table obj)
+        {
+            return DBHerlper.ExecuteNonQuery(GetSqlString("Update"),
+                 CommandType.StoredProcedure,
+                 new SqlParameter[] {
+                    new SqlParameter("@NP_id",obj.NP_id),
+                    new SqlParameter("@NP_Name",obj.NP_Name)
+                 });
+        }
+        #endregion
+
+        #region 移除是否新产品
+        /// <summary>
+        /// 移除是否新产品
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        public int Delete_NewProductTableData(string con)
+        {
+            return DBHerlper.ExecuteNonQuery(GetSqlString("Delete"),
+                 CommandType.StoredProcedure,
+                 new SqlParameter[] {
+                     new SqlParameter("@NP_id",con)
+                 });
+        }
+        #endregion
+
     }
 }

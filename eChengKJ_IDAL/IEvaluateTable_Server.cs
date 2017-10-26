@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<Evaluate_Table> GetEvaluateTableAll();
 
         /// <summary>
+        /// 获取某条【评价】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        Evaluate_Table GetEvaluateTableByConn(string con);
+
+        /// <summary>
         /// 添加评价
         /// </summary>
         /// <param name="obj">带入参数</param>

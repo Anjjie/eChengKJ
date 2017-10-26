@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<Mail_Table> GetMailTableAll();
 
         /// <summary>
+        /// 获取某条【邮箱】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        Mail_Table GetMailTableByConn(string con);
+
+        /// <summary>
         /// 添加邮箱表信息
         /// </summary>
         /// <param name="obj">带入参数</param>

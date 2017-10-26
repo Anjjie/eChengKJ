@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<OrderState_Table> GetOrderStateTableAll();
 
         /// <summary>
+        /// 获取某条订单状态信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        OrderState_Table GetOrderStateTableByConn(string con);
+
+        /// <summary>
         /// 添加订单状态表信息
         /// </summary>
         /// <param name="obj">带入参数</param>

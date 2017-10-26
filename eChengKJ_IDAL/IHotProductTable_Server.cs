@@ -19,11 +19,20 @@ namespace eChengKJ_IDAL
         List<HotProduct_Table> GetHotProductTableAll();
 
         /// <summary>
+        /// 获取某条【是否热门产品】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        HotProduct_Table GetHotProductTableByConn(string con);
+
+        /// <summary>
         /// 添加是否热门产品表信息
         /// </summary>
         /// <param name="obj">带入参数</param>
         /// <returns></returns>
         int Insert_HotProductTableData(HotProduct_Table obj);
+
+        
 
         /// <summary>
         /// 更改是否热门产品表信息

@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<JoinUs_Table> GetJoinUsTableAll();
 
         /// <summary>
+        /// 获取某条【招聘】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        JoinUs_Table GetJoinUsTableByConn(string con);
+
+        /// <summary>
         /// 添加招聘表信息
         /// </summary>
         /// <param name="obj">带入参数</param>

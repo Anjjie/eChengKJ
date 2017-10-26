@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<Employee_Table> GetEmployeeTableAll();
 
         /// <summary>
+        /// 获取某条员工信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        Employee_Table GetEmployeeTableByConn(string con);
+
+        /// <summary>
         /// 添加员工
         /// </summary>
         /// <param name="obj">带入参数</param>

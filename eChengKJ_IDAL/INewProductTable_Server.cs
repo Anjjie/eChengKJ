@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<NewProduct_Table> GetNewProductTableAll();
 
         /// <summary>
+        /// 获取某条【是否新产品】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        NewProduct_Table GetNewProductTableByConn(string con);
+
+        /// <summary>
         /// 添加是否新产品表信息
         /// </summary>
         /// <param name="obj">带入参数</param>

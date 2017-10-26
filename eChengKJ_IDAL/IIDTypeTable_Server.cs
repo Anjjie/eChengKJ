@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<IDType_Table> GetIDTypeTableAll();
 
         /// <summary>
+        /// 获取某条【证件类型】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        IDType_Table GetIDTypeTableByConn(string con);
+
+        /// <summary>
         /// 添加证件类型表信息
         /// </summary>
         /// <param name="obj">带入参数</param>

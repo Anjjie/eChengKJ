@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<Department_Table> GetDepartmentTableAll();
 
         /// <summary>
+        /// 获取某条【部门】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        Department_Table GetDepartmentTableByConn(string con);
+
+        /// <summary>
         /// 添加部门
         /// </summary>
         /// <param name="obj">带入参数</param>

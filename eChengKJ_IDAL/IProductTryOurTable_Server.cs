@@ -10,7 +10,7 @@ namespace eChengKJ_IDAL
     /// <summary>
     /// 接口:产品试用申请试用申请表
     /// </summary>
-    public interface IProductTryOurTryOurTable_Server
+    public interface IProductTryOurTable_Server
     {
         /// <summary>
         /// 获取全部的产品试用申请表信息

@@ -68,6 +68,35 @@ namespace eChengKJ_DAL
         }
         #endregion
 
+        #region 根据ID查询公司信息
+        /// <summary>
+        /// 根据ID查询公司信息
+        /// </summary>
+        /// <param name="con"></param>
+        /// <returns></returns>
+        public Company_Table GetCompanyTableByConn(string con)
+        {
+            Company_Table obj = new Company_Table();
+            SqlDataReader dr = DBHerlper.ExecuteReader(
+                "Select * from Company_Table where Com_id=@Com_id",
+                 CommandType.Text, new SqlParameter[] {
+                     new SqlParameter("@Com_id",con)
+                 });
+            if (dr.Read())
+            {
+                obj.Com_Course = dr["Com_Course"].ToString();
+                obj.Com_Honer = dr["Com_Course"].ToString();
+                obj.Com_id = Convert.ToInt32(dr["Com_Course"]);
+                obj.Com_Introduce = dr["Com_Course"].ToString();
+                obj.Com_Logo = (byte[])(dr["Com_Course"]);
+                obj.Com_Name = dr["Com_Course"].ToString();
+                obj.Com_Purpose = dr["Com_Course"].ToString();
+                obj.Com_Scale = dr["Com_Course"].ToString();
+            }
+            return obj;
+        } 
+        #endregion
+
         #region 添加公司信息
         /// <summary>
         /// 添加公司信息
@@ -123,12 +152,7 @@ namespace eChengKJ_DAL
                 CommandType.StoredProcedure, new SqlParameter[] {
                     new SqlParameter("@Com_id",con)
                 });
-        } 
+        }
         #endregion
-
-
-
-
-
     }
 }

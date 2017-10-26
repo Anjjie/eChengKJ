@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<News_Table> GetNewsTableAll();
 
         /// <summary>
+        /// 获取某条【新闻】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        News_Table GetNewsTableByConn(string con);
+
+        /// <summary>
         /// 添加新闻表信息
         /// </summary>
         /// <param name="obj">带入参数</param>
