@@ -74,9 +74,9 @@ namespace eChengKJ_DAL
         {
             TryOut_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from TryOut_Table where HP_id=@HP_id",
+                "Select * from TryOut_Table where TO_id=@TO_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@TO_id",con)
                  });
             if (dr.Read())
             {

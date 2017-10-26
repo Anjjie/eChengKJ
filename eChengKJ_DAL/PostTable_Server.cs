@@ -74,9 +74,9 @@ namespace eChengKJ_DAL
         {
             Post_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from Post_Table where HP_id=@HP_id",
+                "Select * from Post_Table where Post_id=@Post_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@Post_id",con)
                  });
             if (dr.Read())
             {

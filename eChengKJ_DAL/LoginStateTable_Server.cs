@@ -74,9 +74,9 @@ namespace eChengKJ_DAL
         {
             LoginState_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from LoginState_Table where HP_id=@HP_id",
+                "Select * from LoginState_Table where LS_id=@LS_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@LS_id",con)
                  });
             if (dr.Read())
             {

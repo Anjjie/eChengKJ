@@ -81,9 +81,9 @@ namespace eChengKJ_DAL
         {
             Order_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from Order_Table where HP_id=@HP_id",
+                "Select * from Order_Table where O_id=@O_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@O_id",con)
                  });
             if (dr.Read())
             {

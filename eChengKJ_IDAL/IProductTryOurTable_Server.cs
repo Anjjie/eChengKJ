@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<ProductTryOur_Table> GetProductTryOurTableAll();
 
         /// <summary>
+        /// 获取某条产品信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        ProductTryOur_Table GetProductTryOurTableByConn(string con);
+
+        /// <summary>
         /// 添加产品试用申请表信息
         /// </summary>
         /// <param name="obj">带入参数</param>

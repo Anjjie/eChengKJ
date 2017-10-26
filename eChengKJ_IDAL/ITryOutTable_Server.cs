@@ -19,6 +19,13 @@ namespace eChengKJ_IDAL
         List<TryOut_Table> GetTryOutTableAll();
 
         /// <summary>
+        /// 获取某条【产品类型】信息
+        /// </summary>
+        /// <param name="con">参数条件</param>
+        /// <returns></returns>
+        TryOut_Table GetTryOutTableByConn(string con);
+
+        /// <summary>
         /// 添加解决方案表信息
         /// </summary>
         /// <param name="obj">带入参数</param>

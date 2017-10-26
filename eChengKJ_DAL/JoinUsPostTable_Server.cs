@@ -75,9 +75,9 @@ namespace eChengKJ_DAL
         {
             JoinUsPost_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from JoinUsPost_Table where HP_id=@HP_id",
+                "Select * from JoinUsPost_Table where JUP_id=@JUP_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@JUP_id",con)
                  });
             if (dr.Read())
             {

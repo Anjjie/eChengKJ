@@ -40,13 +40,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CompanyTable_BLL.cs" />
+    <Compile Include="DepartmentTable_BLL.cs" />
+    <Compile Include="EvaluateTable_BLL.cs" />
+    <Compile Include="Factory_BLL.cs" />
+    <Compile Include="FeedbackTable_BLL.cs" />
+    <Compile Include="HotProductTable_BLL.cs" />
+    <Compile Include="IDTypeTable_BLL.cs" />
+    <Compile Include="IssueAnswerTable_BLL.cs" />
+    <Compile Include="JoinUsPostTable_BLL.cs" />
+    <Compile Include="JoinUsTable_BLL.cs" />
+    <Compile Include="LoginStateTable_BLL.cs" />
+    <Compile Include="MailTable_BLL.cs" />
+    <Compile Include="NewProductTable_BLL.cs" />
+    <Compile Include="NewsTable_BLL.cs" />
+    <Compile Include="OrderStateTable_BLL.cs" />
+    <Compile Include="OrderTable_BLL.cs" />
+    <Compile Include="PostTable_BLL.cs" />
+    <Compile Include="ProductTable_BLL.cs" />
+    <Compile Include="ProductTryOurTable_BLL.cs" />
+    <Compile Include="ProductTypeTable_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolutionTable_BLL.cs" />
+    <Compile Include="TryOutTable_BLL.cs" />
+    <Compile Include="UserTable_BLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eChengKJ_DAL\eChengKJ_DAL.csproj">
       <Project>{de0f9c55-242f-4e93-9d8f-3019a664c951}</Project>
       <Name>eChengKJ_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eChengKJ_IDAL\eChengKJ_IDAL.csproj">
+      <Project>{bf6ad5a0-117c-4e1c-be73-a55d0d6fd5f9}</Project>
+      <Name>eChengKJ_IDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\eChengKJ_Models\eChengKJ_Models.csproj">
       <Project>{95a2443d-21c3-46f7-9e6b-3b7267be22e8}</Project>

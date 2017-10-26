@@ -19,6 +19,12 @@ namespace eChengKJ_IDAL
         List<Post_Table> GetPostTableAll();
 
         /// <summary>
+        /// 获取全部的职位表信息
+        /// </summary>
+        /// <returns></returns>
+        Post_Table GetPostTableByConn(string con);
+
+        /// <summary>
         /// 添加职位表信息
         /// </summary>
         /// <param name="obj">带入参数</param>

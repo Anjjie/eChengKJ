@@ -90,9 +90,9 @@ namespace eChengKJ_DAL
         {
             User_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from User_Table where HP_id=@HP_id",
+                "Select * from User_Table where U_id=@U_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@U_id",con)
                  });
             if (dr.Read())
             {

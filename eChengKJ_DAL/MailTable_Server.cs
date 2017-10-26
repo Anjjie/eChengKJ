@@ -75,9 +75,9 @@ namespace eChengKJ_DAL
         {
             Mail_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from Mail_Table where HP_id=@HP_id",
+                "Select * from Mail_Table where M_id=@M_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@M_id",con)
                  });
             if (dr.Read())
             {

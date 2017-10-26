@@ -13,7 +13,7 @@ namespace eChengKJ_DAL
     /// <summary>
     /// 数据访问:产品试用申请试用申请表
     /// </summary>
-    public class ProductTryOurTryOurTable_Server : IProductTryOurTryOurTable_Server
+    public class ProductTryOurTable_Server : IProductTryOurTable_Server
     {
         #region 获取SQL存储过程（固定）
         /// <summary>
@@ -46,14 +46,14 @@ namespace eChengKJ_DAL
         /// 获取全部的产品试用申请
         /// </summary>
         /// <returns></returns>
-        public List<ProductTryOurTryOur_Table> GetProductTryOurTryOurTableAll()
+        public List<ProductTryOur_Table> GetProductTryOurTableAll()
         {
-            List<ProductTryOurTryOur_Table> list = new List<ProductTryOurTryOur_Table>();
+            List<ProductTryOur_Table> list = new List<ProductTryOur_Table>();
             SqlDataReader dr = DBHerlper.ExecuteReader(GetSqlString("Select"),
                 CommandType.StoredProcedure);
             while (dr.Read())
             {
-                ProductTryOurTryOur_Table obj = new ProductTryOurTryOur_Table()
+                ProductTryOur_Table obj = new ProductTryOur_Table()
                 {
                     E_id = Convert.ToInt32(dr["E_id"]),
                     PTO_Activate = Convert.ToInt32(dr["PTO_Activate"]),
@@ -82,13 +82,13 @@ namespace eChengKJ_DAL
         {
             ProductTryOur_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from ProductTryOur_Table where HP_id=@HP_id",
+                "Select * from ProductTryOur_Table where PTO_id=@PTO_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@PTO_id",con)
                  });
             if (dr.Read())
             {
-                obj = new ProductTryOurTryOur_Table()
+                obj = new ProductTryOur_Table()
                 {
                     E_id = Convert.ToInt32(dr["E_id"]),
                     PTO_Activate = Convert.ToInt32(dr["PTO_Activate"]),
@@ -112,7 +112,7 @@ namespace eChengKJ_DAL
         /// </summary>
         /// <param name="obj">带入参数</param>
         /// <returns></returns>
-        public int Insert_ProductTryOurTryOurTableData(ProductTryOurTryOur_Table obj)
+        public int Insert_ProductTryOurTableData(ProductTryOur_Table obj)
         {
             return DBHerlper.ExecuteNonQuery(GetSqlString("Insert"),
                 CommandType.StoredProcedure,
@@ -136,7 +136,7 @@ namespace eChengKJ_DAL
         /// </summary>
         /// <param name="obj">带入参数</param>
         /// <returns></returns>
-        public int Update_ProductTryOurTryOurTableData(ProductTryOurTryOur_Table obj)
+        public int Update_ProductTryOurTableData(ProductTryOur_Table obj)
         {
             return DBHerlper.ExecuteNonQuery(GetSqlString("Update"),
                  CommandType.StoredProcedure,
@@ -161,7 +161,7 @@ namespace eChengKJ_DAL
         /// </summary>
         /// <param name="con">参数条件</param>
         /// <returns></returns>
-        public int Delete_ProductTryOurTryOurTableData(string con)
+        public int Delete_ProductTryOurTableData(string con)
         {
             return DBHerlper.ExecuteNonQuery(GetSqlString("Delete"),
                  CommandType.StoredProcedure,

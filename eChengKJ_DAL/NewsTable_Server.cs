@@ -77,9 +77,9 @@ namespace eChengKJ_DAL
         {
             News_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from News_Table where HP_id=@HP_id",
+                "Select * from News_Table where News_id=@News_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@News_id",con)
                  });
             if (dr.Read())
             {

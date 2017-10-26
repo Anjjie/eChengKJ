@@ -74,9 +74,9 @@ namespace eChengKJ_DAL
         {
             ProductType_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from ProductType_Table where HP_id=@HP_id",
+                "Select * from ProductType_Table where PT_id=@PT_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@PT_id",con)
                  });
             if (dr.Read())
             {

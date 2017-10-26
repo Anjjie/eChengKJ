@@ -80,9 +80,9 @@ namespace eChengKJ_DAL
         {
             IssueAnswer_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from IssueAnswer_Table where HP_id=@HP_id",
+                "Select * from IssueAnswer_Table where IA_id=@IA_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@IA_id",con)
                  });
             if (dr.Read())
             {

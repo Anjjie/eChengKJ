@@ -74,9 +74,9 @@ namespace eChengKJ_DAL
         {
             IDType_Table obj = null;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from IDType_Table where HP_id=@HP_id",
+                "Select * from IDType_Table where IDT_id=@IDT_id",
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@HP_id",con)
+                     new SqlParameter("@IDT_id",con)
                  });
             if (dr.Read())
             {
@@ -117,7 +117,7 @@ namespace eChengKJ_DAL
             return DBHerlper.ExecuteNonQuery(GetSqlString("Update"),
                 CommandType.StoredProcedure,
                 new SqlParameter[] {
-                    new SqlParameter("@HP_Name",obj.IDT_Name),
+                    new SqlParameter("@IDT_Name",obj.IDT_Name),
                     new SqlParameter("@IDT_id",obj.IDT_id)
                 });
         }
