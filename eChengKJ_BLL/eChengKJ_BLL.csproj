@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CompanyTable_BLL.cs" />
     <Compile Include="DepartmentTable_BLL.cs" />
+    <Compile Include="EmployeeTable_BLL.cs" />
     <Compile Include="EvaluateTable_BLL.cs" />
     <Compile Include="Factory_BLL.cs" />
     <Compile Include="FeedbackTable_BLL.cs" />

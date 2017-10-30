@@ -20,9 +20,17 @@ namespace eChengKJ_Models
         /// </summary>
         public int U_id { get; set; }
         /// <summary>
+        /// 获取用户属性对象
+        /// </summary>
+        public User_Table GetUser { get; set; }
+        /// <summary>
         /// 产品ID
         /// </summary>
         public int P_id { get; set; }
+        /// <summary>
+        /// 获取产品属性对象
+        /// </summary>
+        public Product_Table GetProduct { get; set; }
         /// <summary>
         /// 评价内容
         /// </summary>

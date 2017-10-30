@@ -464,7 +464,8 @@ GO
 	@M_id INT ,								--邮箱
 	@U_Company NVARCHAR(300) ,				--所在公司
 	@U_ComPanyAddress NVARCHAR(300) ,		--公司地址
-	@LS_id INT ,								--登录状态
+	@U_PhoneVerify NVARCHAR(5),				--手机验证码（动态）
+	@LS_id INT ,							--登录状态
 	@U_LoginAddress NVARCHAR(300) ,			--登录地址
 	@U_LoginDatetime DateTime,				--登录时间
 	@U_LastLoginAddress NVARCHAR(300) ,		--上次登录地址
@@ -473,7 +474,7 @@ GO
 	AS
 	Insert INTO  User_Table
 	VALUES(@U_UserName,@U_UserPwd,@U_Head,@U_Name,@U_Sex,@IDT_id,@U_IDS,@U_Phone,@M_id,@U_Company,
-	@U_ComPanyAddress,@LS_id,@U_LoginAddress,@U_LoginDatetime,@U_LastLoginAddress,@U_LastLoginDatetime,@U_CreateUserDate)
+	@U_ComPanyAddress,@U_PhoneVerify,@LS_id,@U_LoginAddress,@U_LoginDatetime,@U_LastLoginAddress,@U_LastLoginDatetime,@U_CreateUserDate)
 GO
 
 -------------------修改--------------------------
@@ -493,6 +494,7 @@ GO
 	@M_id INT ,								--邮箱
 	@U_Company NVARCHAR(300) ,				--所在公司
 	@U_ComPanyAddress NVARCHAR(300) ,		--公司地址
+	@U_PhoneVerify NVARCHAR(5),				--手机验证码（动态）
 	@LS_id INT ,							--登录状态
 	@U_LoginAddress NVARCHAR(300) ,			--登录地址
 	@U_LoginDatetime DateTime,				--登录时间
@@ -502,7 +504,8 @@ GO
 	AS
 	Update  User_Table set U_UserName=@U_UserName,U_UserPwd=@U_UserPwd,U_Head=@U_Head,U_Name=@U_Name,
 	U_Sex=@U_Sex,IDT_id=@IDT_id,U_IDS=@U_IDS,U_Phone=@U_Phone,M_id=@M_id,U_Company=@U_Company,
-	U_ComPanyAddress=@U_ComPanyAddress,LS_id=@LS_id,U_LoginAddress=@U_LoginAddress,
+	U_ComPanyAddress=@U_ComPanyAddress,U_PhoneVerify=@U_PhoneVerify,
+	LS_id=@LS_id,U_LoginAddress=@U_LoginAddress,
 	U_LoginDatetime=@U_LoginDatetime,U_LastLoginAddress=@U_LastLoginAddress,
 	U_LastLoginDatetime=@U_LastLoginDatetime,U_CreateUserDate=@U_CreateUserDate
 	 where U_id=@U_id

@@ -56,6 +56,7 @@ namespace eChengKJ_BLL
         public Post_Table GetPostTableByConn(string con)
         {
             return relevanceClass.GetPostTableByConn(con);
+
         }
         #endregion
 

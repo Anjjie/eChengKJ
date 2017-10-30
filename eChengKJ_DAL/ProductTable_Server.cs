@@ -68,6 +68,7 @@ namespace eChengKJ_DAL
                 };
                 list.Add(obj);
             }
+            dr.Close();
             return list;
         }
         #endregion
@@ -102,6 +103,7 @@ namespace eChengKJ_DAL
                     P_Price = Convert.ToDouble(dr["P_Price"])
                 };
             }
+            dr.Close();
             return obj;
         }
         #endregion

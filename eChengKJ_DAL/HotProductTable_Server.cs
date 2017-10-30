@@ -60,6 +60,7 @@ namespace eChengKJ_DAL
                 };
                 list.Add(obj);
             }
+            dr.Close();
             return list;
         }
         #endregion
@@ -86,6 +87,7 @@ namespace eChengKJ_DAL
                     HP_id = Convert.ToInt32(dr["HP_id"])
                 };
             }
+            dr.Close();
             return obj;
         }
         #endregion

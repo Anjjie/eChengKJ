@@ -15,6 +15,11 @@ namespace eChengKJ_BLL
     /// </summary>
     public class OrderTable_BLL
     {
+        EmployeeTable_BLL FK_Employee = new EmployeeTable_BLL();
+        OrderStateTable_BLL FK_OrderState = new OrderStateTable_BLL();
+        ProductTable_BLL FK_Product = new ProductTable_BLL();
+        UserTable_BLL FK_User = new UserTable_BLL();
+
         #region 获取动态类名
         /// <summary>
         /// 获取动态类名
@@ -43,7 +48,17 @@ namespace eChengKJ_BLL
         /// <returns></returns>
         public List<Order_Table> GetOrderTableAll()
         {
-            return relevanceClass.GetOrderTableAll();
+            List<Order_Table> list = relevanceClass.GetOrderTableAll();
+            List<Order_Table> listNew = new List<Order_Table>();
+            foreach (Order_Table obj in list)
+            {
+                obj.GetEmployee = FK_Employee.GetEmployeeTableByConn(obj.E_id + "");
+                obj.GetOrderState = FK_OrderState.GetOrderStateTableByConn(obj.OState_id + "");
+                obj.GetProduct = FK_Product.GetProductTableByConn(obj.P_id + "");
+                obj.GetUser = FK_User.GetUserTableByConn(obj.U_id + "","id");
+                listNew.Add(obj);
+            }
+            return listNew;
         }
         #endregion
 

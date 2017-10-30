@@ -29,7 +29,7 @@
                     OriginalId = Navigation_id;
                 }
             });
-            $("#Slider").hide();//设置位置(id:Slider在al)    
+            $("#Slider").hide();//设置位置(id:Slider在al)
             /*
             设置进入到Front_Div_Logo_Navigation_ul类所使用的导航时,
             显示子菜单，并改变导航颜色位置
@@ -144,6 +144,28 @@
                 $(".Pansonel_rightDiv_rightTop_btnMonthOrDays").not($(this)).css("background-color", "transparent");
             });
         }
+        
+       //============加载用户页面数据================//
+        function LoadPageUserData() {
+            var type="<%=notIsLogin%>";
+            if (type == "登录") {
+                $("#thisUserName").html("<%= this.GetUserInfo().U_UserName%>");
+            }else {
+                $("#thisUserName").html("登录");
+            }
+        }
+        //============页面登录链接页面================//
+        function LoginUrl() {
+            $loginUrl = $("#thisUserName");
+            $loginUrl.click(function () {
+                var contene = $loginUrl.html();
+                if (contene == "登录") {
+                    $loginUrl.eq(0).attr("href", "Front_Login.aspx");
+                } else {
+                    $loginUrl.eq(0).attr("href", "Front_PansonelInfo.aspx");
+                }
+            });
+        }
 
         $(function () {
             //设置左边导航栏默认图片及文字颜色
@@ -157,6 +179,8 @@
             leftSonDiv();
             btnConsumeMonthOrDay();
             btnShopMonthOrDay();
+            LoadPageUserData();
+            LoginUrl();
         });
     </script>
 </asp:Content>

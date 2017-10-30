@@ -20,6 +20,10 @@ namespace eChengKJ_Models
         /// </summary>
         public int P_id { get; set; }
         /// <summary>
+        /// 获取产品属性对象
+        /// </summary>
+        public Product_Table GetProduct { get; set; }
+        /// <summary>
         /// 标题
         /// </summary>
         public string S_tatle { get; set; }

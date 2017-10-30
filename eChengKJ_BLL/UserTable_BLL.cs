@@ -15,6 +15,10 @@ namespace eChengKJ_BLL
     /// </summary>
     public class UserTable_BLL
     {
+        IDTypeTable_BLL FK_IDType = new IDTypeTable_BLL();
+        LoginStateTable_BLL FK_LoginState = new LoginStateTable_BLL();
+        MailTable_BLL FK_Mail = new MailTable_BLL();
+
         #region 获取动态类名
         /// <summary>
         /// 获取动态类名
@@ -43,19 +47,29 @@ namespace eChengKJ_BLL
         /// <returns></returns>
         public List<User_Table> GetUserTableAll()
         {
-            return relevanceClass.GetUserTableAll();
+            List<User_Table> list = relevanceClass.GetUserTableAll();
+            List<User_Table> listNew = new List<User_Table>();
+            foreach (User_Table obj in list)
+            {
+                obj.GetIDTtpe = FK_IDType.GetIDTypeTableByConn(obj.IDT_id + "");
+                obj.GetLoginState = FK_LoginState.GetLoginStateTableByConn(obj.LS_id + "");
+                obj.GetMail = FK_Mail.GetMailTableByConn(obj.M_id + "");
+                listNew.Add(obj);
+            }
+            return listNew;
         }
         #endregion
 
         #region 根据ID查询用户信息
         /// <summary>
-        /// 根据ID查询用户信息
+        /// 根据条件查询用户信息
         /// </summary>
         /// <param name="con"></param>
-        /// <returns></returns>
-        public User_Table GetUserTableByConn(string con)
+        /// <param name="type">[id，name]选其一(必填)</param>
+        public User_Table GetUserTableByConn(string con,string type)
         {
-            return relevanceClass.GetUserTableByConn(con);
+            return relevanceClass.GetUserTableByConn(con, type);
+
         }
         #endregion
 

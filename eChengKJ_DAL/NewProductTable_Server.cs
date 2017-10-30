@@ -60,6 +60,7 @@ namespace eChengKJ_DAL
                 };
                 list.Add(obj);
             }
+            dr.Close();
             return list;
         }
         #endregion
@@ -86,6 +87,7 @@ namespace eChengKJ_DAL
                     NP_Name = dr["NP_Name"].ToString()
                 };
             }
+            dr.Close();
             return obj;
         }
         #endregion

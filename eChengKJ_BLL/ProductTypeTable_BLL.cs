@@ -32,8 +32,8 @@ namespace eChengKJ_BLL
         /// <summary>
         /// 实例化接口
         /// </summary>
-        IProductTable_Server relevanceClass
-            = (IProductTable_Server)Factory_BLL.GetDALServer(GetClassName());
+        IProductTypeTable_Server relevanceClass
+            = (IProductTypeTable_Server)Factory_BLL.GetDALServer(GetClassName());
         #endregion
 
         #region 获取全部的产品类型信息
@@ -41,9 +41,9 @@ namespace eChengKJ_BLL
         /// 获取全部的产品类型信息
         /// </summary>
         /// <returns></returns>
-        public List<Product_Table> GetProductTableAll()
+        public List<ProductType_Table> GetProductTypeTableAll()
         {
-            return relevanceClass.GetProductTableAll();
+            return relevanceClass.GetProductTypeTableAll();
         }
         #endregion
 
@@ -53,9 +53,9 @@ namespace eChengKJ_BLL
         /// </summary>
         /// <param name="con"></param>
         /// <returns></returns>
-        public Product_Table GetProductTableByConn(string con)
+        public ProductType_Table GetProductTypeTableByConn(string con)
         {
-            return relevanceClass.GetProductTableByConn(con);
+            return relevanceClass.GetProductTypeTableByConn(con);
         }
         #endregion
 
@@ -65,9 +65,9 @@ namespace eChengKJ_BLL
         /// </summary>
         /// <param name="obj">带入参数</param>
         /// <returns></returns>
-        public int Insert_ProductTableData(Product_Table obj)
+        public int Insert_ProductTypeTableData(ProductType_Table obj)
         {
-            return relevanceClass.Insert_ProductTableData(obj);
+            return relevanceClass.Insert_ProductTypeTableData(obj);
         }
         #endregion
 
@@ -77,9 +77,9 @@ namespace eChengKJ_BLL
         /// </summary>
         /// <param name="obj">带入参数</param>
         /// <returns></returns>
-        public int Update_ProductTableData(Product_Table obj)
+        public int Update_ProductTypeTableData(ProductType_Table obj)
         {
-            return relevanceClass.Update_ProductTableData(obj);
+            return relevanceClass.Update_ProductTypeTableData(obj);
         }
         #endregion
 
@@ -89,9 +89,9 @@ namespace eChengKJ_BLL
         /// </summary>
         /// <param name="con">参数条件</param>
         /// <returns></returns>
-        public int Delete_ProductTableData(string con)
+        public int Delete_ProductTypeTableData(string con)
         {
-            return relevanceClass.Delete_ProductTableData(con);
+            return relevanceClass.Delete_ProductTypeTableData(con);
         }
         #endregion
     }

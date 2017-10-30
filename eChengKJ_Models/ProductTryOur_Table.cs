@@ -24,6 +24,10 @@ namespace eChengKJ_Models
         /// </summary>
         public int U_id { get; set; }
         /// <summary>
+        /// 获取用户属性对象
+        /// </summary>
+        public User_Table GetUser { get; set; }
+        /// <summary>
         /// 申请日期
         /// </summary>
         public DateTime PTO_ApplyFor { get; set; }
@@ -32,9 +36,17 @@ namespace eChengKJ_Models
         /// </summary>
         public int TO_id { get; set; }
         /// <summary>
+        /// 获取审核状态属性对象
+        /// </summary>
+        public TryOut_Table GetTryOut { get; set; }
+        /// <summary>
         /// 处理人（操作员）
         /// </summary>
         public int E_id { get; set; }
+        /// <summary>
+        /// 获取员工属性对象
+        /// </summary>
+        public Employee_Table GetEmployee{ get; set; }
         /// <summary>
         /// 操作时间
         /// </summary>

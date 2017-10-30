@@ -20,6 +20,7 @@
    
     <asp:ContentPlaceHolder ID="conPlaceHolder_JS" runat="server">
         <%-- 放置引用JS脚本文件或者编写脚本代码地方（已默认引入JQ压缩文件） --%>
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -39,7 +40,7 @@
                                <a href="#"></a>
                            </ul>
                            <ul class="Front_Div_Logo_ul">
-                               <a href="Front_Login.aspx">登录</a>
+                               <a href="Front_Login.aspx" id="thisUserName">登录</a>
                            </ul>
                            <ul class="Front_Div_Logo_ul">
                                <a href="#"></a>

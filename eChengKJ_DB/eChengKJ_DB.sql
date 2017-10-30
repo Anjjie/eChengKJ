@@ -142,6 +142,7 @@ GO
 	M_id INT ,								--邮箱
 	U_Company NVARCHAR(300) ,				--所在公司
 	U_ComPanyAddress NVARCHAR(300) ,		--公司地址
+	U_PhoneVerify NVARCHAR(5),				--手机验证码（动态）
 	LS_id INT ,								--登录状态
 	U_LoginAddress NVARCHAR(300) ,			--登录地址
 	U_LoginDatetime DateTime,				--登录时间

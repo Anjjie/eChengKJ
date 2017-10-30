@@ -21,9 +21,9 @@ namespace eChengKJ_BLL
             //创建接收器
             Object obj = null;
             //创建一个程序集用以执行加载DAL
-            Assembly ass = Assembly.Load("DAL");
+            Assembly ass = Assembly.Load("eChengKJ_DAL");
             //Object 获取对象
-            obj = ass.CreateInstance("DAL."+ className+ "_Server");
+            obj = ass.CreateInstance("eChengKJ_DAL." + className+ "Table_Server");
             return obj;
         } 
         #endregion

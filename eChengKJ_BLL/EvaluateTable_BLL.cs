@@ -15,6 +15,9 @@ namespace eChengKJ_BLL
     /// </summary>
     public class EvaluateTable_BLL
     {
+        ProductTable_BLL FK_Product = new ProductTable_BLL();
+        UserTable_BLL FK_User = new UserTable_BLL();
+
         #region 获取动态类名
         /// <summary>
         /// 获取动态类名
@@ -43,7 +46,16 @@ namespace eChengKJ_BLL
         /// <returns></returns>
         public List<Evaluate_Table> GetEvaluateTableAll()
         {
-            return relevanceClass.GetEvaluateTableAll();
+            List<Evaluate_Table> list = relevanceClass.GetEvaluateTableAll();
+            List < Evaluate_Table > listNew = new List<Evaluate_Table>();
+            foreach (Evaluate_Table obj in list)
+            {
+                //获取外键信息
+                obj.GetProduct = FK_Product.GetProductTableByConn(obj.P_id+"");
+                obj.GetUser = FK_User.GetUserTableByConn(obj.U_id+"","id");
+                listNew.Add(obj);
+            }
+            return listNew;
         }
         #endregion
 

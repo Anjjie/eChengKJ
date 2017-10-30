@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using eChengKJ_Models;
+using eChengKJ_BLL;
+using System.Web.Services;
 
 namespace eChengKJ_Web.Web_Front
 {
@@ -11,7 +14,8 @@ namespace eChengKJ_Web.Web_Front
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
+
     }
 }

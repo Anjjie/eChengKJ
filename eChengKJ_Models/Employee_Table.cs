@@ -36,6 +36,10 @@ namespace eChengKJ_Models
         /// </summary>
         public int IDT_id { get; set; }
         /// <summary>
+        /// 获取证件属性对象
+        /// </summary>
+        public IDType_Table GetIDType { get; set; }
+        /// <summary>
         /// 证件号
         /// </summary>
         public string E_IdS { get; set; }
@@ -60,9 +64,17 @@ namespace eChengKJ_Models
         /// </summary>
         public int Dep_id { get; set; }
         /// <summary>
+        /// 部门属性对象
+        /// </summary>
+        public Department_Table GetDepartment { get;set;}
+        /// <summary>
         /// 职位
         /// </summary>
         public int Post_id { get; set; }
+        /// <summary>
+        /// 职位属性对象
+        /// </summary>
+        public Post_Table GetPost { get; set; }
         /// <summary>
         /// 薪资
         /// </summary>
@@ -71,6 +83,10 @@ namespace eChengKJ_Models
         /// 登录状态
         /// </summary>
         public int LS_ID { get; set; }
+        /// <summary>
+        /// 登陆状态属性对象
+        /// </summary>
+        public LoginState_Table GetLoginState { get; set; }
         /// <summary>
         /// 登录地址
         /// </summary>

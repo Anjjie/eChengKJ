@@ -15,6 +15,8 @@ namespace eChengKJ_BLL
     /// </summary>
     public class IssueAnswerTable_BLL
     {
+        UserTable_BLL FK_User = new UserTable_BLL();
+
         #region 获取动态类名
         /// <summary>
         /// 获取动态类名
@@ -43,7 +45,14 @@ namespace eChengKJ_BLL
         /// <returns></returns>
         public List<IssueAnswer_Table> GetIssueAnswerTableAll()
         {
-            return relevanceClass.GetIssueAnswerTableAll();
+            List<IssueAnswer_Table> list = relevanceClass.GetIssueAnswerTableAll();
+            List<IssueAnswer_Table> listNew = new List<IssueAnswer_Table>();
+            foreach (IssueAnswer_Table obj in list)
+            {
+                obj.GetUser = FK_User.GetUserTableByConn(obj.U_UserName + "","Name");
+                listNew.Add(obj);
+            }
+            return listNew;
         }
         #endregion
 

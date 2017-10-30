@@ -55,69 +55,88 @@ namespace eChengKJ_DAL
             {
                 User_Table obj = new User_Table()
                 {
-                    IDT_id = Convert.ToInt32(dr["TO_id"]),
-                    U_ComPanyAddress = dr["TO_Name"].ToString(),
-                    U_Company = dr["TO_Name"].ToString(),
-                    M_id = Convert.ToInt32(dr["TO_Name"]),
-                    U_CreateUserDate = Convert.ToDateTime(dr["TO_Name"]),
-                    U_Head = (byte[])dr["TO_Name"],
-                    U_id = Convert.ToInt32(dr["TO_Name"]),
-                    U_IDS = dr["TO_Name"].ToString(),
-                    U_LastLoginAddress = dr["TO_Name"].ToString(),
-                    U_LastLoginDatetime = Convert.ToDateTime(dr["TO_Name"]),
-                    U_LoginAddress = dr["TO_Name"].ToString(),
-                    U_LoginDatetime = Convert.ToDateTime(dr["TO_Name"]),
-                    U_Sex = dr["TO_Name"].ToString(),
-                    U_Name = dr["TO_Name"].ToString(),
-                    U_Phone = dr["TO_Name"].ToString(),
-                    U_UserName = dr["TO_Name"].ToString(),
-                    U_UserPwd = dr["TO_Name"].ToString(),
-                    LS_id = Convert.ToInt32(dr["TO_Name"])
+                    IDT_id = Convert.ToInt32(dr["IDT_id"]),
+                    U_ComPanyAddress = dr["U_ComPanyAddress"].ToString(),
+                    U_Company = dr["U_Company"].ToString(),
+                    M_id = Convert.ToInt32(dr["M_id"]),
+                    U_CreateUserDate = Convert.ToDateTime(dr["U_CreateUserDate"]),
+                    U_Head = (byte[])dr["U_Head"],
+                    U_id = Convert.ToInt32(dr["U_id"]),
+                    U_IDS = dr["U_IDS"].ToString(),
+                    U_PhoneVerify = dr["U_PhoneVerify"].ToString(),
+                    U_LastLoginAddress = dr["U_LastLoginAddress"].ToString(),
+                    U_LastLoginDatetime = Convert.ToDateTime(dr["U_LastLoginDatetime"]),
+                    U_LoginAddress = dr["U_LoginAddress"].ToString(),
+                    U_LoginDatetime = Convert.ToDateTime(dr["U_LoginDatetime"]),
+                    U_Sex = dr["U_Sex"].ToString(),
+                    U_Name = dr["U_Name"].ToString(),
+                    U_Phone = dr["U_Phone"].ToString(),
+                    U_UserName = dr["U_UserName"].ToString(),
+                    U_UserPwd = dr["U_UserPwd"].ToString(),
+                    LS_id = Convert.ToInt32(dr["LS_id"])
                 };
                 list.Add(obj);
             }
+            dr.Close();
             return list;
         }
         #endregion
 
         #region 根据ID查询试用户信息
         /// <summary>
-        /// 根据ID查询用户信息
+        /// 根据条件查询用户信息
         /// </summary>
         /// <param name="con"></param>
+        /// <param name="type">[id，name]选其一(必填)</param>
         /// <returns></returns>
-        public User_Table GetUserTableByConn(string con)
+        public User_Table GetUserTableByConn(string con,string type)
         {
+            string sql = "";
             User_Table obj = null;
-            SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from User_Table where U_id=@U_id",
-                 CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@U_id",con)
-                 });
+            SqlDataReader dr = null;
+            switch (type)
+            {
+                case "id":
+                    sql = "Select * from User_Table where U_id=@U_id";
+                    dr = DBHerlper.ExecuteReader(
+                       sql, CommandType.Text, new SqlParameter[] {
+                             new SqlParameter("@U_id",con)
+                        });
+                    break;
+                case "name":
+                    sql = "Select * from User_Table where U_UserName=@U_UserName";
+                    dr = DBHerlper.ExecuteReader(
+                      sql, CommandType.Text, new SqlParameter[] {
+                             new SqlParameter("@U_UserName",con)
+                       });
+                    break;
+            }
             if (dr.Read())
             {
                 obj = new User_Table()
                 {
-                    IDT_id = Convert.ToInt32(dr["TO_id"]),
-                    U_ComPanyAddress = dr["TO_Name"].ToString(),
-                    U_Company = dr["TO_Name"].ToString(),
-                    M_id = Convert.ToInt32(dr["TO_Name"]),
-                    U_CreateUserDate = Convert.ToDateTime(dr["TO_Name"]),
-                    U_Head = (byte[])dr["TO_Name"],
-                    U_id = Convert.ToInt32(dr["TO_Name"]),
-                    U_IDS = dr["TO_Name"].ToString(),
-                    U_LastLoginAddress = dr["TO_Name"].ToString(),
-                    U_LastLoginDatetime = Convert.ToDateTime(dr["TO_Name"]),
-                    U_LoginAddress = dr["TO_Name"].ToString(),
-                    U_LoginDatetime = Convert.ToDateTime(dr["TO_Name"]),
-                    U_Sex = dr["TO_Name"].ToString(),
-                    U_Name = dr["TO_Name"].ToString(),
-                    U_Phone = dr["TO_Name"].ToString(),
-                    U_UserName = dr["TO_Name"].ToString(),
-                    U_UserPwd = dr["TO_Name"].ToString(),
-                    LS_id = Convert.ToInt32(dr["TO_Name"])
+                    U_PhoneVerify = dr["U_PhoneVerify"].ToString(),
+                    IDT_id = Convert.ToInt32(dr["IDT_id"]),
+                    U_ComPanyAddress = dr["U_ComPanyAddress"].ToString(),
+                    U_Company = dr["U_Company"].ToString(),
+                    M_id = Convert.ToInt32(dr["M_id"]),
+                    U_CreateUserDate = Convert.ToDateTime(dr["U_CreateUserDate"]),
+                    U_Head = (byte[])dr["U_Head"],
+                    U_id = Convert.ToInt32(dr["U_id"]),
+                    U_IDS = dr["U_IDS"].ToString(),
+                    U_LastLoginAddress = dr["U_LastLoginAddress"].ToString(),
+                    U_LastLoginDatetime = Convert.ToDateTime(dr["U_LastLoginDatetime"]),
+                    U_LoginAddress = dr["U_LoginAddress"].ToString(),
+                    U_LoginDatetime = Convert.ToDateTime(dr["U_LoginDatetime"]),
+                    U_Sex = dr["U_Sex"].ToString(),
+                    U_Name = dr["U_Name"].ToString(),
+                    U_Phone = dr["U_Phone"].ToString(),
+                    U_UserName = dr["U_UserName"].ToString(),
+                    U_UserPwd = dr["U_UserPwd"].ToString(),
+                    LS_id = Convert.ToInt32(dr["LS_id"])
                 };
             }
+            dr.Close();
             return obj;
         }
         #endregion
@@ -133,6 +152,7 @@ namespace eChengKJ_DAL
             return DBHerlper.ExecuteNonQuery(GetSqlString("Insert"),
                 CommandType.StoredProcedure,
                 new SqlParameter[] {
+                    new SqlParameter("@U_PhoneVerify",obj.U_PhoneVerify),
                     new SqlParameter("@IDT_id",obj.IDT_id),
                     new SqlParameter("@U_ComPanyAddress",obj.U_ComPanyAddress),
                     new SqlParameter("@U_Company",obj.U_Company),
@@ -165,7 +185,8 @@ namespace eChengKJ_DAL
             return DBHerlper.ExecuteNonQuery(GetSqlString("Update"),
                  CommandType.StoredProcedure,
                  new SqlParameter[] {
-                     new SqlParameter("@IDT_id",obj.IDT_id),
+                    new SqlParameter("@U_PhoneVerify",obj.U_PhoneVerify),
+                    new SqlParameter("@IDT_id",obj.IDT_id),
                     new SqlParameter("@U_ComPanyAddress",obj.U_ComPanyAddress),
                     new SqlParameter("@U_Company",obj.U_Company),
                     new SqlParameter("@M_id",obj.M_id),

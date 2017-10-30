@@ -15,6 +15,8 @@ namespace eChengKJ_BLL
     /// </summary>
     public class JoinUsTable_BLL
     {
+        JoinUsPostTable_BLL FK_JoinUsPost = new JoinUsPostTable_BLL();
+
         #region 获取动态类名
         /// <summary>
         /// 获取动态类名
@@ -43,7 +45,14 @@ namespace eChengKJ_BLL
         /// <returns></returns>
         public List<JoinUs_Table> GetJoinUsTableAll()
         {
-            return relevanceClass.GetJoinUsTableAll();
+            List<JoinUs_Table> list = relevanceClass.GetJoinUsTableAll();
+            List<JoinUs_Table> listNew = new List<JoinUs_Table>();
+            foreach (JoinUs_Table obj in list)
+            {
+                obj.GetJoinUsPost = FK_JoinUsPost.GetJoinUsPostTableByConn(obj.JUP_id+"" );
+                listNew.Add(obj);
+            }
+            return listNew;
         }
         #endregion
 

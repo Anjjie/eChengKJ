@@ -15,6 +15,11 @@ namespace eChengKJ_BLL
     /// </summary>
     public class ProductTable_BLL
     {
+        EmployeeTable_BLL FK_Employee = new EmployeeTable_BLL();
+        HotProductTable_BLL FK_HotProduct = new HotProductTable_BLL();
+        NewProductTable_BLL FK_NewProduct = new NewProductTable_BLL();
+        ProductTypeTable_BLL FK_ProductType = new ProductTypeTable_BLL();
+
         #region 获取动态类名
         /// <summary>
         /// 获取动态类名
@@ -43,7 +48,17 @@ namespace eChengKJ_BLL
         /// <returns></returns>
         public List<Product_Table> GetProductTableAll()
         {
-            return relevanceClass.GetProductTableAll();
+            List<Product_Table> list = relevanceClass.GetProductTableAll();
+            List<Product_Table> listNew = new List<Product_Table>();
+            foreach (Product_Table obj in list)
+            {
+                obj.GetEmployee = FK_Employee.GetEmployeeTableByConn(obj.E_id + "");
+                obj.GetHotProduct = FK_HotProduct.GetHotProductTableByConn(obj.HP_id + "");
+                obj.GetNewProduct = FK_NewProduct.GetNewProductTableByConn(obj.NP_id + "");
+                obj.GetProductType = FK_ProductType.GetProductTypeTableByConn(obj.PT_id + "");
+                listNew.Add(obj);
+            }
+            return listNew;
         }
         #endregion
 

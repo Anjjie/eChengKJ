@@ -87,26 +87,20 @@ namespace eChengKJ_DAL
         /// <summary>
         /// 判断获取当前状态事件
         /// </summary>
-        public static void AllConnState()
+        public static void AllConnState(SqlConnection sqlConn)
         {
-            switch (conn.State)
+            switch (sqlConn.State)
             {
                 case ConnectionState.Closed:
-                    conn.Open();
+                    sqlConn.Open();
                     break;
                 case ConnectionState.Open:
-                    conn.Close();
-                    conn.Open();
-                    break;
-                case ConnectionState.Connecting:
-                    break;
-                case ConnectionState.Executing:
-                    break;
-                case ConnectionState.Fetching:
+                    sqlConn.Close();
+                    sqlConn.Open();
                     break;
                 case ConnectionState.Broken:
-                    conn.Close();
-                    conn.Open();
+                    sqlConn.Close();
+                    sqlConn.Open();
                     break;
             }
         } 
@@ -121,8 +115,8 @@ namespace eChengKJ_DAL
             if (conn == null || conn.ConnectionString == "")
             {
                 conn = new SqlConnection(GetConnStr());
-                AllConnState();
             }
+            AllConnState(conn);
             return conn;
         } 
         #endregion
@@ -161,6 +155,7 @@ namespace eChengKJ_DAL
             com.CommandType = type;
             com.Parameters.AddRange(paras);
             int n = com.ExecuteNonQuery();
+            com.Clone();
             return n;
         } 
         #endregion

@@ -77,6 +77,7 @@ namespace eChengKJ_DAL
                 };
                 list.Add(obj);
             }
+            dr.Close();
             return list;
         }
         #endregion
@@ -120,7 +121,10 @@ namespace eChengKJ_DAL
                     LS_ID = Convert.ToInt32(dr["LS_ID"]),
                     Post_id = Convert.ToInt32(dr["Post_id"])
                 };
+                
             }
+            dr.Close();
+            DBHerlper.CloseConn();
             return obj;
         }
         #endregion

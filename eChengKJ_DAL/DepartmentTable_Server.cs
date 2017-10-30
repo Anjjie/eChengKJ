@@ -58,6 +58,7 @@ namespace eChengKJ_DAL
                 obj.Dep_Name = dr["Dep_Name"].ToString();
                 list.Add(obj);
             }
+            dr.Close();
             return list;
         }
         #endregion
@@ -81,6 +82,7 @@ namespace eChengKJ_DAL
                 obj.Dep_id = Convert.ToInt32(dr["Dep_id"].ToString());
                 obj.Dep_Name = dr["Dep_Name"].ToString();
             }
+            dr.Close();
             return obj;
         }
         #endregion

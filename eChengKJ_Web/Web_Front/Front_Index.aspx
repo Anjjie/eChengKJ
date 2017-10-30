@@ -8,6 +8,28 @@
      <%-- 放置引用JS脚本文件或者编写脚本代码地方（已默认引入JQ压缩文件） --%>
         <script type="text/javascript" src="js/Front_Index.js"></script>
     <script type="text/javascript">
+       //============加载用户页面数据================//
+        function LoadPageUserData() {
+            var type = "<%=notIsLogin%>";
+            if (type == "登录") {
+                    $("#thisUserName").html("<%= this.GetUserInfo().U_UserName%>");
+                }else {
+                    $("#thisUserName").html("登录");
+                }
+            }
+        //============页面登录链接页面================//
+        function LoginUrl() {
+            $loginUrl = $("#thisUserName");
+            $loginUrl.click(function () {
+                var contene = $loginUrl.html();
+                if (contene == "登录") {
+                    $loginUrl.eq(0).attr("href", "Front_Login.aspx");
+                } else {
+                    $loginUrl.eq(0).attr("href", "Front_PansonelInfo.aspx");
+                }
+            });
+        }
+
         $(function () {
             $("#topNavigation").css("position", "fixed");
             var thisID;
@@ -23,6 +45,8 @@
             $(".Front_Div_All_middle_Advertising_Card_LucencyCard").click(function () {
                 $(this).fadeOut(1000);
             });
+            LoadPageUserData();
+            LoginUrl();
         });
     </script>
 </asp:Content>
@@ -125,7 +149,7 @@
 		                 <div class="Front_Card_button">查看详细</div>
 		             </a>
 		             <p><a id="cardDiv1" name="aDiv" href="javascript:;">更多</a></p>
-                 </div>s
+                 </div>
                   <%-- 卡片效果2:PC/APP说明 --%>
                   <div class="Front_Div_All_middle_Advertising_Card">
                      <div id="cardDiv2_Tier" class="Front_Div_All_middle_Advertising_Card_LucencyCard">

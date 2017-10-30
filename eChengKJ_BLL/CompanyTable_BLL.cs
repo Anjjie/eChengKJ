@@ -43,7 +43,8 @@ namespace eChengKJ_BLL
         /// <returns></returns>
         public List<Company_Table> GetCompanyTableAll()
         {
-           return relevanceClass.GetCompanyTableAll();
+            List < Company_Table > list= relevanceClass.GetCompanyTableAll();
+            return list;
         }
         #endregion
 

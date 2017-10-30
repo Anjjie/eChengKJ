@@ -67,6 +67,7 @@ namespace eChengKJ_DAL
                 };
                 list.Add(obj);
             }
+            dr.Close();
             return list;
         }
         #endregion
@@ -100,6 +101,7 @@ namespace eChengKJ_DAL
                     U_id = (int)dr["U_id"]
                 };
             }
+            dr.Close();
             return obj;
         }
         #endregion

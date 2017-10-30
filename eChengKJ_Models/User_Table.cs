@@ -40,6 +40,10 @@ namespace eChengKJ_Models
         /// </summary>
         public int IDT_id { get; set; }
         /// <summary>
+        /// 获取证件类型属性对象
+        /// </summary>
+        public IDType_Table GetIDTtpe { get; set; }
+        /// <summary>
         /// 证件号码
         /// </summary>
         public string U_IDS { get; set; }
@@ -52,6 +56,10 @@ namespace eChengKJ_Models
         /// </summary>
         public int M_id { get; set; }
         /// <summary>
+        /// 获取邮箱属性对象
+        /// </summary>
+        public Mail_Table GetMail { get; set; }
+        /// <summary>
         /// 所在公司
         /// </summary>
         public string U_Company { get; set; }
@@ -60,9 +68,17 @@ namespace eChengKJ_Models
         /// </summary>
         public string U_ComPanyAddress { get; set; }
         /// <summary>
+        /// 手机验证码
+        /// </summary>
+        public string U_PhoneVerify { get; set; }
+        /// <summary>
         /// 登录状态
         /// </summary>
         public int LS_id { get; set; }
+        /// <summary>
+        /// 获取登录状态属性对象
+        /// </summary>
+        public LoginState_Table GetLoginState { get; set; }
         /// <summary>
         /// 登录地址
         /// </summary>

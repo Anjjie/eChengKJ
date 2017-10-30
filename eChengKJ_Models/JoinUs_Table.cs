@@ -36,6 +36,10 @@ namespace eChengKJ_Models
         /// </summary>
         public int JUP_id { get; set; }
         /// <summary>
+        /// 获取招聘岗位属性对象
+        /// </summary>
+        public JoinUsPost_Table GetJoinUsPost { get; set; }
+        /// <summary>
         /// 提交时间
         /// </summary>
         public DateTime JU_SubmitDateTime { get; set; } 			

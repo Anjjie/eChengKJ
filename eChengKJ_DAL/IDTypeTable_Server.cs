@@ -60,6 +60,8 @@ namespace eChengKJ_DAL
                 };
                 list.Add(obj);
             }
+            dr.Close();
+            DBHerlper.CloseConn();
             return list;
         }
         #endregion
@@ -86,6 +88,8 @@ namespace eChengKJ_DAL
                     IDT_id = Convert.ToInt32(dr["IDT_id"])
                 };
             }
+            dr.Close();
+            DBHerlper.CloseConn();
             return obj;
         }
         #endregion

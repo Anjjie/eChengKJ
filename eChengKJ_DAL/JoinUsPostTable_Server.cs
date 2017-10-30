@@ -61,6 +61,7 @@ namespace eChengKJ_DAL
                 };
                 list.Add(obj);
             }
+            dr.Close();
             return list;
         }
         #endregion
@@ -88,6 +89,7 @@ namespace eChengKJ_DAL
                     JUP_Number = (int)dr["JUP_Number"]
                 };
             }
+            dr.Close();
             return obj;
         }
         #endregion

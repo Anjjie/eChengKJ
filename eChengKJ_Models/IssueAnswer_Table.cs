@@ -20,6 +20,10 @@ namespace eChengKJ_Models
         /// </summary>
         public string U_UserName { get; set; }
         /// <summary>
+        /// 获取用户属性对象
+        /// </summary>
+        public User_Table GetUser { get; set; }
+        /// <summary>
         /// 问题1
         /// </summary>
         public string IA_Issue1 { get; set; }

@@ -63,6 +63,7 @@ namespace eChengKJ_DAL
                 };
                 list.Add(obj);
             }
+            dr.Close();
             return list;
         }
         #endregion
@@ -92,6 +93,7 @@ namespace eChengKJ_DAL
                     JU_Sex = dr["JU_Sex"].ToString()
                 };
             }
+            dr.Close();
             return obj;
         }
         #endregion

@@ -15,6 +15,9 @@ namespace eChengKJ_BLL
     /// </summary>
     public class FeedbackTable_BLL
     {
+        ProductTable_BLL FK_Product = new ProductTable_BLL();
+        UserTable_BLL FK_User = new UserTable_BLL();
+
         #region 获取动态类名
         /// <summary>
         /// 获取动态类名
@@ -43,7 +46,15 @@ namespace eChengKJ_BLL
         /// <returns></returns>
         public List<Feedback_Table> GetFeedbackTableAll()
         {
-            return relevanceClass.GetFeedbackTableAll();
+            List<Feedback_Table> list = relevanceClass.GetFeedbackTableAll();
+            List<Feedback_Table> listNew = new List<Feedback_Table>();
+            foreach (Feedback_Table obj in list)
+            {
+                obj.GetProduct = FK_Product.GetProductTableByConn(obj.P_id + "");
+                obj.GetUser = FK_User.GetUserTableByConn(obj.U_id + "","id");
+                listNew.Add(obj);
+            }
+            return listNew;
         }
         #endregion
 

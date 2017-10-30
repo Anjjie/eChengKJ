@@ -54,6 +54,7 @@ namespace eChengKJ_DAL
             while (dr.Read())
             {
                 Company_Table obj = new Company_Table();
+                obj.Com_Scope = dr["Com_Scope"].ToString();
                 obj.Com_Course  = dr["Com_Course"].ToString();
                 obj.Com_Honer  = dr["Com_Course"].ToString();
                 obj.Com_id = Convert.ToInt32(dr["Com_Course"]);
@@ -64,6 +65,7 @@ namespace eChengKJ_DAL
                 obj.Com_Scale = dr["Com_Course"].ToString();
                 list.Add(obj);
             }
+            dr.Close();
             return list;
         }
         #endregion
@@ -84,6 +86,7 @@ namespace eChengKJ_DAL
                  });
             if (dr.Read())
             {
+                obj.Com_Scope = dr["Com_Scope"].ToString();
                 obj.Com_Course = dr["Com_Course"].ToString();
                 obj.Com_Honer = dr["Com_Course"].ToString();
                 obj.Com_id = Convert.ToInt32(dr["Com_Course"]);
@@ -93,6 +96,7 @@ namespace eChengKJ_DAL
                 obj.Com_Purpose = dr["Com_Course"].ToString();
                 obj.Com_Scale = dr["Com_Course"].ToString();
             }
+            dr.Close();
             return obj;
         } 
         #endregion
@@ -107,6 +111,7 @@ namespace eChengKJ_DAL
         {
             return DBHerlper.ExecuteNonQuery(GetSqlString("Insert"),
                 CommandType.StoredProcedure,new SqlParameter[] {
+                    new SqlParameter("@Com_Scope", obj.Com_Scope),
                     new SqlParameter("@Com_Course",obj.Com_Course),
                     new SqlParameter("@Com_Honer",obj.Com_Honer),
                     new SqlParameter("@Com_Introduce",obj.Com_Introduce),
@@ -128,6 +133,7 @@ namespace eChengKJ_DAL
         {
             return DBHerlper.ExecuteNonQuery(GetSqlString("Update"),
                CommandType.StoredProcedure, new SqlParameter[] {
+                    new SqlParameter("@Com_Scope", obj.Com_Scope),
                     new SqlParameter("@Com_Course",obj.Com_Course),
                     new SqlParameter("@Com_Honer",obj.Com_Honer),
                     new SqlParameter("@Com_id",obj.Com_id),

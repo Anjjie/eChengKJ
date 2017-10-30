@@ -34,7 +34,7 @@ namespace eChengKJ_Models
         /// <summary>
         /// 销售范围
         /// </summary>
-        string Com_Scope { get; set; }
+        public string Com_Scope { get; set; }
         /// <summary>
         /// 规模
         /// </summary>

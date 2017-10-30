@@ -23,7 +23,7 @@ namespace eChengKJ_IDAL
         /// </summary>
         /// <param name="con">参数条件</param>
         /// <returns></returns>
-        User_Table GetUserTableByConn(string con);
+        User_Table GetUserTableByConn(string con, string type);
 
         /// <summary>
         /// 添加用户信息
