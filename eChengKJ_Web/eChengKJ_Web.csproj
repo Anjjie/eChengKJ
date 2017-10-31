@@ -168,7 +168,6 @@
     <Compile Include="Web_Front\Front_Product.aspx.designer.cs">
       <DependentUpon>Front_Product.aspx</DependentUpon>
     </Compile>
-    <Compile Include="我的类.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Web_Backstage\css\" />
