@@ -150,6 +150,15 @@
             var type="<%=notIsLogin%>";
             if (type == "登录") {
                 $("#thisUserName").html("<%= this.GetUserInfo().U_UserName%>");
+                $("#myName").html("<%= this.GetUserInfo().U_Name%>");
+                $("#myLoginId").html("<%= this.GetUserInfo().U_UserName%>");
+                var conpany = "<%= this.GetUserInfo().U_Company%>";
+                if (conpany=="") {
+                    $("#myConpany").html("你还没有填写公司");
+                } else {
+                    $("#myConpany").html("<%= this.GetUserInfo().U_Company%>");
+                }
+               
             }else {
                 $("#thisUserName").html("登录");
             }
