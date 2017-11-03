@@ -61,10 +61,11 @@
                    <!-- 导航：产品模块 -->
                    <div id="Navigation_div1" class="Front_Div_Navigation_div">
                        <ul style="float:left;line-height:40px;font-size:14pt;">
+                           <a href="#"><li class="Front_Div_Navigation_div_li">电子商务</li></a>
                            <a href="#"><li class="Front_Div_Navigation_div_li">财务管理</li></a>
-                           <a href="#"><li class="Front_Div_Navigation_div_li">生产服务</li></a>
-                           <a href="#"><li class="Front_Div_Navigation_div_li">采购清单</li></a>
                            <a href="#"><li class="Front_Div_Navigation_div_li">移动办公</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">人力资源管理</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">资源管理</li></a>
                        </ul>
                    </div>
                    <!-- 导航：提供服务模块 -->
@@ -94,7 +95,7 @@
                        </ul>
                    </div>
                    <!-- 导航：关于我们模块 -->
-                   <div id="Navigation_div5" class="Front_Div_Navigation_div">
+                   <div id="Navigation_div6" class="Front_Div_Navigation_div">
                        <ul style="float:left;line-height:40px;font-size:14pt;">
                            <a href="#"><li class="Front_Div_Navigation_div_li">关于我们</li></a>
                            <a href="#"><li class="Front_Div_Navigation_div_li">成长历程</li></a>
@@ -112,7 +113,7 @@
             </asp:ContentPlaceHolder>
         </div>
         <!-- 尾 -->
-        <div class="Front_Div_All_buttom">
+        <div id="masterBottom" class="Front_Div_All_buttom">
             <!-- 提供服务 -->
             <div class="Front_Div_All_buttom_Service">
                 <div class="Front_Div_All_buttom_Service_divTitle">ERP，我们诚心服务！</div>

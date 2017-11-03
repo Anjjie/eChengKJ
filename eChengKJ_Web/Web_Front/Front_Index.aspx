@@ -210,12 +210,12 @@
 <%-- 导航定位区 --%>
 <asp:Content ID="conNavigation" runat="server" contentplaceholderid="conPlaceHolder_Navigation">
      <div class="Front_Div_Logo_Navigation" id="Front_Div_Logo_NavigationId">
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="5">关于我们</ul></a>
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="6">联系我们</ul></a>
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="4">新闻中心</ul></a>
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="3">解决方案</ul></a>
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="2">提供服务</ul></a>
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="1">产品</ul></a>
+          <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="6">关于我们</ul></a>
+          <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="5">联系我们</ul></a>
+          <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="4">新闻中心</ul></a>
+          <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="3">解决方案</ul></a>
+          <a href="Front_eChengKJService.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="2">提供服务</ul></a>
+          <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="1">产品</ul></a>
           <a href="Front_Index.aspx"><ul class="Front_Div_Logo_Navigation_ul"  id="7">首页</ul></a>
      </div>
 </asp:Content>

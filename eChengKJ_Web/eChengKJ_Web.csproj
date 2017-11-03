@@ -69,10 +69,13 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Web_Front\css\Front_2.css" />
+    <Content Include="Web_Front\css\Front_eChengKJService.css" />
     <Content Include="Web_Front\css\Front_Index.css" />
     <Content Include="Web_Front\css\Front_Login.css" />
     <Content Include="Web_Front\css\Front_Master.css" />
     <Content Include="Web_Front\css\Front_PansonelInfo.css" />
+    <Content Include="Web_Front\css\Front_ProductCss.css" />
+    <Content Include="Web_Front\Front_eChengKJService.aspx" />
     <Content Include="Web_Front\Front_Index.aspx" />
     <Content Include="Web_Front\Front_Login.aspx" />
     <Content Include="Web_Front\Front_PansonelInfo.aspx" />
@@ -85,6 +88,12 @@
     <Content Include="Web_Front\image\buttomServer.jpg" />
     <Content Include="Web_Front\image\buttomServers.jpg" />
     <Content Include="Web_Front\image\Dianhua.png" />
+    <Content Include="Web_Front\image\DomainCrad\e-commerce.png" />
+    <Content Include="Web_Front\image\DomainCrad\financialManager.png" />
+    <Content Include="Web_Front\image\DomainCrad\HRManager.png" />
+    <Content Include="Web_Front\image\DomainCrad\mobileOfficing.png" />
+    <Content Include="Web_Front\image\DomainCrad\resourceManager.png" />
+    <Content Include="Web_Front\image\Exhibition.jpg" />
     <Content Include="Web_Front\image\File.png" />
     <Content Include="Web_Front\image\Gongju.png" />
     <Content Include="Web_Front\image\Gouwuche.png" />
@@ -93,6 +102,19 @@
     <Content Include="Web_Front\image\Logo_ico.ico" />
     <Content Include="Web_Front\image\Logo_ICO.png" />
     <Content Include="Web_Front\image\ProcessPurchases.png" />
+    <Content Include="Web_Front\image\ProductCard\eFu.png" />
+    <Content Include="Web_Front\image\ProductCard\eGou.png" />
+    <Content Include="Web_Front\image\ProductCard\ThisZiYuan.png" />
+    <Content Include="Web_Front\image\ProductFunctionImage\B2B2C.png" />
+    <Content Include="Web_Front\image\ProductFunctionImage\B2COrB2B\both.png" />
+    <Content Include="Web_Front\image\ProductFunctionImage\B2COrB2B\one.png" />
+    <Content Include="Web_Front\image\ProductFunctionImage\back.png" />
+    <Content Include="Web_Front\image\ProductFunctionImage\e-commerce.png" />
+    <Content Include="Web_Front\image\Pro_ad\Img1_1.jpg" />
+    <Content Include="Web_Front\image\Pro_ad\Img1_2.jpg" />
+    <Content Include="Web_Front\image\Pro_ad\Img1_3.jpg" />
+    <Content Include="Web_Front\image\Pro_ad\Img1_4.jpg" />
+    <Content Include="Web_Front\image\Pro_ad\Pro_ad4 - 副本.jpg" />
     <Content Include="Web_Front\image\Shouji.png" />
     <Content Include="Web_Front\image\Sousuo.png" />
     <Content Include="Web_Front\image\Tongzhi.png" />
@@ -139,6 +161,13 @@
     </Compile>
     <Compile Include="Web_Front\eChengKJ_FrontSite.Master.designer.cs">
       <DependentUpon>eChengKJ_FrontSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_eChengKJService.aspx.cs">
+      <DependentUpon>Front_eChengKJService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_eChengKJService.aspx.designer.cs">
+      <DependentUpon>Front_eChengKJService.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web_Front\Front_Index.aspx.cs">
       <DependentUpon>Front_Index.aspx</DependentUpon>
