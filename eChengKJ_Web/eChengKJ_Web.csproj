@@ -73,8 +73,12 @@
     <Content Include="Web_Front\css\Front_Index.css" />
     <Content Include="Web_Front\css\Front_Login.css" />
     <Content Include="Web_Front\css\Front_Master.css" />
+    <Content Include="Web_Front\css\Front_News.css" />
     <Content Include="Web_Front\css\Front_PansonelInfo.css" />
     <Content Include="Web_Front\css\Front_ProductCss.css" />
+    <Content Include="Web_Front\Front_ContactUs.aspx" />
+    <Content Include="Web_Front\Front_News.aspx" />
+    <Content Include="Web_Front\Front_Solution.aspx" />
     <Content Include="Web_Front\Front_eChengKJService.aspx" />
     <Content Include="Web_Front\Front_Index.aspx" />
     <Content Include="Web_Front\Front_Login.aspx" />
@@ -88,15 +92,20 @@
     <Content Include="Web_Front\image\buttomServer.jpg" />
     <Content Include="Web_Front\image\buttomServers.jpg" />
     <Content Include="Web_Front\image\Dianhua.png" />
+    <Content Include="Web_Front\image\dingdan1.png" />
+    <Content Include="Web_Front\image\dingdan1_bai.png" />
     <Content Include="Web_Front\image\DomainCrad\e-commerce.png" />
     <Content Include="Web_Front\image\DomainCrad\financialManager.png" />
     <Content Include="Web_Front\image\DomainCrad\HRManager.png" />
     <Content Include="Web_Front\image\DomainCrad\mobileOfficing.png" />
     <Content Include="Web_Front\image\DomainCrad\resourceManager.png" />
     <Content Include="Web_Front\image\Exhibition.jpg" />
+    <Content Include="Web_Front\image\Exhibition.png" />
     <Content Include="Web_Front\image\File.png" />
     <Content Include="Web_Front\image\Gongju.png" />
+    <Content Include="Web_Front\image\Gongju_bai.png" />
     <Content Include="Web_Front\image\Gouwuche.png" />
+    <Content Include="Web_Front\image\Gouwuche_bai.png" />
     <Content Include="Web_Front\image\login_ad.jpg" />
     <Content Include="Web_Front\image\Logo.png" />
     <Content Include="Web_Front\image\Logo_ico.ico" />
@@ -115,12 +124,22 @@
     <Content Include="Web_Front\image\Pro_ad\Img1_3.jpg" />
     <Content Include="Web_Front\image\Pro_ad\Img1_4.jpg" />
     <Content Include="Web_Front\image\Pro_ad\Pro_ad4 - 副本.jpg" />
+    <Content Include="Web_Front\image\Shouchang.png" />
+    <Content Include="Web_Front\image\Shouchang_bai.png" />
     <Content Include="Web_Front\image\Shouji.png" />
+    <Content Include="Web_Front\image\Solution.jpg" />
     <Content Include="Web_Front\image\Sousuo.png" />
     <Content Include="Web_Front\image\Tongzhi.png" />
+    <Content Include="Web_Front\image\Tongzhi_bai.png" />
     <Content Include="Web_Front\image\WuShou.png" />
+    <Content Include="Web_Front\image\WuShou_bai.png" />
+    <Content Include="Web_Front\image\Xiaofei.png" />
     <Content Include="Web_Front\image\Yes.png" />
+    <Content Include="Web_Front\image\Yiwancheng.png" />
     <Content Include="Web_Front\image\Youxiang.png" />
+    <Content Include="Web_Front\image\Youxiang_bai.png" />
+    <Content Include="Web_Front\image\zhanghu1.png" />
+    <Content Include="Web_Front\image\zhanghu1_bai.png" />
     <Content Include="Web_Front\image\十.png" />
     <Content Include="Web_Front\js\Check_NotIsLogin.js" />
     <Content Include="Web_Front\js\Front_Index.js" />
@@ -161,6 +180,27 @@
     </Compile>
     <Compile Include="Web_Front\eChengKJ_FrontSite.Master.designer.cs">
       <DependentUpon>eChengKJ_FrontSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_ContactUs.aspx.cs">
+      <DependentUpon>Front_ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_ContactUs.aspx.designer.cs">
+      <DependentUpon>Front_ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_News.aspx.cs">
+      <DependentUpon>Front_News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_News.aspx.designer.cs">
+      <DependentUpon>Front_News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Solution.aspx.cs">
+      <DependentUpon>Front_Solution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Solution.aspx.designer.cs">
+      <DependentUpon>Front_Solution.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web_Front\Front_eChengKJService.aspx.cs">
       <DependentUpon>Front_eChengKJService.aspx</DependentUpon>
