@@ -167,7 +167,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="conPlaceHolder_Navigation" runat="server">
     <div class="Front_Div_Logo_Navigation" id="Front_Div_Logo_NavigationId">
           <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="6">关于我们</ul></a>
-          <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="5">联系我们</ul></a>
+          <a href="Front_ContactUs.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="5">联系我们</ul></a>
           <a href="Front_News.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="4">新闻中心</ul></a>
           <a href="Front_Solution.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="3">解决方案</ul></a>
           <a href="Front_eChengKJService.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="2">提供服务</ul></a>
