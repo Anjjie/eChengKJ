@@ -50,10 +50,10 @@ namespace eChengKJ_Web.Web_Front.ashx
             #region Demo
             //string serverIp = "api.ucpaas.com";
             //string serverPort = "443";
-            //string account = "72dd1dd7ba93c2814170ed91b5186d82";     //用户sid
-            //string token = "45dff82891eceb7b9c9b0d3af29850e6";         //用户sid对应的token
-            //string appId = "f56b29bf4cd7421799d9f2ba4f7b2879";      //对应的应用id，非测试应用需上线使用
-            //string templatedId = "178108";          //短信模板id，需通过审核
+            //string account = "";     //用户sid
+            //string token = "";         //用户sid对应的token
+            //string appId = "";      //对应的应用id，非测试应用需上线使用
+            //string templatedId = "";          //短信模板id，需通过审核
             //UCSRestRequest api = new UCSRestRequest();
             //api.init(serverIp, serverPort);
             //api.setAccount(account, token);

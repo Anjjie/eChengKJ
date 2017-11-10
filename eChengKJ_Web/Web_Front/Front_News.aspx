@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Web_Front/eChengKJ_FrontSite.Master" AutoEventWireup="true" CodeBehind="Front_News.aspx.cs" Inherits="eChengKJ_Web.Web_Front.Front_News" %>
 <%-- CSS样式 --%>
 <asp:Content ID="Content1" ContentPlaceHolderID="conPlaceHolder_Css" runat="server">
-    <link href="css/Front_2.css" rel="stylesheet" />
+    <link href="css/Front_News.css" rel="stylesheet" />
 </asp:Content>
 <%-- JavaScript脚本（已引用jQuery文件） --%>
 <asp:Content ID="Content2" ContentPlaceHolderID="conPlaceHolder_JS" runat="server">
@@ -124,7 +124,7 @@
 <%-- 顶部导航 --%>
 <asp:Content ID="Content3" ContentPlaceHolderID="conPlaceHolder_Navigation" runat="server">
     <div class="Front_Div_Logo_Navigation" id="Front_Div_Logo_NavigationId">
-          <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="6">关于我们</ul></a>
+          <a href="Front_AboutUs.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="6">关于</ul></a>
           <a href="Front_ContactUs.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="5">联系我们</ul></a>
           <a href="Front_News.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="4">新闻中心</ul></a>
           <a href="Front_Solution.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="3">解决方案</ul></a>

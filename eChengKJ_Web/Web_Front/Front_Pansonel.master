@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Web_Front/eChengKJ_FrontSite.Master" AutoEventWireup="true" CodeBehind="Front_Pansonel.master.cs" Inherits="eChengKJ_Web.Web_Front.Front_Pansonel" %>
+<%-- CSS样式文件及样式区 --%>
+<asp:Content ID="Content1" ContentPlaceHolderID="conPlaceHolder_Css" runat="server">
+    <asp:ContentPlaceHolder ID="pansonelContent_CSS"  runat="server">
+             
+    </asp:ContentPlaceHolder>
+    <link href="css/1.css" rel="stylesheet" />
+    <%--<link href="css/Front_PansonelInfo.css" rel="stylesheet" />--%>
+</asp:Content>
+<%-- Javascript脚本文件及脚本代码区（已默认引入jQuery文件，无需重复引用） --%>
+<asp:Content ID="Content2" ContentPlaceHolderID="conPlaceHolder_JS" runat="server">
+    <script type="text/javascript">
+        //=======================顶部导航=============================//
+        var OriginalId = "";//顶部导航原ID
+        var ParentID = "";//顶部导航父ID
+        var NavigationMouseout = function () {
+            thisFront_Navigation_ul.css("color", "#982626");
+        }
+        //顶部导航效果
+        function NavigationTopCss() {
+            //设置显示导航下的子菜单
+            $(".Front_Div_Logo_Navigation_ul").mousemove(function () {
+                var Navigation_id = "#Navigation_div" + $(this).eq(0).attr("id");
+                if (OriginalId != "" || ParentID != "") {
+                    $(OriginalId).css("display", "none");
+                    $(ParentID).css("color", "#000000");
+                }
+                if ($(Navigation_id + ":hidden") || ParentID == "") {
+                    $(Navigation_id).css("display", "block");
+                    $("#" + $(this).eq(0).attr("id")).css("color", "#982626");
+                    ParentID = "#" + $(this).eq(0).attr("id");
+                    OriginalId = Navigation_id;
+                }
+            });
+            $("#Slider").hide();//设置位置(id:Slider在al)
+            /*
+            设置进入到Front_Div_Logo_Navigation_ul类所使用的导航时,
+            显示子菜单，并改变导航颜色位置
+            */
+            $(".Front_Div_Logo_Navigation_ul").mousemove(function () {
+                $("#Slider").show();
+                $("#Slider").width($(this).innerWidth());
+                $("#Slider").offset($(this).offset());
+                thisFront_Navigation_ul.css("color", "#000000");
+                //$(this).addClass();
+            });
+            /*
+                设置离开Front_Div_Logo_Navigation_ul类所使用的导航时,
+                隐藏子菜单，并恢复默认导航颜色位置
+            */
+            $(".Front_Div_Logo_Navigation_ul").mouseout(function () {
+                NavigationMouseout();
+            });
+            /*
+                设置进入到Front_Div_Navigation_div类所使用的子菜单导航时,
+                保持父导航颜色位置和显示当前的子导航
+           */
+            $(".Front_Div_Navigation_div").mousemove(function () {
+                $("#Slider").show();
+                if ($(OriginalId + ":hidden") || ParentID == "") {
+                    $(OriginalId).css("display", "block");
+                    $(ParentID).css("color", "#982626");
+                    $("#Slider").width($(ParentID).innerWidth());
+                    $("#Slider").offset($(ParentID).offset());
+                }
+                thisFront_Navigation_ul.css("color", "#000000");
+            });
+            /*
+            设置进入到Front_Div_Navigation_div类所使用的子菜单导航时,
+            隐藏子菜单，并恢复默认导航颜色位置
+         */
+            $(".Front_Div_Navigation_div").mouseout(function () {
+                NavigationMouseout();
+            });
+        }
+        //============左侧子导航(设置DIV旋转与下拉框)================//
+        function leftSonDiv() {
+            $("#sonShowDiv0").hide();
+            $("#sonShowDiv1").hide();
+            $("#sonShowDiv2").hide();
+            $(".Pansonel_leftDiv_sonDiv_li").click(function () {
+                var trueOrFalse = $(this).find("div").css("transform");
+                var showDivId = "#son" + $(this).eq(0).attr("id");
+                if (trueOrFalse == "none" || trueOrFalse == "matrix(1, 0, 0, 1, 0, 0)") {
+                    $(showDivId).slideDown(1000);
+                    $(this).find("div").css({
+                        "transform": "rotate(90deg)",
+                        "transition": "transform 1s"
+                    });
+                }
+                else{
+                    $(showDivId).slideUp(1000);
+                    $(this).find("div").css({
+                        "transform": "rotate(0deg)",
+                        "transition": "transform 1s"
+                    });
+                }
+            });
+        }
+
+        $(function () {
+            //设置左边导航栏默认图片及文字颜色
+            $(defaultColorId).css("color", "#ffffff");
+            defaultPath = $(defaultId).eq(0).attr("src");
+            defaultPath = defaultPath.substring(0, defaultPath.indexOf(".")) + "_bai"
+                + defaultPath.substring(defaultPath.indexOf("."), defaultPath.length);
+            $(defaultId).eq(0).attr("src", defaultPath);
+            NavigationTopCss();
+            leftInfoButton();
+            leftSonDiv();
+            btnConsumeMonthOrDay();
+            btnShopMonthOrDay();
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="pansonelContent_JS"  runat="server">
+             
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<%-- 导航定位区 --%>
+<asp:Content ID="Content3" ContentPlaceHolderID="conPlaceHolder_Navigation" runat="server">
+    <div class="Front_Div_Logo_Navigation" id="Front_Div_Logo_NavigationId">
+          <a href="Front_AboutUs.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="6">关于</ul></a>
+          <a href="Front_ContactUs.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="5">联系我们</ul></a>
+          <a href="Front_News.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="4">新闻中心</ul></a>
+          <a href="Front_Solution.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="3">解决方案</ul></a>
+          <a href="Front_eChengKJService.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="2">提供服务</ul></a>
+          <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="1">产品</ul></a>
+          <a href="Front_Index.aspx"><ul class="Front_Div_Logo_Navigation_ul"  id="7">首页</ul></a>
+     </div>
+</asp:Content>
+ <%-- 中间内容区 --%>
+<asp:Content ID="Content4" ContentPlaceHolderID="conPlaceHolder_Content" runat="server">
+    <div style="width:100%;height:700px;border:0px solid #000000;margin-top:10px;background-color:#f0f1f2;">
+        <%-- 左导航区 --%>
+        <div class="Pansonel_leftDiv">
+            <asp:ContentPlaceHolder ID="pansonelContent_Left"  runat="server">
+             
+            </asp:ContentPlaceHolder>
+        </div>
+         <%-- 右内容区 --%>
+        <div class="Pansonel_rightDiv">
+            <asp:ContentPlaceHolder ID="pansonelContent_Right"  runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>

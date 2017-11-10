@@ -65,11 +65,10 @@ namespace eChengKJ_BLL
         /// 根据条件查询用户信息
         /// </summary>
         /// <param name="con"></param>
-        /// <param name="type">[id，name]选其一(必填)</param>
+        /// <param name="type">[id，name，phone]选其一(必填)</param>
         public User_Table GetUserTableByConn(string con,string type)
         {
             return relevanceClass.GetUserTableByConn(con, type);
-
         }
         #endregion
 

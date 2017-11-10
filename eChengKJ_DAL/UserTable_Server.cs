@@ -60,7 +60,7 @@ namespace eChengKJ_DAL
                     U_Company = dr["U_Company"].ToString(),
                     M_id = Convert.ToInt32(dr["M_id"]),
                     U_CreateUserDate = Convert.ToDateTime(dr["U_CreateUserDate"]),
-                    U_Head = (byte[])dr["U_Head"],
+                    U_Head = dr["U_Head"].ToString(),
                     U_id = Convert.ToInt32(dr["U_id"]),
                     U_IDS = dr["U_IDS"].ToString(),
                     U_PhoneVerify = dr["U_PhoneVerify"].ToString(),
@@ -87,7 +87,7 @@ namespace eChengKJ_DAL
         /// 根据条件查询用户信息
         /// </summary>
         /// <param name="con"></param>
-        /// <param name="type">[id，name]选其一(必填)</param>
+        /// <param name="type">[id，name，phone]选其一(必填)</param>
         /// <returns></returns>
         public User_Table GetUserTableByConn(string con,string type)
         {
@@ -110,6 +110,13 @@ namespace eChengKJ_DAL
                              new SqlParameter("@U_UserName",con)
                        });
                     break;
+                case "phone":
+                    sql = "Select * from User_Table where U_Phone=@U_Phone";
+                    dr = DBHerlper.ExecuteReader(
+                      sql, CommandType.Text, new SqlParameter[] {
+                             new SqlParameter("@U_Phone",con)
+                       });
+                    break;
             }
             if (dr.Read())
             {
@@ -121,7 +128,7 @@ namespace eChengKJ_DAL
                     U_Company = dr["U_Company"].ToString(),
                     M_id = Convert.ToInt32(dr["M_id"]),
                     U_CreateUserDate = Convert.ToDateTime(dr["U_CreateUserDate"]),
-                    U_Head = (byte[])dr["U_Head"],
+                    U_Head = dr["U_Head"].ToString(),
                     U_id = Convert.ToInt32(dr["U_id"]),
                     U_IDS = dr["U_IDS"].ToString(),
                     U_LastLoginAddress = dr["U_LastLoginAddress"].ToString(),

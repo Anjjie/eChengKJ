@@ -123,7 +123,7 @@
 <%-- 顶部导航 --%>
 <asp:Content ID="Content3" ContentPlaceHolderID="conPlaceHolder_Navigation" runat="server">
     <div class="Front_Div_Logo_Navigation" id="Front_Div_Logo_NavigationId">
-          <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="6">关于我们</ul></a>
+          <a href="Front_AboutUs.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="6">关于</ul></a>
           <a href="Front_ContactUs.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="5">联系我们</ul></a>
           <a href="Front_News.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="4">新闻中心</ul></a>
           <a href="Front_Solution.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="3">解决方案</ul></a>
@@ -138,7 +138,7 @@
         <h2 style="color:dodgerblue;">快速留言</h2>
         <p>&nbsp;公司名称：<input type="text" id="txtComName" placeholder="*必填" style="width:300px;" /></p>
         <p>&nbsp;公司地址：<input type="text" id="txtComAddress" placeholder="*选填" style="width:300px;" /></p>
-        <p>&nbsp;联系电话：<input type="text" id="txtHo" placeholder="*必填，联系方式。方便联系" style="width:300px;" /></p>
+        <p>&nbsp;联系电话：<input type="text" id="txtPhone" placeholder="*必填，联系方式。方便联系" style="width:300px;" /></p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;联系人：<input type="text" id="txtName" placeholder="*必填，如：e先生或e女士" style="width:300px;" /></p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;E-Mail：<input type="text" id="txtMail" placeholder="*选填，E-Mail" style="width:300px;" /></p>
         <div style="border:0px solid dodgerblue;">
