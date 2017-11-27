@@ -23,7 +23,7 @@ namespace eChengKJ_Web.Web_Front.ashx
                 U_UserName = context.Request["username"],
                 U_UserPwd = context.Request["userpwd"],
                 LS_id =0,
-                U_CreateUserDate=DateTime.Now,
+                U_CreateUserDate=DateTime.Now+"",
                 IDT_id=0,
                 M_id = 0,
                 U_Company = "",

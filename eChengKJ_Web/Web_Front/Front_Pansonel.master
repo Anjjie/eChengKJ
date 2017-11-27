@@ -4,8 +4,7 @@
     <asp:ContentPlaceHolder ID="pansonelContent_CSS"  runat="server">
              
     </asp:ContentPlaceHolder>
-    <link href="css/1.css" rel="stylesheet" />
-    <%--<link href="css/Front_PansonelInfo.css" rel="stylesheet" />--%>
+    <link href="css/Front_PansonelInfo.css" rel="stylesheet" />
 </asp:Content>
 <%-- Javascript脚本文件及脚本代码区（已默认引入jQuery文件，无需重复引用） --%>
 <asp:Content ID="Content2" ContentPlaceHolderID="conPlaceHolder_JS" runat="server">

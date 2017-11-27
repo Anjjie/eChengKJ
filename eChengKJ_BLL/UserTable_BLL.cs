@@ -68,7 +68,11 @@ namespace eChengKJ_BLL
         /// <param name="type">[id，name，phone]选其一(必填)</param>
         public User_Table GetUserTableByConn(string con,string type)
         {
-            return relevanceClass.GetUserTableByConn(con, type);
+            User_Table obj = relevanceClass.GetUserTableByConn(con, type);
+                obj.GetIDTtpe = FK_IDType.GetIDTypeTableByConn(obj.IDT_id + "");
+                obj.GetLoginState = FK_LoginState.GetLoginStateTableByConn(obj.LS_id + "");
+                obj.GetMail = FK_Mail.GetMailTableByConn(obj.M_id + "");
+            return obj;
         }
         #endregion
 

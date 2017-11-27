@@ -96,7 +96,6 @@
             function DeleteVerify() {
                 var deleteTime;
                 var setDelectTime = 180;
-
                 //获取验证码
                 var phone = { "phone": $txtPhone.val() };
                 $.getJSON("ashx/PhoneVerify.ashx", phone,

@@ -93,10 +93,6 @@ border-style:solid;
 border-width:6px;
 border-color:transparent transparent transparent #808080;
 }
-/*.Pansonel_leftDiv_sonDiv_li:hover{
-    transform:rotate(360deg);
-    transition:transform 2s;
-}*/
 .Pansonel_rightDiv {
     width:74%;
     height:100%;

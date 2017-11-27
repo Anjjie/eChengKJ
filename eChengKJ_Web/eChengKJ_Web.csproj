@@ -70,7 +70,9 @@
     <Content Include="Web_Front\css\1.css" />
     <Content Include="Web_Front\css\Front_AboutUs.css" />
     <Content Include="Web_Front\css\Front_Pansonel_Collect.css" />
+    <Content Include="Web_Front\css\Front_Pansonel_MyInfo.css" />
     <Content Include="Web_Front\css\Front_Pansonel_Shop.css" />
+    <Content Include="Web_Front\css\Front_Prnsonel_SetHead.css" />
     <Content Include="Web_Front\css\Front_UCFind.css" />
     <Content Include="Web_Front\Front_AboutUs.aspx" />
     <Content Include="packages.config" />
@@ -85,9 +87,11 @@
     <Content Include="Web_Front\Front_ContactUs.aspx" />
     <Content Include="Web_Front\Front_News.aspx" />
     <Content Include="Web_Front\Front_Pansonel_Collect.aspx" />
+    <Content Include="Web_Front\Front_Pansonel_MyInfo.aspx" />
     <Content Include="Web_Front\Front_Pansonel_Notice.aspx" />
     <Content Include="Web_Front\Front_Pansonel_Order.aspx" />
     <Content Include="Web_Front\Front_Pansonel_Set.aspx" />
+    <Content Include="Web_Front\Front_Pansonel_SetHead.aspx" />
     <Content Include="Web_Front\Front_Pansonel_Shop.aspx" />
     <Content Include="Web_Front\Front_Pansonel_SystemInfo.aspx" />
     <Content Include="Web_Front\Front_Solution.aspx" />
@@ -247,6 +251,13 @@
     <Compile Include="Web_Front\Front_Pansonel_Collect.aspx.designer.cs">
       <DependentUpon>Front_Pansonel_Collect.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_MyInfo.aspx.cs">
+      <DependentUpon>Front_Pansonel_MyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_MyInfo.aspx.designer.cs">
+      <DependentUpon>Front_Pansonel_MyInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Web_Front\Front_Pansonel_Notice.aspx.cs">
       <DependentUpon>Front_Pansonel_Notice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,6 +278,13 @@
     </Compile>
     <Compile Include="Web_Front\Front_Pansonel_Set.aspx.designer.cs">
       <DependentUpon>Front_Pansonel_Set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_SetHead.aspx.cs">
+      <DependentUpon>Front_Pansonel_SetHead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_SetHead.aspx.designer.cs">
+      <DependentUpon>Front_Pansonel_SetHead.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web_Front\Front_Pansonel_Shop.aspx.cs">
       <DependentUpon>Front_Pansonel_Shop.aspx</DependentUpon>
@@ -336,6 +354,7 @@
     <Folder Include="Web_Backstage\css\" />
     <Folder Include="Web_Backstage\image\" />
     <Folder Include="Web_Backstage\js\" />
+    <Folder Include="Web_Front\image\Head\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eChengKJ_BLL\eChengKJ_BLL.csproj">
@@ -360,9 +379,10 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>24214</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:24214/</IISUrl>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>
+          </DevelopmentServerVPath>
+          <IISUrl>http://localhost:24915/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -303,8 +303,9 @@ namespace eChengKJ_Web.Web_Front.ashx
                         U_Sex = context.Request["Sex"],
                         U_UserName = context.Request["UserName"],
                         U_UserPwd = context.Request["UserPwd"],
-                        U_LoginDatetime = Convert.ToDateTime(context.Request["LoginDatetime"]),
-                        U_LastLoginAddress = context.Request["LoginAddress"]
+                        U_LastLoginDatetime = context.Request["LoginDatetime"],
+                        U_LastLoginAddress = context.Request["LoginAddress"],
+                        U_CreateUserDate= context.Request["CreateUserDate"]
                     };
                     obj = user;
                     break;
@@ -461,9 +462,9 @@ namespace eChengKJ_Web.Web_Front.ashx
                     break;
                 case "user":
                     User_Table user = obj as User_Table;
-                    user.U_CreateUserDate = DateTime.Now;
-                    user.U_LoginDatetime = Convert.ToDateTime("1-1-1 00:00:00.000"); 
-                    user.U_LastLoginDatetime= Convert.ToDateTime("1-1-1 00:00:00.000");
+                    user.U_CreateUserDate = DateTime.Now+"";
+                    user.U_LoginDatetime = "1-1-1 00:00:00.000"; 
+                    user.U_LastLoginDatetime= "1-1-1 00:00:00.000";
                     user.U_LoginAddress = "";
                     user.U_LastLoginAddress = "";
                     n = userBLL.Insert_UserTableData(user);
@@ -584,7 +585,8 @@ namespace eChengKJ_Web.Web_Front.ashx
                     break;
                 case "user":
                     User_Table user = obj as User_Table;
-                    user.U_LoginDatetime = DateTime.Now;
+                    user.U_LoginDatetime = DateTime.Now+"";
+                    user.U_LoginAddress = "";
                     n = userBLL.Update_UserTableData(user);
                     break;
                 default:

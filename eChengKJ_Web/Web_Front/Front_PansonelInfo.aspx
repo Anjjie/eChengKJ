@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Web_Front/eChengKJ_FrontSite.Master" AutoEventWireup="true" CodeBehind="Front_PansonelInfo.aspx.cs" Inherits="eChengKJ_Web.Web_Front.Front_PansonelInfo" %>
 <%-- CSS样式文件及样式区 --%>
 <asp:Content ID="conCss" ContentPlaceHolderID="conPlaceHolder_Css" runat="server">
-    <link href="css/1.css" rel="stylesheet" />
-    <%--<link href="css/Front_PansonelInfo.css" rel="stylesheet" />--%>
+    <link href="css/Front_PansonelInfo.css" rel="stylesheet" />
 </asp:Content>
 <%-- Javascript脚本文件及脚本代码区（已默认引入jQuery文件，无需重复引用） --%>
 <asp:Content ID="conJavaScript" ContentPlaceHolderID="conPlaceHolder_JS" runat="server">
@@ -213,6 +212,17 @@
             });
         }
 
+        //==============子目录下的单击事件==========//
+        function ClickSubNav() {
+            $(".Pansonel_leftDiv_sonDiv_li_div").click(function () {
+                switch ($(this).html()) {
+                    case "个人资料":
+                        window.location.href = "Front_Pansonel_MyInfo.aspx";
+                        break;
+                }
+            });
+        }
+
         $(function () {
             //设置左边导航栏默认图片及文字颜色
             $("#img0").css("color", "#ffffff");
@@ -227,6 +237,7 @@
             btnShopMonthOrDay();
             LoadPageUserData();
             LoginUrl();
+            ClickSubNav();
         });
     </script>
 </asp:Content>
