@@ -100,6 +100,9 @@
             var $btnSave = $("#btnSave");
             var $btnCancel = $("#btnCancel");
             var $selFileImage = $("#conPlaceHolder_Content_pansonelContent_Right_selFileImage");
+            var $btnUp = $("#conPlaceHolder_Content_pansonelContent_Right_btnUp");
+            var $loginUrl = $("#thisUserName");
+
             $setHead.on("click", function () {
                 $divSetHeadCloth.css({
                     "height": $("body").height() + "px",
@@ -127,15 +130,16 @@
                 switch (str) {
                     case "jpg":
                         $btnFileImage.attr("title", "已选择图片：" + path);
-                       
+                        $btnUp.click();
                         $("#setImage200").attr({
-                            "src": path
+                            "src": "../image/Head/" + $loginUrl.html()
                         });
                         break;
                     case "png":
                         $btnFileImage.attr("title", "已选择图片：" + path);
+                        $btnUp.click();
                         $("#setImage200").attr({
-                            "src": path
+                            "src": "../image/Head/" + $loginUrl.html()
                         });
                         break;
                     default:
@@ -147,13 +151,31 @@
                
             });
         }
-
+        //==============获取选择文件单击事件==============//
         function selectFile() {
             $("#conPlaceHolder_Content_pansonelContent_Right_selFileImage").click();
         }
+        //==============子目录下的单击事件==========//
+        function ClickSubNav() {
+            $(".Pansonel_leftDiv_sonDiv_li_div").click(function () {
+                switch ($(this).html()) {
+                    case "个人资料":
+                        window.location.href = "Front_Pansonel_MyInfo.aspx";
+                        break;
+                    case "头像设置":
+                        window.location.href = "Front_Pansonel_SetHead.aspx";
+                        break;
+                    case "修改密码": break;
+                    case "设置密保": break;
+                    case "邮箱绑定": break;
+                    case "手机绑定": break;
+                }
+            });
+        }
 
         $(function () {
-                HeadSetSave();
+            HeadSetSave();
+            ClickSubNav();
                 $("#sonShowDiv0").show();
                 $("#shanjiao1").css({
                     "transform": "rotate(90deg)"
@@ -250,10 +272,10 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="pansonelContent_Right" runat="server">
     <div id="divSetHeadCloth" class="DivClothMax"></div>
     <div id="divSetHeadBack" class="DivClothMax_setHeadBack">
-         <form runat="server">
-            <asp:FileUpload ID="selFileImage" runat="server" ToolTip="选择图片" Style="display:none;" />
-             <asp:Button ID="btnUp" runat="server"  Text="上传"/>
-        </form>
+    <form runat="server">
+        <asp:FileUpload ID="selFileImage" runat="server" ToolTip="选择图片" Style="display:none;" />
+        <asp:Button ID="btnUp" runat="server"  Text="上传" OnClick="btnUp_Click" Style="display:none;" />
+    </form>
       <%--  <input id="selFileImage" type="file" value="" hidden="hidden" accept="Image/*.jpg" />--%>
         <input id="btnFileImage" type="button"  value="选择图片" onclick="selectFile();" title="未选择任何文件"  class="selImage" />
         <p class="pTitle">仅支持JPG,PNG格式;文件小于3M</p>

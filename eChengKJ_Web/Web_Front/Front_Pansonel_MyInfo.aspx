@@ -354,7 +354,27 @@
             });
         }
 
+        //==============子目录下的单击事件==========//
+        function ClickSubNav() {
+            $(".Pansonel_leftDiv_sonDiv_li_div").click(function () {
+                switch ($(this).html()) {
+                    case "个人资料":
+                        window.location.href = "Front_Pansonel_MyInfo.aspx";
+                        break;
+                    case "头像设置":
+                        window.location.href = "Front_Pansonel_SetHead.aspx";
+                        break;
+                    case "修改密码": break;
+                    case "设置密保": break;
+                    case "邮箱绑定": break;
+                    case "手机绑定": break;
+                }
+            });
+        }
+
+
         $(function () {
+                ClickSubNav();
                 MyInfoSave();
                 VerifyButton();
                 LoadMyInfo();
@@ -367,8 +387,6 @@
 
                 LoginUrl();
                 LoadPageUserData();
-                
-            
             });
     </script>  
 </asp:Content>

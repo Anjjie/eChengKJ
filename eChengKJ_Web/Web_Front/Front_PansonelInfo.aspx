@@ -219,6 +219,13 @@
                     case "个人资料":
                         window.location.href = "Front_Pansonel_MyInfo.aspx";
                         break;
+                    case "头像设置":
+                        window.location.href = "Front_Pansonel_SetHead.aspx";
+                        break;
+                    case "修改密码": break;
+                    case "设置密保": break;
+                    case "邮箱绑定": break;
+                    case "手机绑定": break;
                 }
             });
         }
@@ -308,8 +315,8 @@
                              <div class="Pansonel_leftDiv_sonDiv_div"></div>个人信息</a>
                      </li>
                   <div id="sonShowDiv0" class="Pansonel_leftDiv_sonDiv_li_div" style="margin:0;float:left;">
-                             <div class="Pansonel_leftDiv_sonDiv_li_div">个人资料</div>
-                             <div class="Pansonel_leftDiv_sonDiv_li_div">头像设置</div>
+                        <div class="Pansonel_leftDiv_sonDiv_li_div">个人资料</div>
+                        <div class="Pansonel_leftDiv_sonDiv_li_div">头像设置</div>
                   </div>
                 </ul>
                  <%-- 安全设置 --%>
