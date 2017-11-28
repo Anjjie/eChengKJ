@@ -8,7 +8,6 @@
      <%-- 放置引用JS脚本文件或者编写脚本代码地方（已默认引入JQ压缩文件） --%>
         <script type="text/javascript" src="js/Front_Index.js"></script>
     <script type="text/javascript">
-        var IsLogin = "";
        //============加载用户页面数据================//
         function LoadPageUserData() {
             var type = "<%=notIsLogin%>";
@@ -30,19 +29,7 @@
                 }
             });
         }
-        //=============点击购买按钮================//
-        function ClickBtnBuy() {
-            var $Buy = $("#buyDiv");
-            $Buy.click(function () {
-                $loginUrl = $("#thisUserName");
-                var isLogin = $loginUrl.html();
-                if (isLogin == "登录") {
-                    $Buy.eq(0).attr("href", "Front_Login.aspx");
-                } else {
-                    alert("购买及付款页面，待开发...");
-                }
-            });
-        }
+
         $(function () {
             $("#topNavigation").css("position", "fixed");
             var thisID;
@@ -60,7 +47,6 @@
             });
             LoadPageUserData();
             LoginUrl();
-            ClickBtnBuy();
         });
     </script>
 </asp:Content>
@@ -136,8 +122,8 @@
                      <div style="width:80px;height:80px;background-color:#621afe;border-radius:80px;float:left;margin:60px 5px 5px 5px;line-height:80px;font-size:15pt;">热门</div>
                  </div>
              </div>
-              <a id="buyDiv" href="#">
-                <div class="Front_Div_All_middle_Advertising_Product_backDiv_buyDiv">点击购买</div>
+              <a href="#">
+                <div id="buyDiv" class="Front_Div_All_middle_Advertising_Product_backDiv_buyDiv">点击购买</div>
              </a>
          </div>
      </div>
@@ -224,12 +210,12 @@
 <%-- 导航定位区 --%>
 <asp:Content ID="conNavigation" runat="server" contentplaceholderid="conPlaceHolder_Navigation">
      <div class="Front_Div_Logo_Navigation" id="Front_Div_Logo_NavigationId">
-          <a href="Front_AboutUs.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="6">关于</ul></a>
-          <a href="Front_ContactUs.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="5">联系我们</ul></a>
-          <a href="Front_News.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="4">新闻中心</ul></a>
-          <a href="Front_Solution.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="3">解决方案</ul></a>
-          <a href="Front_eChengKJService.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="2">提供服务</ul></a>
-          <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="1">产品</ul></a>
+          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="5">关于我们</ul></a>
+          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="6">联系我们</ul></a>
+          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="4">新闻中心</ul></a>
+          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="3">解决方案</ul></a>
+          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="2">提供服务</ul></a>
+          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="1">产品</ul></a>
           <a href="Front_Index.aspx"><ul class="Front_Div_Logo_Navigation_ul"  id="7">首页</ul></a>
      </div>
 </asp:Content>

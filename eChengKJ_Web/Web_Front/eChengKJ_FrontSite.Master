@@ -61,11 +61,10 @@
                    <!-- 导航：产品模块 -->
                    <div id="Navigation_div1" class="Front_Div_Navigation_div">
                        <ul style="float:left;line-height:40px;font-size:14pt;">
-                           <a href="#"><li class="Front_Div_Navigation_div_li">电子商务</li></a>
                            <a href="#"><li class="Front_Div_Navigation_div_li">财务管理</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">生产服务</li></a>
+                           <a href="#"><li class="Front_Div_Navigation_div_li">采购清单</li></a>
                            <a href="#"><li class="Front_Div_Navigation_div_li">移动办公</li></a>
-                           <a href="#"><li class="Front_Div_Navigation_div_li">人力资源管理</li></a>
-                           <a href="#"><li class="Front_Div_Navigation_div_li">资源管理</li></a>
                        </ul>
                    </div>
                    <!-- 导航：提供服务模块 -->
@@ -95,7 +94,7 @@
                        </ul>
                    </div>
                    <!-- 导航：关于我们模块 -->
-                   <div id="Navigation_div6" class="Front_Div_Navigation_div">
+                   <div id="Navigation_div5" class="Front_Div_Navigation_div">
                        <ul style="float:left;line-height:40px;font-size:14pt;">
                            <a href="#"><li class="Front_Div_Navigation_div_li">关于我们</li></a>
                            <a href="#"><li class="Front_Div_Navigation_div_li">成长历程</li></a>
@@ -113,7 +112,7 @@
             </asp:ContentPlaceHolder>
         </div>
         <!-- 尾 -->
-        <div id="masterBottom" class="Front_Div_All_buttom">
+        <div class="Front_Div_All_buttom">
             <!-- 提供服务 -->
             <div class="Front_Div_All_buttom_Service">
                 <div class="Front_Div_All_buttom_Service_divTitle">ERP，我们诚心服务！</div>
@@ -122,8 +121,7 @@
                         <div style="text-align:left;margin-top:20px;">提供服务</div>
                         <div style="margin-top:20px;">
                             <ul style="float:left;text-align:left;">
-                                <li><a href="#">客户服务</a></li>
-                                <li><a href="#">开发者服务</a></li>
+                                <li><a href="#">实施安装</a></li>
                                 <li><a href="#">系统升级</a></li>
                                 <li><a href="#">售后服务</a></li>
                             </ul>
@@ -133,21 +131,18 @@
                         <div style="text-align:left;margin-top:20px;">解决方案</div>
                         <div style="margin-top:20px;">
                             <ul style="float:left;text-align:left;">
-                                <li ><a href="#">产品常见问题</a></li>
-                                <li ><a href="#">购买流程</a></li>
-                                <li ><a href="#">如何申请试用产品</a></li>
-                                <li><a href="#">在线指南</a></li>
+                                <li ><a href="#">线上线下一体化O2O模式</a></li>
+                                <li ><a href="#">业务财政一体化</a></li>
+                                <li ><a href="#">系统常见问题</a></li>
+                                <li><a href="#">其它</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="Front_Div_All_buttom_Service_divContent_div">
-                        <div style="text-align:left;margin-top:20px;">关于我们</div>
+                        <div style="text-align:left;margin-top:20px;">技术支持</div>
                         <div style="margin-top:20px;">
                             <ul style="float:left;text-align:left;">
-                                <li><a href="#">关于我们</a></li>
-                                <li><a href="#">成长历程</a></li>
-                                <li><a href="#">企业信誉</a></li>
-                                <li><a href="#">加入我们</a></li>
+                                <li><a href="#">客户反馈</a></li>
                             </ul>
                         </div>
                     </div>
@@ -159,7 +154,7 @@
                     <li>热线电话：400-123-4567
                     &nbsp;&nbsp;&nbsp;&nbsp;邮箱：Anjjiewm@163.com</li>
                     <li>广东省珠海市斗门区白蕉南路29号 南方IT学院教学133室</li>
-                    <li>Copyright © <a href="http://www.eChengkeji.top" class="Front_Div_All_buttom_MyCompanyInfo_li_a">eChengkeji.top</a> All Rights Reserved. </li>
+                    <li>Copyright © <a href="#" class="Front_Div_All_buttom_MyCompanyInfo_li_a">eChengKJ.com</a> All Rights Reserved. </li>
                 </ul>
             </div>
           

@@ -13,7 +13,7 @@ namespace eChengKJ_BLL
     /// <summary>
     /// 业务逻辑层：【产品试用申请信息】
     /// </summary>
-    public class ProductTryOurTable_BLL
+    public class ProductTryOurTryOurTable_BLL
     {
         #region 获取动态类名
         /// <summary>

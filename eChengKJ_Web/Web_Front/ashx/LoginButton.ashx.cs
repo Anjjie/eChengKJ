@@ -21,14 +21,7 @@ namespace eChengKJ_Web.Web_Front.ashx
             //context.Response.Write("Hello World");
 
             var userName = context.Request["userName"];
-            var type = context.Request["con"];
-            User_Table getUser = new User_Table();
-            switch (type)
-            {
-                case "id":  getUser = User.GetUserTableByConn(userName, "id"); break;
-                case "name":  getUser = User.GetUserTableByConn(userName, "name"); break;
-                case "phone":  getUser = User.GetUserTableByConn(userName, "phone"); break;
-            }
+            User_Table getUser = User.GetUserTableByConn(userName, "name");
             List<User_Table> getUserList = new List<User_Table>();
             getUserList.Add(getUser);
             //创建可对数据进行Json【序列化/反序列化】操作对象

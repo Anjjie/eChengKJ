@@ -133,7 +133,7 @@ GO
 	U_id int IDENTITY(0,1) PRIMARY KEY,		--编号
 	U_UserName NVARCHAR(16) ,				--用户名
 	U_UserPwd NVARCHAR(16) ,				--密码
-	U_Head NVARCHAR(300)  ,					--头像
+	U_Head image ,							--头像
 	U_Name NVARCHAR(50) ,					--姓名
 	U_Sex NVARCHAR(4) ,						--性别
 	IDT_id Int ,							--证件类型

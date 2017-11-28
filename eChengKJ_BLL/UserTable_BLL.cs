@@ -65,14 +65,11 @@ namespace eChengKJ_BLL
         /// 根据条件查询用户信息
         /// </summary>
         /// <param name="con"></param>
-        /// <param name="type">[id，name，phone]选其一(必填)</param>
+        /// <param name="type">[id，name]选其一(必填)</param>
         public User_Table GetUserTableByConn(string con,string type)
         {
-            User_Table obj = relevanceClass.GetUserTableByConn(con, type);
-                obj.GetIDTtpe = FK_IDType.GetIDTypeTableByConn(obj.IDT_id + "");
-                obj.GetLoginState = FK_LoginState.GetLoginStateTableByConn(obj.LS_id + "");
-                obj.GetMail = FK_Mail.GetMailTableByConn(obj.M_id + "");
-            return obj;
+            return relevanceClass.GetUserTableByConn(con, type);
+
         }
         #endregion
 

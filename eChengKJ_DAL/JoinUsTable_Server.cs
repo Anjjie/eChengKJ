@@ -58,8 +58,6 @@ namespace eChengKJ_DAL
                     JUP_id = Convert.ToInt32(dr["JUP_id"]),
                     JU_id = Convert.ToInt32(dr["JU_id"]),
                     JU_Name = dr["JU_Name"].ToString(),
-                    JU_Address = dr["JU_Address"].ToString(),
-                    JU_SubmitDateTime =Convert.ToDateTime( dr["JU_SubmitDateTime"]),
                     JU_Phone = dr["JU_Phone"].ToString(),
                     JU_Sex = dr["JU_Sex"].ToString()
                 };
@@ -91,8 +89,6 @@ namespace eChengKJ_DAL
                     JUP_id = Convert.ToInt32(dr["JUP_id"]),
                     JU_id = Convert.ToInt32(dr["JU_id"]),
                     JU_Name = dr["JU_Name"].ToString(),
-                    JU_Address = dr["JU_Address"].ToString(),
-                    JU_SubmitDateTime = Convert.ToDateTime(dr["JU_SubmitDateTime"]),
                     JU_Phone = dr["JU_Phone"].ToString(),
                     JU_Sex = dr["JU_Sex"].ToString()
                 };
@@ -116,9 +112,7 @@ namespace eChengKJ_DAL
                     new SqlParameter("@JUP_id",obj.JUP_id),
                     new SqlParameter("@JU_Name",obj.JU_Name),
                     new SqlParameter("@JU_Phone",obj.JU_Phone),
-                    new SqlParameter("@JU_Sex",obj.JU_Sex),
-                    new SqlParameter("@JU_Address",obj.JU_Address),
-                    new SqlParameter("@JU_SubmitDateTime",obj.JU_SubmitDateTime)
+                    new SqlParameter("@JU_Sex",obj.JU_Sex)
                 });
         }
         #endregion
@@ -135,11 +129,10 @@ namespace eChengKJ_DAL
                  CommandType.StoredProcedure,
                  new SqlParameter[] {
                     new SqlParameter("@JUP_id",obj.JUP_id),
+                    new SqlParameter("@JU_id",obj.JU_id),
                     new SqlParameter("@JU_Name",obj.JU_Name),
                     new SqlParameter("@JU_Phone",obj.JU_Phone),
-                    new SqlParameter("@JU_Sex",obj.JU_Sex),
-                    new SqlParameter("@JU_Address",obj.JU_Address),
-                    new SqlParameter("@JU_SubmitDateTime",obj.JU_SubmitDateTime)
+                    new SqlParameter("@JU_Sex",obj.JU_Sex)
                  });
         }
         #endregion

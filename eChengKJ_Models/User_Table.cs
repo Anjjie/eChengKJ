@@ -11,12 +11,6 @@ namespace eChengKJ_Models
     /// </summary>
     public class User_Table
     {
-        //设置时间的默认值
-        string defaultDate = "1-1-1 00:00:00.000";
-        string defaultDates ="1-1-1 00:00:00.000";
-        //头像
-        string Head = "Logo_ICO.png";
-
         /// <summary>
         /// 编号
         /// </summary>
@@ -32,7 +26,7 @@ namespace eChengKJ_Models
         /// <summary>
         /// 头像
         /// </summary>
-        public string U_Head { get { return Head; } set { Head=value; } }
+        public Byte[] U_Head { get; set; }
         /// <summary>
         /// 姓名
         /// </summary>
@@ -92,7 +86,7 @@ namespace eChengKJ_Models
         /// <summary>
         /// 登录时间
         /// </summary>
-        public string U_LoginDatetime { get { return defaultDate; } set { defaultDate = value; } }
+        public DateTime U_LoginDatetime { get; set; }
         /// <summary>
         /// 上次登录地址
         /// </summary>
@@ -100,12 +94,10 @@ namespace eChengKJ_Models
         /// <summary>
         /// 上次登录时间
         /// </summary>
-        public string U_LastLoginDatetime { get { return defaultDates; } set { defaultDates = value; } }
+        public DateTime U_LastLoginDatetime { get; set; }
         /// <summary>
         /// 创建日期
         /// </summary>
-        public string U_CreateUserDate { get; set; }
-
+        public DateTime U_CreateUserDate { get; set; }
     }
-
 }
