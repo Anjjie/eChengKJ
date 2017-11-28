@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Web_Front/eChengKJ_FrontSite.Master" AutoEventWireup="true" CodeBehind="Front_PansonelInfo.aspx.cs" Inherits="eChengKJ_Web.Web_Front.Front_PansonelInfo" %>
 <%-- CSS样式文件及样式区 --%>
 <asp:Content ID="conCss" ContentPlaceHolderID="conPlaceHolder_Css" runat="server">
-    <%--<link href="css/Front_2.css" rel="stylesheet" />--%>
     <link href="css/Front_PansonelInfo.css" rel="stylesheet" />
 </asp:Content>
 <%-- Javascript脚本文件及脚本代码区（已默认引入jQuery文件，无需重复引用） --%>
@@ -72,7 +71,7 @@
         }
         //======================左侧导航=============================//
         var imgId;//图片ID
-        var defaultId = "#img0_0";
+        var defaultId = "#img0_0";//默认图片定位ID选项
         var defaultPath;//默认图片地址
         var path;//原图片地址
         var newPath;//新图片地址
@@ -101,8 +100,32 @@
                             $("#" + imgId + "_0").attr("src", path);
                         }
                     }
-
-
+                },
+                click: function () {
+                    var idType = $(this).eq(0).attr("id");
+                    switch (idType) {
+                        case "img0":
+                            window.location.href = "Front_PansonelInfo.aspx";
+                            break;
+                        case "img1":
+                            window.location.href = "Front_Pansonel_Shop.aspx";
+                            break;
+                        case "img2":
+                            window.location.href = "Front_Pansonel_Order.aspx";
+                            break;
+                        case "img3":
+                            window.location.href = "Front_Pansonel_Collect.aspx";
+                            break;
+                        case "img4":
+                            window.location.href = "Front_Pansonel_SystemInfo.aspx";
+                            break;
+                        case "img5":
+                            window.location.href = "Front_Pansonel_Notice.aspx";
+                            break;
+                        case "img6":
+                            window.location.href = "Front_Pansonel_Set.aspx";
+                            break;
+                    }
                 }
             });
         }
@@ -111,37 +134,50 @@
             $("#sonShowDiv0").hide();
             $("#sonShowDiv1").hide();
             $("#sonShowDiv2").hide();
-            $(".Pansonel_leftDiv_sonDiv_ul").click(function () {
+            $(".Pansonel_leftDiv_sonDiv_li").click(function () {
                 var trueOrFalse = $(this).find("div").css("transform");
-                var showDivId = "#sonShowDiv" + $(this).index();
+                var showDivId = "#son" + $(this).eq(0).attr("id");
                 if (trueOrFalse == "none" || trueOrFalse == "matrix(1, 0, 0, 1, 0, 0)") {
-                    $(showDivId).slideToggle(1000);
-                    $(this).find("li").find("div").css("transform", "rotate(90deg)");
-                    $(this).find("li").find("div").css("transition", "transform 1s");
+                    $(showDivId).slideDown(1000);
+                    $(this).find("div").css({
+                        "transform": "rotate(90deg)",
+                        "transition": "transform 1s"
+                    });
                 }
-                else if (trueOrFalse!="matrix(1, 0, 0, 1, 0, 0)") {
-                    $(showDivId).slideToggle(1000);
-                    $(this).find("li").find("div").css("transform", "rotate(0deg)");
-                    $(this).find("li").find("div").css("transition", "transform 1s");
+                else{
+                    $(showDivId).slideUp(1000);
+                    $(this).find("div").css({
+                        "transform": "rotate(0deg)",
+                        "transition": "transform 1s"
+                    });
                 }
             });
         }
         //============消费统计================//
         function btnConsumeMonthOrDay() {
             //设置默认值
-            $(".Pansonel_rightDiv_rightTop_btnMonthOrDay").eq(0).css("background-color", "#ffffff");
+            var $setDefault = $(".Pansonel_rightDiv_rightTop_btnMonthOrDay:eq(0)");
+            $setDefault.css("background-color", "#ffffff");
+            $setDefault.css("box-shadow", "0 5px 10px #1085f0");
             $(".Pansonel_rightDiv_rightTop_btnMonthOrDay").click(function () {
                 $(this).css("background-color", "#ffffff");
-                $(".Pansonel_rightDiv_rightTop_btnMonthOrDay").not($(this)).css("background-color", "transparent");
+                $(this).css("box-shadow", "0 5px 10px #1085f0");
+                var $getNotThis = $(".Pansonel_rightDiv_rightTop_btnMonthOrDay").not($(this));
+                $getNotThis.css("box-shadow", "0 0 0px #1085f0");
+                $getNotThis.css("background-color", "transparent");
             });
         }
         //============购物车================//
         function btnShopMonthOrDay() {
             //设置默认值
-            $(".Pansonel_rightDiv_rightTop_btnMonthOrDays").eq(0).css("background-color", "#ffffff");
+            var $setDefault = $(".Pansonel_rightDiv_rightTop_btnMonthOrDays:eq(0)");
+            $setDefault.css("background-color", "blue");
+            $setDefault.css("color", "#ffffff");
             $(".Pansonel_rightDiv_rightTop_btnMonthOrDays").click(function () {
-                $(this).css("background-color", "#ffffff");
+                $(this).css("background-color", "blue");
+                $(this).css("color", "#ffffff");
                 $(".Pansonel_rightDiv_rightTop_btnMonthOrDays").not($(this)).css("background-color", "transparent");
+                $(".Pansonel_rightDiv_rightTop_btnMonthOrDays").not($(this)).css("color", "#000000");
             });
         }
         
@@ -176,6 +212,24 @@
             });
         }
 
+        //==============子目录下的单击事件==========//
+        function ClickSubNav() {
+            $(".Pansonel_leftDiv_sonDiv_li_div").click(function () {
+                switch ($(this).html()) {
+                    case "个人资料":
+                        window.location.href = "Front_Pansonel_MyInfo.aspx";
+                        break;
+                    case "头像设置":
+                        window.location.href = "Front_Pansonel_SetHead.aspx";
+                        break;
+                    case "修改密码": break;
+                    case "设置密保": break;
+                    case "邮箱绑定": break;
+                    case "手机绑定": break;
+                }
+            });
+        }
+
         $(function () {
             //设置左边导航栏默认图片及文字颜色
             $("#img0").css("color", "#ffffff");
@@ -190,18 +244,19 @@
             btnShopMonthOrDay();
             LoadPageUserData();
             LoginUrl();
+            ClickSubNav();
         });
     </script>
 </asp:Content>
 <%-- 导航定位区 --%>
 <asp:Content ID="conMiddle" ContentPlaceHolderID="conPlaceHolder_Navigation" runat="server">
      <div class="Front_Div_Logo_Navigation" id="Front_Div_Logo_NavigationId">
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="5">关于我们</ul></a>
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="6">联系我们</ul></a>
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="4">新闻中心</ul></a>
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="3">解决方案</ul></a>
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="2">提供服务</ul></a>
-          <a href="#"><ul class="Front_Div_Logo_Navigation_ul" id="1">产品</ul></a>
+          <a href="Front_AboutUs.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="6">关于</ul></a>
+          <a href="Front_ContactUs.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="5">联系我们</ul></a>
+          <a href="Front_News.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="4">新闻中心</ul></a>
+          <a href="Front_Solution.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="3">解决方案</ul></a>
+          <a href="Front_eChengKJService.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="2">提供服务</ul></a>
+          <a href="Front_Product.aspx"><ul class="Front_Div_Logo_Navigation_ul" id="1">产品</ul></a>
           <a href="Front_Index.aspx"><ul class="Front_Div_Logo_Navigation_ul"  id="7">首页</ul></a>
      </div>
 </asp:Content>
@@ -209,15 +264,16 @@
 <asp:Content ID="conNavigation" ContentPlaceHolderID="conPlaceHolder_Content" runat="server">
     <div style="width:100%;height:700px;border:0px solid #000000;margin-top:10px;background-color:#f0f1f2;">
          <%-- 左导航区 --%>
-        <div class="Pansonel_leftDiv">
+        <div class="Pansonel_leftDiv" >
             <%-- 父左导航栏 --%>
              <div class="Pansonel_leftDiv_fatherDiv" >
                 <div id="img0" class="Pansonel_leftDiv_fatherDiv_buttonDiv" 
                     style="margin-top:30px;background-color:#5FB878;">
                     <div class="Pansonel_leftDiv_fatherDiv_buttonDiv_imgDiv" >
                         <img id="img0_0" src="image/zhanghu1.png" class="Pansonel_leftDiv_fatherDiv_buttonDiv_img"/> 
-                    </div> 
-                    账户管理</div>
+                    </div> 账户管理
+                </div>
+
                 <div class="Pansonel_leftDiv_fatherDiv_buttonDiv" id="img1">
                    <div class="Pansonel_leftDiv_fatherDiv_buttonDiv_imgDiv" >
                         <img id="img1_0" src="image/Gouwuche.png" class="Pansonel_leftDiv_fatherDiv_buttonDiv_img"/> 
@@ -254,17 +310,18 @@
              <div class="Pansonel_leftDiv_sonDiv">
                  <%-- 个人信息 --%>
                 <ul class="Pansonel_leftDiv_sonDiv_ul">
-                     <li class="Pansonel_leftDiv_sonDiv_li" > 
+                     <li class="Pansonel_leftDiv_sonDiv_li" id="ShowDiv0"> 
                          <a href="javasrcipt:;" style="color:#808080;font-size:10pt;">
                              <div class="Pansonel_leftDiv_sonDiv_div"></div>个人信息</a>
                      </li>
-                <div id="sonShowDiv0" class="Pansonel_leftDiv_sonDiv_li_div" style="margin:0;float:left;">
-                             <div class="Pansonel_leftDiv_sonDiv_li_div">个人资料</div>
-                             <div class="Pansonel_leftDiv_sonDiv_li_div">头像设置</div>
-                         </div></ul>
+                  <div id="sonShowDiv0" class="Pansonel_leftDiv_sonDiv_li_div" style="margin:0;float:left;">
+                        <div class="Pansonel_leftDiv_sonDiv_li_div">个人资料</div>
+                        <div class="Pansonel_leftDiv_sonDiv_li_div">头像设置</div>
+                  </div>
+                </ul>
                  <%-- 安全设置 --%>
                 <ul class="Pansonel_leftDiv_sonDiv_ul">
-                     <li class="Pansonel_leftDiv_sonDiv_li" >
+                     <li class="Pansonel_leftDiv_sonDiv_li" id="ShowDiv1">
                           <a href="javasrcipt:;" style="color:#808080;font-size:10pt;">
                               <div class="Pansonel_leftDiv_sonDiv_div"></div>安全设置</a>
                      </li>
@@ -275,7 +332,7 @@
                 </ul>
                  <%-- 绑定设置 --%>
                 <ul class="Pansonel_leftDiv_sonDiv_ul">
-                          <li class="Pansonel_leftDiv_sonDiv_li" > 
+                          <li class="Pansonel_leftDiv_sonDiv_li" id="ShowDiv2" > 
                          <a href="javasrcipt:;" style="color:#808080;font-size:10pt;">
                              <div class="Pansonel_leftDiv_sonDiv_div" ></div>绑定设置</a>
 
@@ -325,7 +382,10 @@
             </div>
             <%-- 最近登录情况（记录10条登录记录） --%>
             <div class="Pansonel_rightDiv_rightTop">
-                <table id="myShopTable" width="100%" >
+                <div style="width:100%;height:25px;float:left;border-bottom:1px solid #808080;">
+                       最近登录
+                </div>
+                <table id="myLoginTable" width="100%" >
                        <tr >
                           <th width="40%">时间</th>
                           <th width="30%">id地址</th>
@@ -340,11 +400,10 @@
             </div>
              <%-- 最近加入购物车的物品信息(今天、本月) --%>
             <div class="Pansonel_rightDiv_leftBottom">
-                 <div style="width:100%;height:25px;float:left;border-bottom:1px solid #808080;">
-                        <div  id="shopThisDay" class="Pansonel_rightDiv_rightTop_btnMonthOrDays" style="border-bottom:0px;margin-left:25%;">今天 </div>
-                        <div id="shopThisMonth" class="Pansonel_rightDiv_rightTop_btnMonthOrDays" style="border-left:0px;border-bottom:0px;">本月</div>
+                <div style="width:100%;height:25px;float:left;border-bottom:1px solid #808080;">
+                       最近购物车商品
                 </div>
-                 <div style="height:220px;width:100%;border:0px solid red;margin-top:27px;">
+                 <div style="height:325px;width:100%;border:0px solid red;margin-top:27px;">
                    <table id="myShopTable" width="100%" >
                        <tr >
                           <th width="40%">名称</th>
@@ -360,6 +419,10 @@
                       </tr> 
                   </table>
                    <div style="margin-top:10%;"> <a href="#" style="font-size:12pt;color:cornflowerblue">查看全部</a></div>
+               </div>
+               <div style="width:100%;height:25px;float:left;border-top:1px solid #808080;">
+                        <div  id="shopThisDay" class="Pansonel_rightDiv_rightTop_btnMonthOrDays" style="border-top:0px;margin-left:25%;">今天 </div>
+                        <div id="shopThisMonth" class="Pansonel_rightDiv_rightTop_btnMonthOrDays" style="border-left:0px;border-top:0px;">本月</div>
                </div>
             </div>
              <%-- 消费、已购买类型等资料统计显示（昨天、本月、上月） --%>

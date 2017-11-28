@@ -67,12 +67,35 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Web_Front\css\1.css" />
+    <Content Include="Web_Front\css\Front_AboutUs.css" />
+    <Content Include="Web_Front\css\Front_Pansonel_Collect.css" />
+    <Content Include="Web_Front\css\Front_Pansonel_MyInfo.css" />
+    <Content Include="Web_Front\css\Front_Pansonel_Shop.css" />
+    <Content Include="Web_Front\css\Front_Prnsonel_SetHead.css" />
+    <Content Include="Web_Front\css\Front_UCFind.css" />
+    <Content Include="Web_Front\Front_AboutUs.aspx" />
     <Content Include="packages.config" />
     <Content Include="Web_Front\css\Front_2.css" />
+    <Content Include="Web_Front\css\Front_eChengKJService.css" />
     <Content Include="Web_Front\css\Front_Index.css" />
     <Content Include="Web_Front\css\Front_Login.css" />
     <Content Include="Web_Front\css\Front_Master.css" />
+    <Content Include="Web_Front\css\Front_News.css" />
     <Content Include="Web_Front\css\Front_PansonelInfo.css" />
+    <Content Include="Web_Front\css\Front_ProductCss.css" />
+    <Content Include="Web_Front\Front_ContactUs.aspx" />
+    <Content Include="Web_Front\Front_News.aspx" />
+    <Content Include="Web_Front\Front_Pansonel_Collect.aspx" />
+    <Content Include="Web_Front\Front_Pansonel_MyInfo.aspx" />
+    <Content Include="Web_Front\Front_Pansonel_Notice.aspx" />
+    <Content Include="Web_Front\Front_Pansonel_Order.aspx" />
+    <Content Include="Web_Front\Front_Pansonel_Set.aspx" />
+    <Content Include="Web_Front\Front_Pansonel_SetHead.aspx" />
+    <Content Include="Web_Front\Front_Pansonel_Shop.aspx" />
+    <Content Include="Web_Front\Front_Pansonel_SystemInfo.aspx" />
+    <Content Include="Web_Front\Front_Solution.aspx" />
+    <Content Include="Web_Front\Front_eChengKJService.aspx" />
     <Content Include="Web_Front\Front_Index.aspx" />
     <Content Include="Web_Front\Front_Login.aspx" />
     <Content Include="Web_Front\Front_PansonelInfo.aspx" />
@@ -85,21 +108,56 @@
     <Content Include="Web_Front\image\buttomServer.jpg" />
     <Content Include="Web_Front\image\buttomServers.jpg" />
     <Content Include="Web_Front\image\Dianhua.png" />
+    <Content Include="Web_Front\image\dingdan1.png" />
+    <Content Include="Web_Front\image\dingdan1_bai.png" />
+    <Content Include="Web_Front\image\DomainCrad\e-commerce.png" />
+    <Content Include="Web_Front\image\DomainCrad\financialManager.png" />
+    <Content Include="Web_Front\image\DomainCrad\HRManager.png" />
+    <Content Include="Web_Front\image\DomainCrad\mobileOfficing.png" />
+    <Content Include="Web_Front\image\DomainCrad\resourceManager.png" />
+    <Content Include="Web_Front\image\Exhibition.png" />
     <Content Include="Web_Front\image\File.png" />
     <Content Include="Web_Front\image\Gongju.png" />
+    <Content Include="Web_Front\image\Gongju_bai.png" />
+    <Content Include="Web_Front\image\GouMaiLiuCheng.png" />
     <Content Include="Web_Front\image\Gouwuche.png" />
+    <Content Include="Web_Front\image\Gouwuche_bai.png" />
     <Content Include="Web_Front\image\login_ad.jpg" />
     <Content Include="Web_Front\image\Logo.png" />
     <Content Include="Web_Front\image\Logo_ico.ico" />
     <Content Include="Web_Front\image\Logo_ICO.png" />
     <Content Include="Web_Front\image\ProcessPurchases.png" />
+    <Content Include="Web_Front\image\ProductCard\eFu.png" />
+    <Content Include="Web_Front\image\ProductCard\eGou.png" />
+    <Content Include="Web_Front\image\ProductCard\ThisZiYuan.png" />
+    <Content Include="Web_Front\image\ProductFunctionImage\B2B2C.png" />
+    <Content Include="Web_Front\image\ProductFunctionImage\B2COrB2B\both.png" />
+    <Content Include="Web_Front\image\ProductFunctionImage\B2COrB2B\one.png" />
+    <Content Include="Web_Front\image\ProductFunctionImage\back.png" />
+    <Content Include="Web_Front\image\ProductFunctionImage\e-commerce.png" />
+    <Content Include="Web_Front\image\Pro_ad\Img1_1.jpg" />
+    <Content Include="Web_Front\image\Pro_ad\Img1_2.jpg" />
+    <Content Include="Web_Front\image\Pro_ad\Img1_3.jpg" />
+    <Content Include="Web_Front\image\Pro_ad\Img1_4.jpg" />
+    <Content Include="Web_Front\image\Pro_ad\Pro_ad4 - 副本.jpg" />
+    <Content Include="Web_Front\image\Shouchang.png" />
+    <Content Include="Web_Front\image\Shouchang_bai.png" />
     <Content Include="Web_Front\image\Shouji.png" />
+    <Content Include="Web_Front\image\Solution.jpg" />
     <Content Include="Web_Front\image\Sousuo.png" />
     <Content Include="Web_Front\image\Tongzhi.png" />
+    <Content Include="Web_Front\image\Tongzhi_bai.png" />
     <Content Include="Web_Front\image\WuShou.png" />
+    <Content Include="Web_Front\image\WuShou_bai.png" />
+    <Content Include="Web_Front\image\Xiaofei.png" />
     <Content Include="Web_Front\image\Yes.png" />
+    <Content Include="Web_Front\image\Yiwancheng.png" />
     <Content Include="Web_Front\image\Youxiang.png" />
+    <Content Include="Web_Front\image\Youxiang_bai.png" />
+    <Content Include="Web_Front\image\zhanghu1.png" />
+    <Content Include="Web_Front\image\zhanghu1_bai.png" />
     <Content Include="Web_Front\image\十.png" />
+    <Content Include="Web_Front\image\选择我们.jpg" />
     <Content Include="Web_Front\js\Check_NotIsLogin.js" />
     <Content Include="Web_Front\js\Front_Index.js" />
     <Content Include="Web_Front\js\Front_Login.js" />
@@ -108,6 +166,7 @@
     <Content Include="Web_Front\js\JQ_File\jquery-3.2.1.min.js" />
     <Content Include="Web_Front\js\JQ_File\jquery-ui-1.8.20.custom.min.js" />
     <Content Include="Web_Front\js\JQ_File\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Web_Front\WebUC\UC_FindInfo.ascx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -119,6 +178,11 @@
     </Content>
     <Content Include="Web_Front\ashx\LoginButton.ashx" />
     <Content Include="Web_Front\ashx\PhoneVerify.ashx" />
+    <Content Include="Web_Front\ashx\AboutUs_JoinUs_btnOK.ashx" />
+    <Content Include="Web_Front\ashx\AboutUs_JoinUs_SelPost.ashx" />
+    <Content Include="Web_Front\ashx\Login_RegisterInfo.ashx" />
+    <Content Include="Web_Front\Front_Pansonel.master" />
+    <Content Include="Web_Front\ashx\All-Powerful_GetBLL.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="HtmlPage1.html" />
@@ -126,6 +190,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extension\UCSRestRequest.cs" />
+    <Compile Include="Web_Front\ashx\AboutUs_JoinUs_btnOK.ashx.cs">
+      <DependentUpon>AboutUs_JoinUs_btnOK.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\ashx\AboutUs_JoinUs_SelPost.ashx.cs">
+      <DependentUpon>AboutUs_JoinUs_SelPost.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\ashx\All-Powerful_GetBLL.ashx.cs">
+      <DependentUpon>All-Powerful_GetBLL.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\ashx\Login_RegisterInfo.ashx.cs">
+      <DependentUpon>Login_RegisterInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_AboutUs.aspx.cs">
+      <DependentUpon>Front_AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_AboutUs.aspx.designer.cs">
+      <DependentUpon>Front_AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web_Front\ashx\LoginButton.ashx.cs">
       <DependentUpon>LoginButton.ashx</DependentUpon>
@@ -139,6 +222,97 @@
     </Compile>
     <Compile Include="Web_Front\eChengKJ_FrontSite.Master.designer.cs">
       <DependentUpon>eChengKJ_FrontSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_ContactUs.aspx.cs">
+      <DependentUpon>Front_ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_ContactUs.aspx.designer.cs">
+      <DependentUpon>Front_ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_News.aspx.cs">
+      <DependentUpon>Front_News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_News.aspx.designer.cs">
+      <DependentUpon>Front_News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel.master.cs">
+      <DependentUpon>Front_Pansonel.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel.master.designer.cs">
+      <DependentUpon>Front_Pansonel.master</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_Collect.aspx.cs">
+      <DependentUpon>Front_Pansonel_Collect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_Collect.aspx.designer.cs">
+      <DependentUpon>Front_Pansonel_Collect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_MyInfo.aspx.cs">
+      <DependentUpon>Front_Pansonel_MyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_MyInfo.aspx.designer.cs">
+      <DependentUpon>Front_Pansonel_MyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_Notice.aspx.cs">
+      <DependentUpon>Front_Pansonel_Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_Notice.aspx.designer.cs">
+      <DependentUpon>Front_Pansonel_Notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_Order.aspx.cs">
+      <DependentUpon>Front_Pansonel_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_Order.aspx.designer.cs">
+      <DependentUpon>Front_Pansonel_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_Set.aspx.cs">
+      <DependentUpon>Front_Pansonel_Set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_Set.aspx.designer.cs">
+      <DependentUpon>Front_Pansonel_Set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_SetHead.aspx.cs">
+      <DependentUpon>Front_Pansonel_SetHead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_SetHead.aspx.designer.cs">
+      <DependentUpon>Front_Pansonel_SetHead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_Shop.aspx.cs">
+      <DependentUpon>Front_Pansonel_Shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_Shop.aspx.designer.cs">
+      <DependentUpon>Front_Pansonel_Shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_SystemInfo.aspx.cs">
+      <DependentUpon>Front_Pansonel_SystemInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Pansonel_SystemInfo.aspx.designer.cs">
+      <DependentUpon>Front_Pansonel_SystemInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_Solution.aspx.cs">
+      <DependentUpon>Front_Solution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Solution.aspx.designer.cs">
+      <DependentUpon>Front_Solution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_eChengKJService.aspx.cs">
+      <DependentUpon>Front_eChengKJService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_eChengKJService.aspx.designer.cs">
+      <DependentUpon>Front_eChengKJService.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web_Front\Front_Index.aspx.cs">
       <DependentUpon>Front_Index.aspx</DependentUpon>
@@ -168,11 +342,19 @@
     <Compile Include="Web_Front\Front_Product.aspx.designer.cs">
       <DependentUpon>Front_Product.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web_Front\WebUC\UC_FindInfo.ascx.cs">
+      <DependentUpon>UC_FindInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\WebUC\UC_FindInfo.ascx.designer.cs">
+      <DependentUpon>UC_FindInfo.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Web_Backstage\css\" />
     <Folder Include="Web_Backstage\image\" />
     <Folder Include="Web_Backstage\js\" />
+    <Folder Include="Web_Front\image\Head\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eChengKJ_BLL\eChengKJ_BLL.csproj">
@@ -197,9 +379,10 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>24214</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:24214/</IISUrl>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>
+          </DevelopmentServerVPath>
+          <IISUrl>http://localhost:24915/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

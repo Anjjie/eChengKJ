@@ -1,0 +1,163 @@
+﻿li {
+     list-style-type:none;
+}
+tr{
+    border:1px solid rgb(0, 0, 0);
+    height:30px;
+}
+th{
+    border:0px solid rgb(0, 0, 0);
+}
+td{
+     border:0px solid rgb(0, 0, 0);
+}
+.Pansonel_leftDiv {
+    width:25%;
+    height:100%;
+    float:left;
+    border:0px solid red;
+}
+.Pansonel_leftDiv_fatherDiv {
+    width:55.5%;
+    height:99.8%;
+    float:left;
+    background-color:#4f7dbd;
+    border-top:1px solid #f0f1f2;
+    border-bottom:1px solid #f0f1f2;
+}
+.Pansonel_leftDiv_fatherDiv_buttonDiv{
+    cursor:pointer;
+    width:100%;
+    height:40px;
+    line-height:40px;
+    color:#cacaca;
+    margin-top:20px;
+    border:0px solid red;
+}
+.Pansonel_leftDiv_fatherDiv_buttonDiv:hover{
+    color:#ffffff;
+}
+.Pansonel_leftDiv_fatherDiv_buttonDiv_imgDiv{
+width:32px;
+height:100%;
+float:left;
+left:25%;
+margin-left:-16px;
+position:relative;
+}
+.Pansonel_leftDiv_fatherDiv_buttonDiv_img{
+width:25px;
+height:25px;
+margin-top:5px;
+position:absolute;
+border:0px solid red;
+}
+.Pansonel_leftDiv_sonDiv{
+    width:44%;
+    height:100%;
+    float:right;
+    background-color:#ffffff;
+    border:0px solid red;
+}
+.Pansonel_leftDiv_sonDiv_ul{
+width:100%; border:0px solid red;
+}
+.Pansonel_leftDiv_sonDiv_li {
+    max-height:20px;
+    cursor:pointer; 
+    list-style-type:none;
+    margin-top:20px; 
+    border:0px solid red;
+
+}
+.Pansonel_leftDiv_sonDiv_li:hover {
+    background-color:rgba(95, 184, 120, 0.27);
+}
+.Pansonel_leftDiv_sonDiv_li_div{
+    cursor:pointer;
+    color:#808080;
+    font-size:10pt;
+    margin-top:10px;
+    width:150px;
+    border:0px solid red;
+}
+.Pansonel_leftDiv_sonDiv_li_div:hover{
+    font-size:12pt;
+    transition:font-size 0.5s;
+}
+.Pansonel_leftDiv_sonDiv_div {
+float:left;
+margin-left:5%;
+margin-top:6px;
+border-style:solid;
+border-width:6px;
+border-color:transparent transparent transparent #808080;
+}
+/*.Pansonel_leftDiv_sonDiv_li:hover{
+    transform:rotate(360deg);
+    transition:transform 2s;
+}*/
+.Pansonel_rightDiv {
+    width:74%;
+    height:100%;
+     float:right;
+    border:0px solid red;
+}
+.Pansonel_rightDiv_leftTop {
+   background-color:#ffffff;
+   width:48%;
+   height:250px; 
+   margin:10px;
+   margin-top:30px;
+   float:left;
+}
+.Pansonel_rightDiv_leftTop_photo {
+    margin-top: 25px;
+    border: 0px solid red;
+    border-radius:50px;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 50%;
+    margin-left:-50px;
+}
+.Pansonel_rightDiv_leftBottom {
+   background-color:#ffffff;
+   width:48%;
+   height:380px; 
+   margin:10px;
+   float:left;
+}
+.Pansonel_rightDiv_rightTop {
+   background-color:#ffffff;
+   width:45%;
+   height:250px; 
+   margin:10px;
+    margin-top:30px;
+   float:left;
+}
+.Pansonel_rightDiv_rightTop_btnMonthOrDay{
+cursor:pointer;
+width:24.5%;
+height:100%;
+float:left;
+margin-left:5px;
+margin-right:5px;
+border:1px solid #808080;
+border-radius:24px;
+}
+.Pansonel_rightDiv_rightTop_btnMonthOrDays{
+cursor:pointer;
+width:24.5%;
+height:100%;
+float:left;
+border:1px solid #808080;
+border-radius:20px;
+}
+.Pansonel_rightDiv_rightBottom {
+   background-color:#ffffff;
+   width:45%;
+   height:380px; 
+   margin:10px;
+   float:left;
+}

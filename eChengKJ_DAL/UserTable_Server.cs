@@ -55,19 +55,19 @@ namespace eChengKJ_DAL
             {
                 User_Table obj = new User_Table()
                 {
+                    U_PhoneVerify = dr["U_PhoneVerify"].ToString(),
                     IDT_id = Convert.ToInt32(dr["IDT_id"]),
                     U_ComPanyAddress = dr["U_ComPanyAddress"].ToString(),
                     U_Company = dr["U_Company"].ToString(),
                     M_id = Convert.ToInt32(dr["M_id"]),
-                    U_CreateUserDate = Convert.ToDateTime(dr["U_CreateUserDate"]),
-                    U_Head = (byte[])dr["U_Head"],
+                    U_CreateUserDate = dr["U_CreateUserDate"].ToString(),
+                    U_Head = dr["U_Head"].ToString(),
                     U_id = Convert.ToInt32(dr["U_id"]),
                     U_IDS = dr["U_IDS"].ToString(),
-                    U_PhoneVerify = dr["U_PhoneVerify"].ToString(),
                     U_LastLoginAddress = dr["U_LastLoginAddress"].ToString(),
-                    U_LastLoginDatetime = Convert.ToDateTime(dr["U_LastLoginDatetime"]),
+                    U_LastLoginDatetime = dr["U_LastLoginDatetime"].ToString(),
                     U_LoginAddress = dr["U_LoginAddress"].ToString(),
-                    U_LoginDatetime = Convert.ToDateTime(dr["U_LoginDatetime"]),
+                    U_LoginDatetime = dr["U_LoginDatetime"].ToString(),
                     U_Sex = dr["U_Sex"].ToString(),
                     U_Name = dr["U_Name"].ToString(),
                     U_Phone = dr["U_Phone"].ToString(),
@@ -87,14 +87,14 @@ namespace eChengKJ_DAL
         /// 根据条件查询用户信息
         /// </summary>
         /// <param name="con"></param>
-        /// <param name="type">[id，name]选其一(必填)</param>
+        /// <param name="type">[id，name，phone]选其一(必填)</param>
         /// <returns></returns>
         public User_Table GetUserTableByConn(string con,string type)
         {
             string sql = "";
             User_Table obj = null;
             SqlDataReader dr = null;
-            switch (type)
+            switch (type.ToLower())
             {
                 case "id":
                     sql = "Select * from User_Table where U_id=@U_id";
@@ -110,6 +110,13 @@ namespace eChengKJ_DAL
                              new SqlParameter("@U_UserName",con)
                        });
                     break;
+                case "phone":
+                    sql = "Select * from User_Table where U_Phone=@U_Phone";
+                    dr = DBHerlper.ExecuteReader(
+                      sql, CommandType.Text, new SqlParameter[] {
+                             new SqlParameter("@U_Phone",con)
+                       });
+                    break;
             }
             if (dr.Read())
             {
@@ -120,14 +127,14 @@ namespace eChengKJ_DAL
                     U_ComPanyAddress = dr["U_ComPanyAddress"].ToString(),
                     U_Company = dr["U_Company"].ToString(),
                     M_id = Convert.ToInt32(dr["M_id"]),
-                    U_CreateUserDate = Convert.ToDateTime(dr["U_CreateUserDate"]),
-                    U_Head = (byte[])dr["U_Head"],
+                    U_CreateUserDate = dr["U_CreateUserDate"].ToString(),
+                    U_Head = dr["U_Head"].ToString(),
                     U_id = Convert.ToInt32(dr["U_id"]),
                     U_IDS = dr["U_IDS"].ToString(),
                     U_LastLoginAddress = dr["U_LastLoginAddress"].ToString(),
-                    U_LastLoginDatetime = Convert.ToDateTime(dr["U_LastLoginDatetime"]),
+                    U_LastLoginDatetime = dr["U_LastLoginDatetime"].ToString(),
                     U_LoginAddress = dr["U_LoginAddress"].ToString(),
-                    U_LoginDatetime = Convert.ToDateTime(dr["U_LoginDatetime"]),
+                    U_LoginDatetime =dr["U_LoginDatetime"].ToString(),
                     U_Sex = dr["U_Sex"].ToString(),
                     U_Name = dr["U_Name"].ToString(),
                     U_Phone = dr["U_Phone"].ToString(),

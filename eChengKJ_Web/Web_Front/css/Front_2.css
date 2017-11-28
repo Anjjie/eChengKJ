@@ -1,142 +1,104 @@
-﻿li {
-     list-style-type:none;
-}
-.Pansonel_leftDiv {
-    width:25%;
-    height:100%;
-    float:left;
-    border:0px solid red;
-}
-.Pansonel_leftDiv_fatherDiv {
-    width:55.5%;
-    height:99.8%;
-    float:left;
-    background-color:#4f7dbd;
-    border-top:1px solid #f0f1f2;
-    border-bottom:1px solid #f0f1f2;
-}
-.Pansonel_leftDiv_fatherDiv_buttonDiv{
-    cursor:pointer;
+﻿.ShowHeadBack{
+    margin-top:50px;
+    height:150px;
     width:100%;
-    height:40px;
-    line-height:40px;
-    color:#cacaca;
-    margin-top:20px;
-    border:0px solid red;
+    border:0px solid #ff0000;
+    text-align:left;
 }
-.Pansonel_leftDiv_fatherDiv_buttonDiv:hover{
-    color:#ffffff;
-}
-.Pansonel_leftDiv_fatherDiv_buttonDiv_imgDiv{
-width:32px;
-height:100%;
-float:left;
-left:25%;
-margin-left:-16px;
-position:relative;
-}
-.Pansonel_leftDiv_fatherDiv_buttonDiv_img{
-width:32px;
-height:32px;
-margin-top:5px;
-position:absolute;
-border:0px solid red;
-}
-.Pansonel_leftDiv_sonDiv{
-    width:44%;
-    height:100%;
-    float:right;
-    background-color:#ffffff;
-    border:0px solid red;
-}
-.Pansonel_leftDiv_sonDiv_ul{
-width:100%; border:0px solid red;
-}
-.Pansonel_leftDiv_sonDiv_li {
-    max-height:20px;
-    cursor:pointer; 
-    list-style-type:none;
-    margin-top:20px; 
-    border:0px solid red;
-
-}
-.Pansonel_leftDiv_sonDiv_li:hover {
-    background-color:rgba(95, 184, 120, 0.27);
-}
-.Pansonel_leftDiv_sonDiv_li_div{
-    cursor:pointer;
-    color:#808080;
-    font-size:10pt;
-    margin-top:10px;
+.MyHeads{
     width:150px;
-    border:0px solid red;
+    height:150px;
+    /*border:1px solid #ff0000;*/
+    margin-left:100px;
+    background-color:#ffffff;
+    border-radius:75px;
 }
-.Pansonel_leftDiv_sonDiv_li_div:hover{
-    font-size:12pt;
-    transition:font-size 0.5s;
+.adDiv{
+    margin-top:40px;
+    height:200px;
+    width:100%;
+    border:1px solid #ff0000;
 }
-.Pansonel_leftDiv_sonDiv_div {
-float:left;
-margin-left:5%;
-margin-top:6px;
-border-style:solid;
-border-width:6px;
-border-color:transparent transparent transparent #808080;
+.DivClothMax{
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+    background-color:#000000;
+    opacity:0.3;
+    z-index:100;
 }
-/*.Pansonel_leftDiv_sonDiv_li:hover{
-    transform:rotate(360deg);
-    transition:transform 2s;
-}*/
-.Pansonel_rightDiv {
-    width:74%;
-    height:100%;
-     float:right;
-    border:0px solid red;
+.DivClothMax_setHeadBack{
+    display:none;
+    text-align:left;
+    position:absolute;
+    height:370px;
+    width:700px;
+    background-color:#ffffff;
+    z-index:101;
 }
-.Pansonel_rightDiv_leftTop {
-   background-color:#ffffff;
-   width:48%;
-   height:250px; 
-   margin:10px;
-   margin-top:30px;
-   float:left;
+.selImage{
+    color:#ffffff;
+    margin-left:20px;
+    margin-top:20px;
+    width:100px;
+    height:30px;
+    background-color:coral;
+    border:0px;
 }
-.Pansonel_rightDiv_leftTop_photo {
-    margin-top: 25px;
-    border: 0px solid red;
-    border-radius:50px;
-    height: 100px;
-    width: 100px;
-    position: relative;
-    left: 50%;
-    margin-left:-50px;
+.pTitle{
+    margin-left:20px;
+    color:#c6c6c6;
+    font-size:10pt;
 }
-.Pansonel_rightDiv_leftBottom {
-   background-color:#ffffff;
-   width:48%;
-   height:380px; 
-   margin:10px;
-   float:left;
+.divSetHead{
+    border-bottom:1px solid #c6c6c6;
+    height:230px;
+    width:100%;
 }
-.Pansonel_rightDiv_rightTop {
-   background-color:#ffffff;
-   width:45%;
-   height:250px; 
-   margin:10px;
-    margin-top:30px;
-   float:left;
+.divSetHeadBottom{
+    text-align:right;
 }
-.Pansonel_rightDiv_rightTop_btnMonthOrDay{
-cursor:pointer;
-width:24.5%;
-height:100%;
-float:left;
-border:1px solid #808080;
+.btnSaveCancel{
+    margin-top:10px;
+    height:25px;
+    width:60px;
+    border:0;
+    color:#ffffff;
+    background-color:coral;
 }
-.Pansonel_rightDiv_rightBottom {
-   background-color:#ffffff;
-   width:45%;
-   height:380px; 
-   margin:10px;
-   float:left;
+#btnSave{
+    margin-right:20px;
+}
+#btnCancel{
+    background-color:#808080;
+}
+#setHead200{
+    float:left;
+    margin-left:20px;
+    height:200px;
+    width:200px;
+    border:1px solid #ff0000;
+}
+#setHead150{
+    float:left;
+    margin-left:20px;
+    height:150px;
+    width:150px;
+    border:1px solid #ff0000;
+    background-size:100%;
+}
+#setHead75{
+    float:left;
+    margin-left:20px;
+    height:75px;
+    width:75px;
+    border:1px solid #ff0000;
+}
+#setHead50{
+     float:left;
+    margin-left:20px;
+    height:50px;
+    width:50px;
+    border:1px solid #ff0000;
 }

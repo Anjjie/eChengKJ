@@ -1,0 +1,108 @@
+﻿button,input {
+    outline: none;
+}
+.ConteneDIVAll {
+    margin:0;
+    padding:0;
+    width:100%;
+    min-width:1024px;
+    min-height:768px;
+    border:0px solid #ff0000;
+}
+/*产品幻灯片*/
+.ConteneDIVAll_ProductSlideshow{
+    width:100%;
+    height:300px;
+    border:0px solid #000000;
+    display:none;
+    cursor:pointer;
+}
+.ProductSlideshow_DIVcss{
+    width:25%;
+    height:100%;
+    border:0px solid #ff0000;
+    float:left;
+    background-repeat:round;
+}
+.ConteneDIVAll_ProductDiv{
+    z-index:1;
+    width:100%;
+    height:350px;
+    border:0px solid #ff0000;
+    background-color:#1893e0;
+    
+}
+.ConteneDIVAll_ProductDiv_Register{
+    height:50px;
+    width:300px;
+    font-size:12pt;
+    background-color:#ff6a00;
+    border-radius:30px;
+    outline:none;
+}
+.ConteneDIVAll_ProductFunction {
+    width:100%;
+    height:600px;
+    background-color:#dfdfdf;
+    border:0px solid #ff0000;
+}
+.ProductFunction_DIV {
+    width:1024px;
+    height:450px;
+    background-color:#ffffff;
+    position:absolute;
+    left:50%;
+    margin-left:-512px;
+    margin-top:75px;
+    /*4个属性值：上下偏移 左右偏移 阴影大小 阴影颜色*/
+    box-shadow:0px 0px 30px #808080;
+}
+.ProductFunction_DIV_SubDIV {
+    width:100%;
+    border:0px solid  #ff0000;
+}
+.ProductFunction_DIV_SubDIV_Button {
+    float:left;
+    height:30px;
+    border:1px solid #dfdfdf;
+    border-bottom:0px solid #dfdfdf;
+    background-color:#ffffff;
+    padding-left:30px;
+    padding-right:30px;
+}
+.ProductFunction_DIV_SubDIV_ProductButton {
+    float:left;
+    height:30px;
+    border:1px solid #dfdfdf;
+    border-bottom:0px solid #dfdfdf;
+    background-color:#ffffff;
+    padding-left:30px;
+    padding-right:30px;
+}
+.ProductFunction_DIV_SubDIV_Img {
+    width:1024px;
+    height:420px;
+}
+.ProductDomain_DIV {
+    display:none;
+    width:100%;
+    border:0px solid  #ff0000;
+}
+
+/*领域卡片*/
+.Product_DomainCard {
+    height:208px;
+    width:254px;
+    border:1px solid #dfdfdf;
+    border-top:0px solid #dfdfdf;
+    float:left;
+}
+.Product_DomainCard_Image {
+    width:96px;
+    height:96px;
+    border:0px solid #ff0000;
+    position:relative;
+    left:50%;
+    margin-left:-48px;
+    margin-top:30px
+}
