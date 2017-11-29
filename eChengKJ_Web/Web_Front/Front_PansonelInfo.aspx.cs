@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
+using System.Configuration;
 using eChengKJ_Models;
 using eChengKJ_BLL;
 
@@ -43,6 +45,7 @@ namespace eChengKJ_Web.Web_Front
             {
                 u =Session["loginUserName"] as User_Table;
             }
+            ConfigurationManager.AppSettings["defaultHead"] = u.U_Head;
             return u;
         }
     }

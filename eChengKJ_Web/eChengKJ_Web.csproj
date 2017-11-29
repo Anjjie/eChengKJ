@@ -166,6 +166,8 @@
     <Content Include="Web_Front\js\JQ_File\jquery-3.2.1.min.js" />
     <Content Include="Web_Front\js\JQ_File\jquery-ui-1.8.20.custom.min.js" />
     <Content Include="Web_Front\js\JQ_File\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Web_Front\UpdatePassword.html" />
+    <Content Include="Web_Front\UPFileImage.aspx" />
     <Content Include="Web_Front\WebUC\UC_FindInfo.ascx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -342,6 +344,13 @@
     <Compile Include="Web_Front\Front_Product.aspx.designer.cs">
       <DependentUpon>Front_Product.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web_Front\UPFileImage.aspx.cs">
+      <DependentUpon>UPFileImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\UPFileImage.aspx.designer.cs">
+      <DependentUpon>UPFileImage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Web_Front\WebUC\UC_FindInfo.ascx.cs">
       <DependentUpon>UC_FindInfo.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -355,6 +364,7 @@
     <Folder Include="Web_Backstage\image\" />
     <Folder Include="Web_Backstage\js\" />
     <Folder Include="Web_Front\image\Head\" />
+    <Folder Include="Web_Front\image\Temporary_Image_Storage\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eChengKJ_BLL\eChengKJ_BLL.csproj">

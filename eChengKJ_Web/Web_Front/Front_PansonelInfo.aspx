@@ -188,13 +188,13 @@
                 $("#thisUserName").html("<%= this.GetUserInfo().U_UserName%>");
                 $("#myName").html("<%= this.GetUserInfo().U_Name%>");
                 $("#myLoginId").html("<%= this.GetUserInfo().U_UserName%>");
+                $("#myPhoto").attr("src","image/Head/<%= this.GetUserInfo().U_Head%>");
                 var conpany = "<%= this.GetUserInfo().U_Company%>";
                 if (conpany=="") {
                     $("#myConpany").html("你还没有填写公司");
                 } else {
                     $("#myConpany").html("<%= this.GetUserInfo().U_Company%>");
                 }
-               
             }else {
                 $("#thisUserName").html("登录");
             }
@@ -350,8 +350,8 @@
             <div class="Pansonel_rightDiv_leftTop">
                 <div style="float:left;border:0px solid red;width:29%;height:100%;">
                     <div style="border:0px solid red;height:40%;">
-                        <div class="Pansonel_rightDiv_leftTop_photo">
-                            <img id="myPhoto" src="image/Logo_ICO.png" style="width:100px;height:100px;border-radius:50px;border:1px solid rgba(128, 128, 128, 0.25);" />
+                        <div class="Pansonel_rightDiv_leftTop_photo" style="margin-top:+45px;">
+                            <img id="myPhoto" src="image/Logo_ICO.png" style="width:100px;height:100px;border-radius:10px;border:1px solid rgba(128, 128, 128, 0.25);" />
                         </div>
                     </div>
                 </div>

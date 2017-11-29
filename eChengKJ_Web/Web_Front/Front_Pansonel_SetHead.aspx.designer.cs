@@ -13,21 +13,21 @@ namespace eChengKJ_Web.Web_Front {
     public partial class Front_Pansonel_SetHead {
         
         /// <summary>
-        /// selFileImage 控件。
+        /// btnCancels 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload selFileImage;
+        protected global::System.Web.UI.WebControls.Button btnCancels;
         
         /// <summary>
-        /// btnUp 控件。
+        /// btnSaves 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUp;
+        protected global::System.Web.UI.WebControls.Button btnSaves;
     }
 }

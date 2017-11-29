@@ -309,13 +309,13 @@
                     </div>
                      <%-- 登录界面：内容栏 --%>
                      <div id="loginDiv" class="LoginTier_content" >
-                        <input type="text" id="txtUserName" value="" placeholder="请输入账号" class="LoginTier_content_text" />
+                        <input type="text" id="txtUserName" value="User01" placeholder="请输入账号" class="LoginTier_content_text" />
                         <div id="txtLoginIdDiv" class="LoginTier_content_textDiv"></div>
-                        <input type="password" id="txtUserPwd" value="" placeholder="请输入密码" class="LoginTier_content_text" />
+                        <input type="password" id="txtUserPwd" value="User01" placeholder="请输入密码" class="LoginTier_content_text" />
                         <div id="txtLoginPwdDiv" class="LoginTier_content_textDiv"></div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                        <input type="text" id="txtPhone" value="" placeholder="请输入手机号码" class="LoginTier_content_text" />
+                        <input type="text" id="txtPhone" value="17607560135" placeholder="请输入手机号码" class="LoginTier_content_text" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                         <input type="button" id="btnGetCheckInfo" value="获取验证码" />
                         <div id="txtPhoneDiv"  class="LoginTier_content_textDiv"></div>
