@@ -8,7 +8,7 @@ using eChengKJ_Models;
 namespace eChengKJ_IDAL
 {
     /// <summary>
-    /// 接口:产品试用申请试用申请表
+    /// 接口:产品试用申请表
     /// </summary>
     public interface IProductTryOurTable_Server
     {

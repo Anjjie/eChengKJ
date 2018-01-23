@@ -78,27 +78,27 @@ USE eChengKJ_DB
 ------------【用户表】---------------------
 --用户名、密码、头像、姓名、性别、证件类型、证件号、手机号码、邮箱、所在公司、公司地址、登录状态、登录地址、登录时间、上次登录时间、上次登录地点、创建日期
 
-Insert into User_Table
-values('User01','User01','Logo_ICO.png','顾安萱','女','0','341000199101296948','17607560135','','e诚科技','广东珠海南方科技路123号','','0','','','','',default)
+--Insert into User_Table
+--values('User01','User01','Logo_ICO.png','顾安萱','女','0','341000199101296948','17607560135','','e诚科技','广东珠海南方科技路123号','','0','','','','',default)
 
-Insert into User_Table
-values('User02','User02','Logo_ICO.png','储曼梅','女','0','341000199101296948','12345678901','','e诚科技','广东珠海南方科技路123号','','0','','','','',default)
+--Insert into User_Table
+--values('User02','User02','Logo_ICO.png','储曼梅','女','0','341000199101296948','12345678901','','e诚科技','广东珠海南方科技路123号','','0','','','','',default)
 
-Insert into User_Table
-values('User03','User03','Logo_ICO.png','贺瑶一','男','0','341000199101296948','12345678901','','e诚科技','广东珠海南方科技路123号','','0','','','','',default)
+--Insert into User_Table
+--values('User03','User03','Logo_ICO.png','贺瑶一','男','0','341000199101296948','12345678901','','e诚科技','广东珠海南方科技路123号','','0','','','','',default)
 
 EXEC Select_UserTable
 
 ------------【员工表】---------------------
 --用户名、密码、姓名、性别、证件类型、证件号、毕业学校、学历、联系方式、家庭住址、部门、职位、工资、登录状态、登录地址、登录时间、上次登录时间、上次登录地点、注册时间
-Insert into Employee_Table
-values('Admin1','Admin1','云新锁','男','0','440705198011202491','暨南大学','本科','12345678901','广东珠海香洲香楠路123号','3','6','4000','0','','','','',CONVERT(datetime, GETDATE(),120))
+--Insert into Employee_Table
+--values('Admin1','Admin1','云新锁','男','0','440705198011202491','暨南大学','本科','12345678901','广东珠海香洲香楠路123号','3','6','4000','0','','','','',CONVERT(datetime, GETDATE(),120))
 
-Insert into Employee_Table
-values('Admin2','Admin2','汪圣熙','男','0','350924198906261917','暨南大学','专科','12345678901','广东珠海香洲香楠路124号','2','6','4000','0','','','','',CONVERT(datetime, GETDATE(),120))
+--Insert into Employee_Table
+--values('Admin2','Admin2','汪圣熙','男','0','350924198906261917','暨南大学','专科','12345678901','广东珠海香洲香楠路124号','2','6','4000','0','','','','',CONVERT(datetime, GETDATE(),120))
 
-Insert into Employee_Table
-values('Admin3','Admin3','毕书蝶','女','0','34022219860802956X','暨南大学','本科','12345678901','广东珠海香洲香楠路125号','1','6','5000','0','','','','',CONVERT(datetime, GETDATE(),120))
+--Insert into Employee_Table
+--values('Admin3','Admin3','毕书蝶','女','0','34022219860802956X','暨南大学','本科','12345678901','广东珠海香洲香楠路125号','1','6','5000','0','','','','',CONVERT(datetime, GETDATE(),120))
 
 EXEC Select_EmployeeTable
 
@@ -106,22 +106,22 @@ EXEC Select_DepartmentTable
 EXEC Select_PostTable
 
 ------------【产品表】---------------------
---名称、价格、产品类型、是否热门产品、是否新产品、发布日期、出品公司、录入人员
+--编号、封面、名称、价格、产品类型、是否热门产品、是否新产品、产品介绍、发布日期、出品公司、录入人员
 Insert into Product_Table
-values('00000001','e购天下','8888','0',default,default,default,default,1)
+values('00000001','eGou.png','e购天下','8888','0',default,default,'e购天下，服务电商平台！','2010-01-01',default,1)
 
 Insert into Product_Table
-values('10000001','e服智管','9999','1',default,default,default,default,1)
+values('10000001','eFu.png','e服智管','9999','1',default,default,'e服智管，帮您管理您的服装生产！','2010-01-01',default,0)
 
 Insert into Product_Table
-values('40000001','This资源','11111','4',default,default,default,default,1)
+values('40000001','ThisZiYuan.png','This资源','11111','4',default,default,'This资源，服务资源分化整合！','2010-01-01',default,1)
 
 EXEC Select_ProductTable
 EXEC Select_ProductTypeTable
 
 
 
-------------【e诚科技信息表】---------------------
+------------【网站信息表】---------------------
 --公司名称、公司Logo、公司介绍、公司荣誉、公司范围介绍、公司规模、公司发展历程、公司宗旨
 Insert into Company_Table
 values('e诚科技','','e诚科技，2017新创一所潜力无限的黑马科技公司，专门服务企业资源管理。',
@@ -131,7 +131,11 @@ EXEC Select_CompanyTable
 
 
 
+------------【购物车信息表】---------------------
+--用户、产品、数量、日期
+EXEC Insert_ShopTable 'User01','00000001','1','2018-01-23'
+EXEC Insert_ShopTable 'User01','10000001','1','2018-01-23'
+EXEC Insert_ShopTable 'User01','40000001','1','2018-01-23'
 
-
-
+exec Select_ShopTable
 

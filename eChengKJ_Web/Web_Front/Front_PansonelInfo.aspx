@@ -222,15 +222,29 @@
                     case "头像设置":
                         window.location.href = "Front_Pansonel_SetHead.aspx";
                         break;
-                    case "修改密码": break;
-                    case "设置密保": break;
-                    case "邮箱绑定": break;
-                    case "手机绑定": break;
+                    case "修改密码":
+                        window.location.href = "Front_UpdatePwd.aspx";
+                        break;
+                    case "设置密保":
+                        window.location.href = "Front_SetSecurity.aspx";
+                        break;
+                    case "邮箱绑定":
+                        window.location.href = "Front_EMail.aspx";
+                        break;
+                    case "手机绑定":
+                        window.location.href = "Front_Phone.aspx";
+                        break;
                 }
             });
         }
 
         $(function () {
+            $(".Pansonel_rightDiv_leftBottom").click(function () {
+                window.open("https://promotion.aliyun.com/ntms/act/ecshighperformance.html?utm_content=se_1276629");
+            });
+            $(".Pansonel_rightDiv_rightBottom").click(function () {
+                window.open("http://www.ucpaas.com/?utm_source=baidu&utm_medium=ppc&utm_term=%E5%93%81%E8%B7%91%E6%A0%87%E9%A2%98&utm_content=&utm_campaign=pinpao&id=103014");
+            });
             //设置左边导航栏默认图片及文字颜色
             $("#img0").css("color", "#ffffff");
             defaultPath = $(defaultId).eq(0).attr("src");
@@ -380,86 +394,43 @@
                     </table>
                 </div>
             </div>
-            <%-- 最近登录情况（记录10条登录记录） --%>
+            <%-- 账户余额、礼卡 --%>
             <div class="Pansonel_rightDiv_rightTop">
-                <div style="width:100%;height:25px;float:left;border-bottom:1px solid #808080;">
-                       最近登录
+                <div class="divBalance">
+                    <div class="rightTop-Title">
+                        <div></div>账户余额
+                    </div>
+                    <div class="rightTop-Content">
+                        <div>
+                            <div style="float:left;"><label class="full" id="balanceFull">0</label><label class="double" id="balanceDouble">.00</label><label style="font-size:13pt;color:#999999;">元</label></div>
+                            <div id="balanceHint">余额不足，<a style="color:blue;" href="javascript:;">点击充值</a></div>
+                        </div>
+                    </div>
                 </div>
-                <table id="myLoginTable" width="100%" >
-                       <tr >
-                          <th width="40%">时间</th>
-                          <th width="30%">id地址</th>
-                          <th width="30%">地区</th>
-                      </tr> 
-                       <tr >
-                          <th width="40%">-</th>
-                          <th width="30%">-</th>
-                          <th width="30%">-</th>
-                      </tr> 
-                 </table>
+                <div class="divGiftBag">
+                     <div class="rightTop-Title">
+                        <div></div>我的礼包卡
+                    </div>
+                    <div class="rightTop-Content">
+                        <div><label class="full" id="GiftBagFull">0</label><label class="double" id="GiftBagdouble">.00</label><label style="font-size:13pt;color:#999999;">元</label>
+                            <a  href="javascript:;" style="margin-left:2%;color:#ff6a00;">查看</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-             <%-- 最近加入购物车的物品信息(今天、本月) --%>
+             <%-- 广告 --%>
             <div class="Pansonel_rightDiv_leftBottom">
-                <div style="width:100%;height:25px;float:left;border-bottom:1px solid #808080;">
-                       最近购物车商品
+               <img src="image/aliyun.png" style="width:100%;height:70%;" />
+                <div>
+                    阿里云-提供专业的云服务器ECS、关系型数据库服务RDS、开放存储服务OSS、内容分发网络CDN等云产品服务。
                 </div>
-                 <div style="height:325px;width:100%;border:0px solid red;margin-top:27px;">
-                   <table id="myShopTable" width="100%" >
-                       <tr >
-                          <th width="40%">名称</th>
-                          <th width="20%">类型</th>
-                          <th width="20%">价格</th>
-                          <th width="20%"></th>
-                      </tr> 
-                       <tr >
-                          <th width="40%">-</th>
-                          <th width="20%">-</th>
-                          <th width="20%">-</th>
-                          <th width="20%"></th>
-                      </tr> 
-                  </table>
-                   <div style="margin-top:10%;"> <a href="#" style="font-size:12pt;color:cornflowerblue">查看全部</a></div>
-               </div>
-               <div style="width:100%;height:25px;float:left;border-top:1px solid #808080;">
-                        <div  id="shopThisDay" class="Pansonel_rightDiv_rightTop_btnMonthOrDays" style="border-top:0px;margin-left:25%;">今天 </div>
-                        <div id="shopThisMonth" class="Pansonel_rightDiv_rightTop_btnMonthOrDays" style="border-left:0px;border-top:0px;">本月</div>
-               </div>
             </div>
-             <%-- 消费、已购买类型等资料统计显示（昨天、本月、上月） --%>
+             <%-- 广告 --%>
             <div class="Pansonel_rightDiv_rightBottom">
-                 <div style="width:100%;height:25px;float:left;border-bottom:1px solid #808080;">
-                        <div  id="getYesterday" class="Pansonel_rightDiv_rightTop_btnMonthOrDay" style="border-bottom:0px;margin-left:13%;">昨天 </div>
-                        <div  id="getThisMonth" class="Pansonel_rightDiv_rightTop_btnMonthOrDay" style="border-left:0px;border-bottom:0px;">本月</div>
-                        <div  id="getLastMonth" class="Pansonel_rightDiv_rightTop_btnMonthOrDay" style="border-left:0px;border-bottom:0px;">上月</div>
-               </div>
-                 <div style="height:220px;width:100%;border:0px solid red;margin-top:27px;">
-                   <%--  消费 --%>
-                    <div style="height:50%;width:100%;border:0px solid red;margin-top:40px;border-bottom:1px solid #808080;">
-                        <div style="height:100%;width:120px;border:0px solid red;float:left;">
-                            <img src="image/Xiaofei.png" style="height:100%;width:120px;" />
-                        </div>
-                        <div style="height:100%;width:60%;border:0px solid red;float:left;">
-                            <div style="height:30px;margin-top:80px;float:left;">总消费：</div>
-                            <div style="height:30px;margin-top:80px;float:left;">999999</div>
-                            <div style=" height:30px;margin-top:80px;float:right;">
-                                <a href="#" style="color:blue;font-size:11pt;">了解详情</a>
-                            </div>
-                        </div>
-                   </div>
-                    <%-- 购买 --%>
-                   <div style="height:50%;width:100%;margin-top:20px;">
-                        <div style="height:100%;width:120px;border:0px solid red;float:left;">
-                            <img src="image/Yiwancheng.png" style="height:100%;width:120px;" />
-                        </div>
-                        <div style="height:100%;width:60%;border:0px solid red;float:left;">
-                            <div style="height:30px;margin-top:80px;float:left;">已购买产品数：</div>
-                            <div style="height:30px;margin-top:80px;float:left;">1</div>
-                            <div style=" height:30px;margin-top:80px;float:right;">
-                                <a href="#" style="color:blue;font-size:11pt;">了解详情</a>
-                            </div>
-                         </div>
-                   </div>
-               </div>
+                 <img src="image/yunzhixun.jpg" style="width:100%;height:70%;" />
+                <div>
+                    云之讯为互联网/移动互联网广大开发者和企业提供通讯能力,云计算PaaS平台,开发者无需硬件网络成本,快速接入电信级通讯能力
+                </div>
             </div>
         </div>
     </div>

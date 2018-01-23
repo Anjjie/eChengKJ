@@ -6,7 +6,7 @@
 -- CREATE DATABASE eChengKJ_DB
 -- ON(
 --	NAME='eChengKJ_DB',
---	FILENAME='D:\学习资料\南方IT学院二学年学习资料\个人项目\e诚科技\e诚科技网站\eChengKJ\eChengKJ_DB\eChengKJ_DB.MDF'
+--	FILENAME='D:\学习资料\二学年\个人项目\e诚科技\e诚科技网站\eChengKJ\eChengKJ_DB\eChengKJ_DB.MDF'
 -- )
  
  GO
@@ -50,11 +50,13 @@ GO
  (
 	P_id int IDENTITY(0,1) PRIMARY KEY,		--产品编号
 	P_No NvarChar(20),						--自定义产品编号
+	p_CoverImage Nvarchar(1000),			--产品封面
 	P_Name NvarChar(100),					--产品名称
 	P_Price MONEY,							--产品价格
 	PT_id INT DEFAULT(0),					--类型
 	HP_id INT DEFAULT(0),					--是否热门
 	NP_id INT DEFAULT(1),					--是否新品
+	P_Introduce Nvarchar(2000),				--产品介绍
 	P_Date DateTIME DEFAULT(Convert(datetime,getdate(),120)),--发布日期
 	P_Company Nvarchar(200) DEFAULT('e诚科技') ,--出品公司
 	E_id INT								--操作人
@@ -148,7 +150,7 @@ GO
 	U_LoginDatetime DateTime,				--登录时间
 	U_LastLoginAddress NVARCHAR(300) ,		--上次登录地址
 	U_LastLoginDatetime DateTime ,			--上次登录时间
-	U_CreateUserDate DateTime default(getdate())	--创建日期
+	U_CreateUserDate DateTime default(getdate()) --创建日期
 	
  )
  
@@ -354,5 +356,17 @@ GO
 	Com_Course NVARCHAR(200), 					--发展历程
 	Com_Purpose NVARCHAR(200) 					--宗旨
  )
-
+ --------------【购物车表】----------------------------------
+  GO
+IF OBJECT_ID('Shop_Table') IS NOT NULL
+   DROP TABLE Shop_Table
+GO
+ CREATE TABLE Shop_Table
+ (
+	Shop_id int IDENTITY(0,1) PRIMARY KEY,		--编号
+	Shop_User NVARCHAR(16) ,					--用户
+	P_No Nvarchar(20) ,							--产品
+	Shop_Number Int ,							--数量
+	Shop_Date DateTime 							--日期
+ )
  

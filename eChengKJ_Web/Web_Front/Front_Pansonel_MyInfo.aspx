@@ -532,7 +532,7 @@
                     <tr>
                         <td style="text-align:right;width:30%;">证件号：</td>
                         <td style="text-align:left;width:20%;">
-                           <input type="text" id="txtID" value="" placeholder="请输入您的证件号码" /></td>
+                           <input type="password" id="txtID" value="" placeholder="请输入您的证件号码" /></td>
                         <td style="text-align:left;"><label id="lbID"></label></td>
                     </tr>
                     <tr>

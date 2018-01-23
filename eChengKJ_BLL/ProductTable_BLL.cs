@@ -62,15 +62,15 @@ namespace eChengKJ_BLL
         }
         #endregion
 
-        #region 根据ID查询产品信息
+        #region 根据输入的属性名称查询产品信息
         /// <summary>
-        /// 根据ID查询产品信息
+        /// 根据输入的属性名称查询产品信息
         /// </summary>
         /// <param name="con"></param>
         /// <returns></returns>
-        public Product_Table GetProductTableByConn(string con)
+        public Product_Table GetProductTableByConn(string tyepAttrName, string con)
         {
-            return relevanceClass.GetProductTableByConn(con);
+            return relevanceClass.GetProductTableByConn(tyepAttrName,con);
         }
         #endregion
 

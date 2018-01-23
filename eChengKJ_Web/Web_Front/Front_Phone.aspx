@@ -1,12 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Web_Front/Front_Pansonel.master" AutoEventWireup="true" CodeBehind="Front_Pansonel_SetHead.aspx.cs" Inherits="eChengKJ_Web.Web_Front.Front_Pansonel_SetHead" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Web_Front/Front_Pansonel.master" AutoEventWireup="true" CodeBehind="Front_UpdatePwd.aspx.cs" Inherits="eChengKJ_Web.Web_Front.Front_UpdatePwd" %>
 <%-- CSS样式文件及样式类 --%>
 <asp:Content ID="Content1" ContentPlaceHolderID="pansonelContent_CSS" runat="server">
     <link href="css/Front_Pansonel_Collect.css" rel="stylesheet" />
     <link href="css/Front_2.css" rel="stylesheet" />
+    <link href="css/view-SetOrUpdaet.css" rel="stylesheet" />
 </asp:Content>
 <%-- JS(JQ文件已存在) --%>
 <asp:Content ID="Content2" ContentPlaceHolderID="pansonelContent_JS" runat="server">
+    <script src="js/Front_Phone.js"></script>
     <script type="text/javascript">
         //======================左侧导航(母版页实现，当前页面设置默认值)=============================//
         var defaultColorId = "#img0";//设置左边导航栏默认图片及文字颜色
@@ -75,7 +76,7 @@
             var type = "<%=notIsLogin%>";
             if (type == "登录") {
                 $("#thisUserName").html("<%= this.GetUserInfo().U_UserName%>");
-                 $("#myHead").attr("src","image/Head/<%= this.GetUserInfo().U_Head%>");
+                $("#myHead").attr("src","image/Head/<%= this.GetUserInfo().U_Head%>");
                 }else {
                     $("#thisUserName").html("登录");
                 }
@@ -93,39 +94,6 @@
             });
         }
 
-        //==============设置头像====================//
-        function ShowSet() {
-            var $divSetHeadCloth = $("#divSetHeadCloth");
-            var $divSetHeadBack = $("#divSetHeadBack");
-            var $setHead = $("#setHead");
-            var $btnCancel = $("#btnCancel");
-            var $btnSave = $("#btnSave");
-            var $btnCancles = $("#conPlaceHolder_Content_pansonelContent_Right_btnCancels");
-            var $btnSaves = $("#conPlaceHolder_Content_pansonelContent_Right_btnSaves");
-
-            $setHead.on("click", function () {
-                $divSetHeadCloth.css({
-                    "height": $("body").height() + "px",
-                    "width": $("body").width() + "px",
-                    "display": "block"
-                });
-                $divSetHeadBack.css({
-                    "display": "block"
-                });
-            });
-            $btnCancel.on("click", function () {
-                $divSetHeadCloth.css({
-                    "display": "none"
-                });
-                $divSetHeadBack.css({
-                    "display": "none"
-                });
-                $btnCancles.click();
-            });
-            $btnSave.click(function () {
-                $btnSaves.click();
-            });
-        }
         //==============子目录下的单击事件==========//
         function ClickSubNav() {
             $(".Pansonel_leftDiv_sonDiv_li_div").click(function () {
@@ -153,25 +121,46 @@
         }
         //============设置默认子导航选择============//
         function SetNavDefault() {
-            $("#sonShowDiv0").show();
+            $("#sonShowDiv2").show();
             //设置选择90度
             $("#shanjiao1").css({
                 "transform": "rotate(90deg)"
             });
-            $("#ShowDiv0").css("background-color", "rgba(95, 184, 120, 0.27)");
+            $("#ShowDiv2").css("background-color", "rgba(95, 184, 120, 0.27)");
             $("#myInfo").css("color", "rgba(95, 184, 120, 0.27)");
         }
 
-
-        $(function () {
-                SetNavDefault();
-                LoginUrl();
-                LoadPageUserData();
-                $("#Select_Image").attr("src", "UPFileImage.aspx?name=" + $("#thisUserName").html());
-                ClickSubNav();
-                ShowSet();
-
+        function LoadInfo() {
+            $("#lbLoginUser").html("<%= this.GetUserInfo().U_UserName%>");
+            var data = {
+                "methodType": "selectcon",
+                "classType": "User",
+                "attribute": "name",
+                "con": "<%= this.GetUserInfo().U_UserName%>"
+            }
+            $.getJSON("ashx/All-Powerful_GetBLL.ashx", data, function (ret) {
+                $.each(ret, function (i, obj) {
+                    
+                    lbCheckPhone_val(obj.U_Phone);
+                });
             });
+           
+        }
+        $(function () {
+            LoadInfo();
+            SetNavDefault();
+            LoginUrl();
+            LoadPageUserData();
+            $("#Select_Image").attr("src", "UPFileImage.aspx?name=" + $("#thisUserName").html());
+            ClickSubNav();
+            defaultShow();
+            btnGetCheck_click();
+            btnNewGetCheck_click();
+            btnNext_click();
+            btnUp_click();
+            btnOk_click();
+            
+        });
     </script>
 </asp:Content>
 <%-- 左边导航 --%>
@@ -230,23 +219,23 @@
         <ul class="Pansonel_leftDiv_sonDiv_ul">
             <li class="Pansonel_leftDiv_sonDiv_li" id="ShowDiv0">
                 <a href="javasrcipt:;" style="color: #808080; font-size: 10pt;">
-                    <div id="shanjiao1" class="Pansonel_leftDiv_sonDiv_div"></div>
+                    <div  class="Pansonel_leftDiv_sonDiv_div"></div>
                     个人信息</a>
             </li>
             <div id="sonShowDiv0" class="Pansonel_leftDiv_sonDiv_li_div" style="margin: 0; float: left;">
                 <div class="Pansonel_leftDiv_sonDiv_li_div">个人资料</div>
-                <div id="myInfo" class="Pansonel_leftDiv_sonDiv_li_div">头像设置</div>
+                <div class="Pansonel_leftDiv_sonDiv_li_div">头像设置</div>
             </div>
         </ul>
         <%-- 安全设置 --%>
         <ul class="Pansonel_leftDiv_sonDiv_ul">
             <li class="Pansonel_leftDiv_sonDiv_li" id="ShowDiv1">
                 <a href="javasrcipt:;" style="color: #808080; font-size: 10pt;">
-                    <div class="Pansonel_leftDiv_sonDiv_div"></div>
+                    <div class="Pansonel_leftDiv_sonDiv_div" ></div>
                     安全设置</a>
             </li>
             <div id="sonShowDiv1" class="Pansonel_leftDiv_sonDiv_li_div" style="margin: 0; float: left;">
-                <div class="Pansonel_leftDiv_sonDiv_li_div">修改密码</div>
+                <div  class="Pansonel_leftDiv_sonDiv_li_div">修改密码</div>
                 <div class="Pansonel_leftDiv_sonDiv_li_div">设置密保</div>
             </div>
         </ul>
@@ -254,41 +243,83 @@
         <ul class="Pansonel_leftDiv_sonDiv_ul">
             <li class="Pansonel_leftDiv_sonDiv_li" id="ShowDiv2">
                 <a href="javasrcipt:;" style="color: #808080; font-size: 10pt;">
-                    <div class="Pansonel_leftDiv_sonDiv_div"></div>
+                    <div class="Pansonel_leftDiv_sonDiv_div" id="shanjiao1"></div>
                     绑定设置</a>
 
             </li>
             <div id="sonShowDiv2" class="Pansonel_leftDiv_sonDiv_li_div" style="margin: 0; float: left;">
                 <div class="Pansonel_leftDiv_sonDiv_li_div">邮箱绑定</div>
-                <div class="Pansonel_leftDiv_sonDiv_li_div">手机绑定</div>
+                <div  id="myInfo"  class="Pansonel_leftDiv_sonDiv_li_div">手机绑定</div>
             </div>
         </ul>
     </div>
 </asp:Content>
 <%-- 右边内容 --%>
 <asp:Content ID="Content4" ContentPlaceHolderID="pansonelContent_Right" runat="server">
-    <div id="divSetHeadCloth" class="DivClothMax"></div>
-    <div id="divSetHeadBack" class="DivClothMax_setHeadBack">
-        <div id="divSetHeadButton" style="height:320px;">
-            <iframe id="Select_Image"   style="width:100%; height:350px;border:0;overflow:hidden;"></iframe>
-        </div>
-        <div class="divSetHeadBottom">
-            <form runat="server">
-                 <asp:Button id="btnCancels" runat="server" value="取消" OnClick="btnCancels_Click" class="btnSaveCancel" Style="display:none;"  />
-                 <asp:Button id="btnSaves" runat="server" value="保存"  OnClick="btnSaves_Click"  class="btnSaveCancel" Style="display:none;"  />
-            </form>
-            <input id="btnCancel" type="button" value="取消" class="btnSaveCancel" />
-            <input id="btnSave" type="button" value="保存" class="btnSaveCancel" />
-        </div>
-    </div>
-
-    <div class="ShowHeadBack">
-        <div class="MyHeads">
-            <img id="myHead" src="image/Head/Logo_ICO.png" style="width:150px;height:150px;border-radius:10px;border:1px solid rgba(128, 128, 128, 0.25);" />
-        </div>
-        <span id="setHead" style="margin-left:46%; cursor: pointer;">设置头像</span>
-    </div>
-
-    
-
+   <div class="view-SetOrUpdaet">
+       <div class="pwdTop">
+           <div class="left">
+               <div class="topLeftAdorn"></div>手机绑定
+           </div>
+           <div class="right">
+               <div class="step">完成</div>
+               <div class="step">3.设置新手机</div>
+               <div class="step">2.验证身份</div>
+               <div class="step">1.填写账号信息</div>
+           </div>
+       </div>
+       <div class="pwdBottom">
+           <div class="pwdContent">
+               <div name="content-view" id="Info">
+                   <div id="LoginUser">
+                       <div style="margin-right:10px;width:45%;text-align:right;color:#999999;">当前账号</div>
+                       <div id="lbLoginUser">66666</div>
+                   </div>
+                   <div id="LoginPwd">
+                       <div style="margin-right:10px;width:45%;text-align:right;color:#999999;">当前密码</div>
+                       <div><input id="txtLoginPwd" type="password" placeholder="请输入密码验证信息" /></div>
+                   </div>
+               </div>
+               <div name="content-view"  id="Check">
+                   <div id="CheckPhone">
+                       <div style="margin-right:10px;width:45%;text-align:right;color:#999999;">手机号</div>
+                       <div id="lbCheckPhone">180****6004</div>
+                   </div>
+                   <div id="CheckCode">
+                       <div style="margin-right:10px;width:45%;text-align:right;color:#999999;">验证码</div>
+                       <div><input id="txtCheckCode" type="text" placeholder="请输入验证码" /> 
+                           <input id="btnGetCheck" type="button" value="免费获取" />  </div>
+                   </div>
+               </div>
+               <div name="content-view" >
+                    <div id="NewPhone">
+                       <div style="margin-right:10px;width:45%;text-align:right;color:#999999;">手机号</div>
+                       <div id="divNewPhone"><input id="txtNewPhone" type="text" value="" placeholder="新手机号码" /> </div>
+                   </div>
+                   <div id="NwePhoneCheckCode">
+                       <div style="margin-right:10px;width:45%;text-align:right;color:#999999;">验证码</div>
+                       <div><input id="txtNewPhoneCheckCode" type="text" placeholder="验证码" /> 
+                           <input id="btnNewGetCheck" type="button" value="免费获取" />  </div>
+                   </div>
+               </div>
+               <div name="content-view" >
+                    <label style="font-size:15pt;font-weight:600;">请阅读以下相关信息</label>
+                        <br /><br />
+                        请您记住本次修改的手机号码！
+                       <br /><br />点击[完成]按钮，将结束本次手机号码绑定！
+                       <br /><br />温馨提示：手机号码有助于帮助您在找回密码、修改密码操作中，起到非常大的作用。
+                       <br /><br />
+                  
+               </div>
+           </div>
+           <div> 
+                <input type="button" id="btnUp" value="上一步" /> 
+                <input type="button" id="btnNext" value="下一步" /> 
+                <input type="button" id="btnOk" value="完成" /> 
+            </div>
+           <div id="div_Hint" style="color:red;margin-top:30px;padding-left:20px;">
+               提示：<label  id="lb_Hint"></label>
+           </div>
+       </div>
+   </div>
 </asp:Content>

@@ -8,42 +8,42 @@ using eChengKJ_Models;
 namespace eChengKJ_IDAL
 {
     /// <summary>
-    /// 接口：产品表
+    /// 接口：购物车表
     /// </summary>
-    public interface IProductTable_Server
+    public interface IShopTable_Server
     {
         /// <summary>
-        /// 获取全部的产品表信息
+        /// 获取全部的购物信息
         /// </summary>
         /// <returns></returns>
-        List<Product_Table> GetProductTableAll();
+        List<Shop_Table> GetShopTableAll();
 
         /// <summary>
-        /// 获取某条产品信息
+        /// 获取某条【购物】信息
         /// </summary>
         /// <param name="con">参数条件</param>
         /// <returns></returns>
-        Product_Table GetProductTableByConn(string tyepAttrName, string con);
+        Shop_Table GetShopTableByConn(string con);
 
         /// <summary>
-        /// 添加产品表信息
+        /// 添加购物信息
         /// </summary>
         /// <param name="obj">带入参数</param>
         /// <returns></returns>
-        int Insert_ProductTableData(Product_Table obj);
+        int Insert_ShopTableData(Shop_Table obj);
 
         /// <summary>
-        /// 更改产品表信息
+        /// 更改购物信息
         /// </summary>
         /// <param name="obj">带入参数</param>
         /// <returns></returns>
-        int Update_ProductTableData(Product_Table obj);
+        int Update_ShopTableData(Shop_Table obj);
 
         /// <summary>
-        /// 移除产品表信息
+        /// 移除购物信息
         /// </summary>
         /// <param name="con">参数条件</param>
         /// <returns></returns>
-        int Delete_ProductTableData(string con);
+        int Delete_ShopTableData(string con);
     }
 }

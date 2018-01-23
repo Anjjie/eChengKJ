@@ -1,10 +1,37 @@
-﻿input,text,button,label{
-    margin:0;
-    padding:0;
-    outline-style:none;
-}
-.Shop_Content{
-    width:100%;
-    height:650px;
-    border:0px solid #ff0000;
-}
+﻿input,text,button,label{ margin:0;padding:0;outline-style:none;}
+.topTitle{margin-left:-8px;width:100%;height:80px;background-color:#ffffff; box-shadow:0 0 2px #808080;}
+.divTitleName{width:99%;height:60%; text-align:left;padding-left:1%;/*border:1px solid;*/}
+.divTitleName>div{float:left;width:50%;height:100%;}
+.divDemand{text-align:right;}
+.ulDemand{height:30px;width:60%;display:table;margin-right:20px;margin-top:10px;}
+.ulDemand>li{display:table-cell;}
+.liDemandText{width:80%;text-align:left;border:1px solid cornflowerblue;border-right:0px;}
+.liDemandButton{width:20%;border:1px solid cornflowerblue;}
+#txtDemandInfo{border:0;width:99%;height:100%;padding-left:1%;text-align:center;}
+#btnDemand{border:0;width:99%;height:100%;cursor:pointer;background-color:cornflowerblue;color:#ffffff;}
+#btnDemand:active{background-color:#ffffff;color:cornflowerblue;}
+.divShopTitleName{width:100%;height:40%;}
+.ulShopTitle{width:100%;height:100%;}
+.ulShopTitle>li{height:90%;float:left;text-align:center;padding-top:5px;}
+.liChk{width:5%;}
+.liShopInfo{width:50%;}
+.liPrice{width:10%;}
+.liNum{width:10%;}
+.liMoney{width:10%;}
+.liOperation{width:12%;}
+.lineHeight{line-height:100px;}
+.Shop_Content{margin-left:-8px;width:102.3%;height:610px;overflow:auto;}
+.shopInfo-view{width:99%;height:110px;border:1.5px solid #ffffff; margin-top:20px; overflow:hidden;background-color:rgba(255, 255, 255, 0.5);}
+.contentImage{width:17.5%;height:100%;float:left;border:1px solid rgba(178, 178, 178, 0.50);line-height:100px;}
+.contentInfo{width:80%;height:100%;float:left;}
+.contentTitle{width:100%;height:30%;font-size:14pt;}
+.contentText{width:99%;height:70%;font-size:10pt;text-align:left;padding-left:1%;overflow:hidden;color:#999999;}
+.shopInfoCss{cursor:pointer;}
+.shopInfoCss:hover{border:1px dashed #ff6a00;width:49.5%;}
+.divCloseAnAccount{margin-top:10px; width:100%;height:60px;background-color:#ffffff;position:absolute;bottom:0;}
+.ulCloseAnAccount{width:100%;height:100%;display:table;}
+.ulCloseAnAccount>li{display:table-cell;vertical-align:middle;}
+#btnCloseAnAccount{width:100%;height:100%;border:0;background-color:#ff6a00;font-size:15pt;color:#ffffff;cursor:pointer; }
+.chkAll{margin-left:10px;margin-top:5px; width:18px;height:18px;}
+.chkAll:checked{border:1px solid #ff6a00;background-color:cornflowerblue;}
+.chkSelect{width:18px;height:18px;}

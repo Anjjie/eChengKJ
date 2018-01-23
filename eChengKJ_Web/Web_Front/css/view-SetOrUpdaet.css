@@ -1,0 +1,29 @@
+﻿.view-SetOrUpdaet{width:80%;height:80%;background-color:#ffffff;left:50%;position:relative;margin-left:-40%;margin-top:70px;}
+.pwdTop{height:40px;width:97%;padding-top:10px;padding-left:3%;text-align:left;border-bottom:2px solid #f0f1f2;}
+.pwdTop>div{float:left;}
+.pwdTop>.left{width:30%;height:100%;font-size:18pt;color:#999999;}
+.topLeftAdorn{float:left; width:5px;height:90%;background-color:#00a4ff;margin-right:15px;}
+.pwdTop>.right{width:70%;height:100%;}
+.step{ height:20px;width:24%;margin-top:15px;float:right;text-align:center;font-size:10pt;}
+.stepBorder_Bottom{border-bottom:1.5px solid #5FB878;}
+.pwdBottom{margin-top:2px; width:80%;height:70%;padding-top:15%;padding-left:10%;padding-right:10%;}
+.pwdContent{min-height:10px;width:100%;text-align:center;}
+.pwdContent>div{display:none;}
+#LoginUser,#LoginPwd,#CheckPhone,#CheckCode,#NewPwd_New,#NewPwd_Ok,#NewPhone,#NwePhoneCheckCode,#set_email,#emailOk{width:100%;height:30px;margin-bottom:30px;}
+#LoginUser>div,#LoginPwd>div,#CheckPhone>div,#CheckCode>div,#NewPwd_New>div,#NewPwd_Ok>div,#NewPhone>div,#NwePhoneCheckCode>div,#set_email>div,#emailOk>div{float:left;text-align:center;color:#343434;}
+#txtLoginPwd,#txtCheckCode,#txtNewPwd_New,#txtNewPwd_Ok,#txtNewPhoneCheckCode,#txtNewPhone,#txtEmail,#txtEmailOk{padding:2px; margin-top:-7px; height:30px;}
+#btnGetCheck,#btnNewGetCheck{cursor:pointer; width:80px;height:25px;border:0;background-color:#00a4ff;color:#ffffff;border-radius:5px;}
+#btnGetCheck:active,#btnNewGetCheck:active{box-shadow:0 3px 5px #999999;}
+#btnNext,#btnUp,#btnOk{margin-left:50px; display:none; width:100px;height:30px; background-color:#0094ff;border:0;color:#ffffff;cursor:pointer;border-radius:5px;}
+#btnUp{background-color:#ff8d44;}
+#btnOk{background-color:#3aaf23;}
+#lbOKHint{width:100%;height:200px;}
+
+
+
+
+
+
+
+
+

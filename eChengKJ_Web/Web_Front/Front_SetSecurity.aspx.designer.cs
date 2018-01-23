@@ -10,6 +10,6 @@
 namespace eChengKJ_Web.Web_Front {
     
     
-    public partial class Front_Pansonel_Shop {
+    public partial class Front_SetSecurity {
     }
 }

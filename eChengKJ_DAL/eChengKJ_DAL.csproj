@@ -63,6 +63,7 @@
     <Compile Include="ProductTryOurTable_Server.cs" />
     <Compile Include="ProductTypeTable_Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopTable_Server.cs" />
     <Compile Include="SolutionTable_Server.cs" />
     <Compile Include="TryOutTable_Server.cs" />
     <Compile Include="UserTable_Server.cs" />

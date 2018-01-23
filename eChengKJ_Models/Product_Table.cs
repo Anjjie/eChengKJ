@@ -20,6 +20,10 @@ namespace eChengKJ_Models
         /// </summary>
         public string P_No { get; set; }
         /// <summary>
+        /// 产品封面
+        /// </summary>
+        public string P_CoverImage { get; set; }
+        /// <summary>
         /// 产品名称
         /// </summary>
         public string P_Name { get; set; }
@@ -51,6 +55,10 @@ namespace eChengKJ_Models
         /// 获取是否新品属性对象
         /// </summary>
         public NewProduct_Table GetNewProduct { get; set; }
+        /// <summary>
+        /// 产品介绍
+        /// </summary>
+        public string P_Introduce { get; set; }
         /// <summary>
         /// 发布日期
         /// </summary>

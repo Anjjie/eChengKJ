@@ -98,6 +98,7 @@ border-color:transparent transparent transparent #808080;
     height:100%;
      float:right;
     border:0px solid red;
+    position:relative;
 }
 .Pansonel_rightDiv_leftTop {
    background-color:#ffffff;
@@ -117,13 +118,16 @@ border-color:transparent transparent transparent #808080;
     left: 50%;
     margin-left:-50px;
 }
+
 .Pansonel_rightDiv_leftBottom {
    background-color:#ffffff;
    width:48%;
    height:380px; 
    margin:10px;
    float:left;
+   cursor:pointer;
 }
+
 .Pansonel_rightDiv_rightTop {
    background-color:#ffffff;
    width:45%;
@@ -132,28 +136,24 @@ border-color:transparent transparent transparent #808080;
     margin-top:30px;
    float:left;
 }
-.Pansonel_rightDiv_rightTop_btnMonthOrDay{
-cursor:pointer;
-width:24.5%;
-height:100%;
-float:left;
-margin-left:5px;
-margin-right:5px;
-border:1px solid #808080;
-border-radius:24px;
-}
-.Pansonel_rightDiv_rightTop_btnMonthOrDays{
-cursor:pointer;
-width:24.5%;
-height:100%;
-float:left;
-border:1px solid #808080;
-border-radius:20px;
-}
+.Pansonel_rightDiv_rightTop>div{width:99.8%;height:49.8%;border:0.3px solid rgba(179, 179, 179, 0.50);}
+.Pansonel_rightDiv_rightTop>div:hover{border:0.5px solid rgba(10, 144, 254, 0.50);}
+.rightTop-Title{width:100%;height:20%;padding-left:10px;padding-top:10px;text-align:left;font-size:15pt;}
+.rightTop-Title>div{margin-right:10px; width:5px;height:100%;background-color:#4f7dbd;float:left;}
+.rightTop-Content{width:100%;height:80%;padding-top:10%;}
+.rightTop-Content>div{padding-left:5px; text-align:left;}
+.full{font-size:25pt;color:#ff7000;}
+.double{font-size:15pt;color:#ff7000;margin-right:5px;}
+#GiftBagFull{color:#999999;}
+#GiftBagdouble{color:#999999;}
+#balanceHint{padding-top:20px; margin-left:40%;color:red;font-size:10pt;float:left;text-align:right;}
+
 .Pansonel_rightDiv_rightBottom {
    background-color:#ffffff;
    width:45%;
    height:380px; 
    margin:10px;
    float:left;
+   cursor:pointer;
 }
+

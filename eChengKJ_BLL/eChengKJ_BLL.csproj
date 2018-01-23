@@ -62,6 +62,7 @@
     <Compile Include="ProductTryOurTable_BLL.cs" />
     <Compile Include="ProductTypeTable_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopTable_BLL.cs" />
     <Compile Include="SolutionTable_BLL.cs" />
     <Compile Include="TryOutTable_BLL.cs" />
     <Compile Include="UserTable_BLL.cs" />

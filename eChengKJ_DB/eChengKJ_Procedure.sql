@@ -145,17 +145,19 @@ IF EXISTS(SELECT * FROM sys.procedures WHERE name='Insert_ProductTable')
 GO
 	CREATE PROC Insert_ProductTable
 	@P_No NvarChar(20),						--自定义产品编号
+	@p_CoverImage Nvarchar(1000),			--产品封面
 	@P_Name NvarChar(100),					--产品名称
 	@P_Price MONEY,							--产品价格
-	@PT_id INT,								--类型
-	@HP_id INT ,							--是否热门
-	@NP_id INT,								--是否新品
-	@P_Date DateTIME,						--发布日期
+	@PT_id INT=0,								--类型
+	@HP_id INT=0,							--是否热门
+	@NP_id INT=1,								--是否新品
+	@P_Introduce Nvarchar(2000),			--产品介绍
+	@P_Date DateTIME ,						--发布日期
 	@P_Company Nvarchar(200)='e诚科技' ,	--出品公司
 	@E_id INT								--操作人
 	AS
 	Insert INTO  Product_Table
-	VALUES(@P_No,@P_Name,@P_Price,@PT_id,@HP_id,@NP_id,@P_Date,@P_Company,@E_id)
+	VALUES(@P_No,@p_CoverImage,@P_Name,@P_Price,@PT_id,@HP_id,@NP_id,@P_Introduce,@P_Date,@P_Company,@E_id)
 GO
 
 -------------------修改--------------------------
@@ -163,19 +165,21 @@ IF EXISTS(SELECT * FROM sys.procedures WHERE name='Update_ProductTable')
 	DROP PROC Update_ProductTable
 GO
 	CREATE PROC Update_ProductTable
-	@P_id int,								--产品编号
+	@P_id int,									--产品编号
 	@P_No NvarChar(20),						--自定义产品编号
+	@p_CoverImage Nvarchar(1000),			--产品封面
 	@P_Name NvarChar(100),					--产品名称
 	@P_Price MONEY,							--产品价格
 	@PT_id INT,								--类型
 	@HP_id INT ,							--是否热门
 	@NP_id INT,								--是否新品
+	@P_Introduce Nvarchar(2000),			--产品介绍
 	@P_Date DateTIME,						--发布日期
 	@P_Company Nvarchar(200)='e诚科技' ,	--出品公司
 	@E_id INT								--操作人
 	AS
-	Update  Product_Table set P_No=@P_No,P_Name=@P_Name,P_Price=@P_Price,PT_id =@PT_id,
-	HP_id=@HP_id,NP_id=@NP_id,P_Date=@P_Date,P_Company=@P_Company,E_id=@E_id where P_id=@P_id
+	Update  Product_Table set p_CoverImage=@p_CoverImage, P_No=@P_No,P_Name=@P_Name,P_Price=@P_Price,PT_id =@PT_id,
+	HP_id=@HP_id,NP_id=@NP_id,P_Date=@P_Date,P_Company=@P_Company,E_id=@E_id ,P_Introduce=@P_Introduce where P_id=@P_id
 GO
 
 -------------------删除--------------------------
@@ -1274,5 +1278,55 @@ GO
 	DELETE FROM  Company_Table where Com_id=@Com_id
 GO
 
+
+
+--【购物车表】
+-------------------查询--------------------------
+IF EXISTS(SELECT * FROM sys.procedures WHERE name='Select_ShopTable')
+	DROP PROC Select_ShopTable
+GO
+	CREATE PROC Select_ShopTable
+	AS
+	SELECT * FROM Shop_Table									
+	
+GO
+-------------------添加--------------------------
+IF EXISTS(SELECT * FROM sys.procedures WHERE name='Insert_ShopTable')
+	DROP PROC Insert_ShopTable
+GO
+	CREATE PROC Insert_ShopTable
+	@Shop_User NVARCHAR(16) ,					--用户
+	@P_No Nvarchar(20) ,							--产品
+	@Shop_Number Int ,							--数量
+	@Shop_Date DateTime 							--日期
+	AS
+	Insert INTO  Shop_Table
+	VALUES(@Shop_User,@P_No,@Shop_Number,@Shop_Date)
+GO
+
+-------------------修改--------------------------
+IF EXISTS(SELECT * FROM sys.procedures WHERE name='Update_ShopTable')
+	DROP PROC Update_ShopTable
+GO
+	CREATE PROC Update_ShopTable
+	@Shop_id int,		--编号
+	@Shop_User NVARCHAR(16) ,					--用户
+	@P_No Nvarchar(20) ,							--产品
+	@Shop_Number Int ,							--数量
+	@Shop_Date DateTime 							--日期
+	AS
+	Update  Shop_Table set Shop_User=@Shop_User,P_No=@P_No,Shop_Number=@Shop_Number,Shop_Date=@Shop_Date
+	 where Shop_id=@Shop_id
+GO
+
+-------------------删除--------------------------
+IF EXISTS(SELECT * FROM sys.procedures WHERE name='Delete_ShopTable')
+	DROP PROC Delete_ShopTable
+GO
+	CREATE PROC Delete_ShopTable
+	@Shop_id int 								--编号
+	AS
+	DELETE FROM  Shop_Table where Shop_id=@Shop_id
+GO
 
 

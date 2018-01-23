@@ -60,6 +60,7 @@
     <Compile Include="IProductTable_Server.cs" />
     <Compile Include="IProductTryOurTable_Server.cs" />
     <Compile Include="IProductTypeTable_Server.cs" />
+    <Compile Include="IShopTable_Server.cs" />
     <Compile Include="ISolutionTable_Server.cs" />
     <Compile Include="ITryOutTable_Server.cs" />
     <Compile Include="IUserTable_Server.cs" />

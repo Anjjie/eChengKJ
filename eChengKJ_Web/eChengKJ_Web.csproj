@@ -72,8 +72,12 @@
     <Content Include="Web_Front\css\Front_Pansonel_Collect.css" />
     <Content Include="Web_Front\css\Front_Pansonel_MyInfo.css" />
     <Content Include="Web_Front\css\Front_Pansonel_Shop.css" />
+    <Content Include="Web_Front\css\Front_Phone.css" />
     <Content Include="Web_Front\css\Front_Prnsonel_SetHead.css" />
+    <Content Include="Web_Front\css\Front_SetSecurity.css" />
     <Content Include="Web_Front\css\Front_UCFind.css" />
+    <Content Include="Web_Front\css\Front_UpdatePwd.css" />
+    <Content Include="Web_Front\css\view-SetOrUpdaet.css" />
     <Content Include="Web_Front\Front_AboutUs.aspx" />
     <Content Include="packages.config" />
     <Content Include="Web_Front\css\Front_2.css" />
@@ -85,6 +89,7 @@
     <Content Include="Web_Front\css\Front_PansonelInfo.css" />
     <Content Include="Web_Front\css\Front_ProductCss.css" />
     <Content Include="Web_Front\Front_ContactUs.aspx" />
+    <Content Include="Web_Front\Front_EMail.aspx" />
     <Content Include="Web_Front\Front_News.aspx" />
     <Content Include="Web_Front\Front_Pansonel_Collect.aspx" />
     <Content Include="Web_Front\Front_Pansonel_MyInfo.aspx" />
@@ -94,17 +99,21 @@
     <Content Include="Web_Front\Front_Pansonel_SetHead.aspx" />
     <Content Include="Web_Front\Front_Pansonel_Shop.aspx" />
     <Content Include="Web_Front\Front_Pansonel_SystemInfo.aspx" />
+    <Content Include="Web_Front\Front_Phone.aspx" />
+    <Content Include="Web_Front\Front_SetSecurity.aspx" />
     <Content Include="Web_Front\Front_Solution.aspx" />
     <Content Include="Web_Front\Front_eChengKJService.aspx" />
     <Content Include="Web_Front\Front_Index.aspx" />
     <Content Include="Web_Front\Front_Login.aspx" />
     <Content Include="Web_Front\Front_PansonelInfo.aspx" />
     <Content Include="Web_Front\Front_Product.aspx" />
+    <Content Include="Web_Front\Front_UpdatePwd.aspx" />
     <Content Include="Web_Front\image\121b87af493473a467132787859a62a6.png" />
     <Content Include="Web_Front\image\ad1.png" />
     <Content Include="Web_Front\image\ad2.jpg" />
     <Content Include="Web_Front\image\ad3.jpg" />
     <Content Include="Web_Front\image\ad4.jpg" />
+    <Content Include="Web_Front\image\aliyun.png" />
     <Content Include="Web_Front\image\buttomServer.jpg" />
     <Content Include="Web_Front\image\buttomServers.jpg" />
     <Content Include="Web_Front\image\Dianhua.png" />
@@ -154,14 +163,20 @@
     <Content Include="Web_Front\image\Yiwancheng.png" />
     <Content Include="Web_Front\image\Youxiang.png" />
     <Content Include="Web_Front\image\Youxiang_bai.png" />
+    <Content Include="Web_Front\image\yunzhixun.jpg" />
     <Content Include="Web_Front\image\zhanghu1.png" />
     <Content Include="Web_Front\image\zhanghu1_bai.png" />
     <Content Include="Web_Front\image\十.png" />
     <Content Include="Web_Front\image\选择我们.jpg" />
     <Content Include="Web_Front\js\Check_NotIsLogin.js" />
+    <Content Include="Web_Front\js\Front_EMail.js" />
     <Content Include="Web_Front\js\Front_Index.js" />
     <Content Include="Web_Front\js\Front_Login.js" />
     <Content Include="Web_Front\js\Front_Master_js.js" />
+    <Content Include="Web_Front\js\Front_Pansonel_Shop.js" />
+    <Content Include="Web_Front\js\Front_Phone.js" />
+    <Content Include="Web_Front\js\Front_SetSecurity.js" />
+    <Content Include="Web_Front\js\Front_UpdatePwd.js" />
     <Content Include="Web_Front\js\JQ_File\jquery-3.2.1.js" />
     <Content Include="Web_Front\js\JQ_File\jquery-3.2.1.min.js" />
     <Content Include="Web_Front\js\JQ_File\jquery-ui-1.8.20.custom.min.js" />
@@ -185,6 +200,8 @@
     <Content Include="Web_Front\ashx\Login_RegisterInfo.ashx" />
     <Content Include="Web_Front\Front_Pansonel.master" />
     <Content Include="Web_Front\ashx\All-Powerful_GetBLL.ashx" />
+    <Content Include="Web_Front\ashx\UpdateUserPwd.ashx" />
+    <Content Include="Web_Front\ashx\UpdatePhone.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="HtmlPage1.html" />
@@ -203,6 +220,12 @@
     </Compile>
     <Compile Include="Web_Front\ashx\Login_RegisterInfo.ashx.cs">
       <DependentUpon>Login_RegisterInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\ashx\UpdatePhone.ashx.cs">
+      <DependentUpon>UpdatePhone.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\ashx\UpdateUserPwd.ashx.cs">
+      <DependentUpon>UpdateUserPwd.ashx</DependentUpon>
     </Compile>
     <Compile Include="Web_Front\Front_AboutUs.aspx.cs">
       <DependentUpon>Front_AboutUs.aspx</DependentUpon>
@@ -231,6 +254,13 @@
     </Compile>
     <Compile Include="Web_Front\Front_ContactUs.aspx.designer.cs">
       <DependentUpon>Front_ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_EMail.aspx.cs">
+      <DependentUpon>Front_EMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_EMail.aspx.designer.cs">
+      <DependentUpon>Front_EMail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web_Front\Front_News.aspx.cs">
       <DependentUpon>Front_News.aspx</DependentUpon>
@@ -302,6 +332,20 @@
     <Compile Include="Web_Front\Front_Pansonel_SystemInfo.aspx.designer.cs">
       <DependentUpon>Front_Pansonel_SystemInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web_Front\Front_Phone.aspx.cs">
+      <DependentUpon>Front_Phone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_Phone.aspx.designer.cs">
+      <DependentUpon>Front_Phone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_SetSecurity.aspx.cs">
+      <DependentUpon>Front_SetSecurity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_SetSecurity.aspx.designer.cs">
+      <DependentUpon>Front_SetSecurity.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Web_Front\Front_Solution.aspx.cs">
       <DependentUpon>Front_Solution.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -343,6 +387,13 @@
     </Compile>
     <Compile Include="Web_Front\Front_Product.aspx.designer.cs">
       <DependentUpon>Front_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\Front_UpdatePwd.aspx.cs">
+      <DependentUpon>Front_UpdatePwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web_Front\Front_UpdatePwd.aspx.designer.cs">
+      <DependentUpon>Front_UpdatePwd.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web_Front\UPFileImage.aspx.cs">
       <DependentUpon>UPFileImage.aspx</DependentUpon>

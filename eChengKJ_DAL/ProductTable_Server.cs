@@ -64,7 +64,9 @@ namespace eChengKJ_DAL
                     P_id = Convert.ToInt32(dr["P_id"]),
                     P_Name = dr["P_Name"].ToString(),
                     P_No = dr["P_No"].ToString(),
-                    P_Price = Convert.ToDouble(dr["P_Price"])
+                    P_Price = Convert.ToDouble(dr["P_Price"]),
+                    P_CoverImage= dr["P_CoverImage"].ToString(),
+                    P_Introduce = dr["P_Introduce"].ToString()
                 };
                 list.Add(obj);
             }
@@ -75,17 +77,18 @@ namespace eChengKJ_DAL
 
         #region 根据ID查询产品信息
         /// <summary>
-        /// 根据ID查询产品信息
+        /// 根据输入的属性名称查询产品信息
         /// </summary>
         /// <param name="con"></param>
         /// <returns></returns>
-        public Product_Table GetProductTableByConn(string con)
+        public Product_Table GetProductTableByConn(string tyepAttrName,string con)
         {
             Product_Table obj = null;
+            string attrName = "@" + tyepAttrName;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from Product_Table where P_id=@P_id",
+                "Select * from Product_Table where " + tyepAttrName + "="+ attrName,
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@P_id",con)
+                     new SqlParameter(attrName,con)
                  });
             if (dr.Read())
             {
@@ -100,7 +103,9 @@ namespace eChengKJ_DAL
                     P_id = Convert.ToInt32(dr["P_id"]),
                     P_Name = dr["P_Name"].ToString(),
                     P_No = dr["P_No"].ToString(),
-                    P_Price = Convert.ToDouble(dr["P_Price"])
+                    P_Price = Convert.ToDouble(dr["P_Price"]),
+                    P_CoverImage = dr["P_CoverImage"].ToString(),
+                    P_Introduce = dr["P_Introduce"].ToString()
                 };
             }
             dr.Close();
@@ -127,6 +132,8 @@ namespace eChengKJ_DAL
                     new SqlParameter("@P_Date",obj.P_Date),
                     new SqlParameter("@P_Name",obj.P_Name),
                     new SqlParameter("@P_No",obj.P_No),
+                    new SqlParameter("@P_CoverImage",obj.P_CoverImage),
+                    new SqlParameter("@P_Introduce",obj.P_Introduce),
                     new SqlParameter("@P_Price",obj.P_Price)
                 });
         }
@@ -152,7 +159,10 @@ namespace eChengKJ_DAL
                     new SqlParameter("@P_id",obj.P_id),
                     new SqlParameter("@P_Name",obj.P_Name),
                     new SqlParameter("@P_No",obj.P_No),
+                    new SqlParameter("@P_CoverImage",obj.P_CoverImage),
+                    new SqlParameter("@P_Introduce",obj.P_Introduce),
                     new SqlParameter("@P_Price",obj.P_Price)
+
                  });
         }
         #endregion
