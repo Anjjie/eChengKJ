@@ -14,6 +14,15 @@
     <script src="js/JQ_File/jquery-ui-1.8.20.custom.min.js"></script>
     <script src="js/JQ_File/jquery.ui.datepicker-zh-CN.js"></script>
 
+    <script>
+
+        $(document).ready(function () {
+            $(".Front_Div_Logo").click(function () {
+                window.location.href = "Front_Index.aspx";
+            });
+        })
+    </script>
+
     <asp:ContentPlaceHolder ID="conPlaceHolder_Css" runat="server">
         <%-- 放置引用CSS样式文件或者编写样式代码地方 --%>
     </asp:ContentPlaceHolder>
@@ -23,14 +32,14 @@
 
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body style="overflow-x:hidden;">
        <div class="Front_Div_All">
         <!-- 头 -->
         <div class="Front_Div_All_top">
            <!-- 固定顶部导航块 -->
            <div id="topNavigation" style="background-color:#ffffff;margin-top:-10px;padding:0;width:100%;z-index:100">
                <!-- Logo -->
-               <div class="Front_Div_Logo">
+               <div class="Front_Div_Logo" style="cursor:pointer;">
                    <div class="Front_Div_Logo_div">
                        <img src="image/Logo.png" class="Front_Div_Logo_img" />
                    </div>

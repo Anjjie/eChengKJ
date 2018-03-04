@@ -964,9 +964,7 @@ namespace eChengKJ_Web.Web_Front.ashx
                     dcjs.WriteObject(context.Response.OutputStream, list_news);
                     break;
                 case "order":
-                    Order_Table get_order = orderBLL.GetOrderTableByConn(con);
-                    List<Order_Table> list_order = new List<Order_Table>();
-                    list_order.Add(get_order);
+                    List<Order_Table> list_order = orderBLL.GetOrderTableByConn(attribute,con);
                     dcjs = new DataContractJsonSerializer(typeof(List<Order_Table>));
                     dcjs.WriteObject(context.Response.OutputStream, list_order);
                     break;
@@ -985,7 +983,7 @@ namespace eChengKJ_Web.Web_Front.ashx
                     dcjs.WriteObject(context.Response.OutputStream, list_post);
                     break;
                 case "product":
-                    Product_Table get_product = proBLL.GetProductTableByConn(con);
+                    Product_Table get_product = proBLL.GetProductTableByConn("P_id", con);
                     List<Product_Table> list_product = new List<Product_Table>();
                     list_product.Add(get_product);
                     dcjs = new DataContractJsonSerializer(typeof(List<Product_Table>));
@@ -1032,7 +1030,6 @@ namespace eChengKJ_Web.Web_Front.ashx
             }
         } 
         #endregion
-
 
         public bool IsReusable
         {

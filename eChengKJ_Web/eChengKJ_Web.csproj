@@ -71,6 +71,7 @@
     <Content Include="Web_Front\css\Front_AboutUs.css" />
     <Content Include="Web_Front\css\Front_Pansonel_Collect.css" />
     <Content Include="Web_Front\css\Front_Pansonel_MyInfo.css" />
+    <Content Include="Web_Front\css\Front_Pansonel_Order.css" />
     <Content Include="Web_Front\css\Front_Pansonel_Shop.css" />
     <Content Include="Web_Front\css\Front_Phone.css" />
     <Content Include="Web_Front\css\Front_Prnsonel_SetHead.css" />
@@ -173,6 +174,7 @@
     <Content Include="Web_Front\js\Front_Index.js" />
     <Content Include="Web_Front\js\Front_Login.js" />
     <Content Include="Web_Front\js\Front_Master_js.js" />
+    <Content Include="Web_Front\js\Front_Pansonel_Order.js" />
     <Content Include="Web_Front\js\Front_Pansonel_Shop.js" />
     <Content Include="Web_Front\js\Front_Phone.js" />
     <Content Include="Web_Front\js\Front_SetSecurity.js" />
@@ -202,6 +204,8 @@
     <Content Include="Web_Front\ashx\All-Powerful_GetBLL.ashx" />
     <Content Include="Web_Front\ashx\UpdateUserPwd.ashx" />
     <Content Include="Web_Front\ashx\UpdatePhone.ashx" />
+    <Content Include="Web_Front\ashx\Shop_Table.ashx" />
+    <Content Include="Web_Front\ashx\Oreder_Page.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="HtmlPage1.html" />
@@ -220,6 +224,12 @@
     </Compile>
     <Compile Include="Web_Front\ashx\Login_RegisterInfo.ashx.cs">
       <DependentUpon>Login_RegisterInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\ashx\Oreder_Page.ashx.cs">
+      <DependentUpon>Oreder_Page.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web_Front\ashx\Shop_Table.ashx.cs">
+      <DependentUpon>Shop_Table.ashx</DependentUpon>
     </Compile>
     <Compile Include="Web_Front\ashx\UpdatePhone.ashx.cs">
       <DependentUpon>UpdatePhone.ashx</DependentUpon>

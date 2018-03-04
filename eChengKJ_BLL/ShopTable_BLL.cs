@@ -12,7 +12,7 @@ namespace eChengKJ_BLL
     /// <summary>
     /// 业务逻辑层：【购物车信息】
     /// </summary>
-    public class ShopTable_BLL : IShopTable_Server
+    public class ShopTable_BLL 
     {
         #region 获取动态类名
         /// <summary>
@@ -50,25 +50,44 @@ namespace eChengKJ_BLL
             foreach (Shop_Table obj in relevanceClass.GetShopTableAll())
             {
                 obj.GetProductByP_No = prodct.GetProductTableByConn("P_No", obj.P_No);
-                obj.GetUserByUserName = user.GetUserTableByConn("name",obj.Shop_User);
+                obj.GetUserByUserName = user.GetUserTableByConn(obj.Shop_User,"name");
                 list.Add(obj);
             }
             return list;
         }
         #endregion
 
-        #region 根据ID查询购物车信息
+        #region 根据查询购物车信息
         /// <summary>
         /// 根据ID查询购物车信息
         /// </summary>
         /// <param name="con">带入参数(ID)</param>
         /// <returns></returns>
-        public Shop_Table GetShopTableByConn(string con)
+        public Shop_Table GetShopTableByConn(string attrName, string con)
         {
-            Shop_Table obj = relevanceClass.GetShopTableByConn(con);
+            Shop_Table obj = relevanceClass.GetShopTableByConn(attrName, con);
             obj.GetProductByP_No = prodct.GetProductTableByConn("P_No", obj.P_No);
-            obj.GetUserByUserName = user.GetUserTableByConn("name", obj.Shop_User);
+            obj.GetUserByUserName = user.GetUserTableByConn(obj.Shop_User, "name");
             return obj;
+        }
+        #endregion
+
+        #region 根据查询购物车信息
+        /// <summary>
+        /// 根据ID查询购物车信息
+        /// </summary>
+        /// <param name="con">带入参数(ID)</param>
+        /// <returns></returns>
+        public List<Shop_Table> GetShopTableByConns(string attrName, string con)
+        {
+            List<Shop_Table> list = new List<Shop_Table>();
+            foreach (Shop_Table obj in relevanceClass.GetShopTableByConns(attrName, con))
+            {
+                obj.GetProductByP_No = prodct.GetProductTableByConn("P_No", obj.P_No);
+                obj.GetUserByUserName = user.GetUserTableByConn(obj.Shop_User, "name");
+                list.Add(obj);
+            }
+            return list;
         }
         #endregion
 

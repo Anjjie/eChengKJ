@@ -51,7 +51,7 @@ namespace eChengKJ_BLL
             foreach (Evaluate_Table obj in list)
             {
                 //获取外键信息
-                obj.GetProduct = FK_Product.GetProductTableByConn(obj.P_id+"");
+                obj.GetProduct = FK_Product.GetProductTableByConn("P_id", obj.P_id+"");
                 obj.GetUser = FK_User.GetUserTableByConn(obj.U_id+"","id");
                 listNew.Add(obj);
             }

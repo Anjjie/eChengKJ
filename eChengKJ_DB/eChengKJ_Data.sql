@@ -134,8 +134,35 @@ EXEC Select_CompanyTable
 ------------【购物车信息表】---------------------
 --用户、产品、数量、日期
 EXEC Insert_ShopTable 'User01','00000001','1','2018-01-23'
+EXEC Insert_ShopTable 'User01','10000001','2','2018-01-23'
+EXEC Insert_ShopTable 'User02','40000001','5','2018-01-23'
+EXEC Insert_ShopTable 'User03','00000001','1','2018-01-23'
+EXEC Insert_ShopTable 'User03','10000001','1','2018-01-23'
+EXEC Insert_ShopTable 'User03','40000001','8','2018-01-23'
+EXEC Insert_ShopTable 'User02','00000001','1','2018-01-23'
+EXEC Insert_ShopTable 'User02','10000001','1','2018-01-23'
+EXEC Insert_ShopTable 'User01','40000001','4','2018-01-23'
+EXEC Insert_ShopTable 'User03','00000001','1','2018-01-23'
 EXEC Insert_ShopTable 'User01','10000001','1','2018-01-23'
 EXEC Insert_ShopTable 'User01','40000001','1','2018-01-23'
+EXEC Insert_ShopTable 'User01','00000001','3','2018-01-23'
+EXEC Insert_ShopTable 'User01','10000001','1','2018-01-23'
+EXEC Insert_ShopTable 'User01','40000001','2','2018-01-23'
 
 exec Select_ShopTable
+
+-------订单-----------
+
+EXEC Insert_OrderTable '00000001','0','麻烦了！','8888','支付宝','','2018-03-03','1',''
+EXEC Insert_OrderTable '40000001','0','麻烦了！','11111','银行','','2018-03-02','1',''
+EXEC Insert_OrderTable '10000001','0','麻烦了！','9999','系统支付','','2018-02-03','1',''
+EXEC Insert_OrderTable '40000001','0','麻烦了！','11111','系统支付','','2018-01-03','1',''
+EXEC Insert_OrderTable '10000001','0','麻烦了！','9999','支付宝','','2018-01-23','1',''
+EXEC Insert_OrderTable '00000001','0','麻烦了！','8888','银行','','2018-02-05','1',''
+EXEC Insert_OrderTable '10000001','0','麻烦了！','9999','微信','','2017-09-13','1',''
+EXEC Insert_OrderTable '40000001','0','麻烦了！','11111','系统支付','','2018-02-28','1',''
+
+exec Select_OrderTable
+
+exec Select_OrderStateTable
 

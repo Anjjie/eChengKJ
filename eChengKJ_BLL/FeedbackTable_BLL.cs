@@ -50,7 +50,7 @@ namespace eChengKJ_BLL
             List<Feedback_Table> listNew = new List<Feedback_Table>();
             foreach (Feedback_Table obj in list)
             {
-                obj.GetProduct = FK_Product.GetProductTableByConn(obj.P_id + "");
+                obj.GetProduct = FK_Product.GetProductTableByConn("P_id", obj.P_id + "");
                 obj.GetUser = FK_User.GetUserTableByConn(obj.U_id + "","id");
                 listNew.Add(obj);
             }

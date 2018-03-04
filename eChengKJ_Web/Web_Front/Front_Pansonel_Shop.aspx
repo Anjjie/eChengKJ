@@ -74,8 +74,19 @@
             });
         }
 
+        //============设置默认子导航选择============//
+        function SetNavDefault() {
+            //$("#sonShowDiv0").show();
+            //设置选择90度
+            //$("#shanjiao1").css({
+            //    "transform": "rotate(90deg)"
+            //});
+            $("#ShowDiv0").css("background-color", "rgba(95, 184, 120, 0.27)");
+            //$("#myInfo").css("color", "rgba(95, 184, 120, 0.27)");
+        }
+
         //======================隔离=============================//
-               //============加载用户页面数据================//
+        //============加载用户页面数据================//
         function LoadPageUserData() {
             var type = "<%=notIsLogin%>";
             if (type == "登录") {
@@ -99,8 +110,8 @@
         $(function () {
             LoginUrl();
             LoadPageUserData();
-            chkAll_click();
-            shopMoney_Count();
+            LoadShopInfo();
+            SetNavDefault();
         });
     </script>  
 </asp:Content>
@@ -148,10 +159,10 @@
             </div>
      <%-- 子左导航栏 --%>
      <div class="Pansonel_leftDiv_sonDiv">
-                 <%-- 个人信息 --%>
+                 <%-- 全部商品 --%>
                 <ul class="Pansonel_leftDiv_sonDiv_ul">
                      <li class="Pansonel_leftDiv_sonDiv_li" id="ShowDiv0"> 
-                         <a href="javasrcipt:;" style="color:#808080;font-size:10pt;">
+                         <a href="Front_Pansonel_Shop.aspx" style="color:#808080;font-size:10pt;">
                             <%-- <div class="Pansonel_leftDiv_sonDiv_div"></div>--%>全部商品</a>
                      </li>
 <%--                  <div id="sonShowDiv0" class="Pansonel_leftDiv_sonDiv_li_div" style="margin:0;float:left;">
@@ -159,10 +170,10 @@
                              <div class="Pansonel_leftDiv_sonDiv_li_div">头像设置</div>
                   </div>--%>
                 </ul>
-                 <%-- 安全设置 --%>
+                 <%-- 降价商品 --%>
                 <ul class="Pansonel_leftDiv_sonDiv_ul">
                      <li class="Pansonel_leftDiv_sonDiv_li" id="ShowDiv1">
-                          <a href="javasrcipt:;" style="color:#808080;font-size:10pt;">
+                          <a href="javasrcipt:;" style="color:#808080;font-size:10pt;cursor:not-allowed;">
                              <%-- <div class="Pansonel_leftDiv_sonDiv_div"></div>--%>降价商品</a>
                      </li>
                      <%-- <div id="sonShowDiv1" class="Pansonel_leftDiv_sonDiv_li_div" style="margin:0;float:left;">
@@ -170,10 +181,10 @@
                              <div class="Pansonel_leftDiv_sonDiv_li_div">设置密保</div>
                          </div>--%>
                 </ul>
-                 <%-- 绑定设置 --%>
-                <ul class="Pansonel_leftDiv_sonDiv_ul">
+                 <%-- 下架商品 --%>
+                <ul class="Pansonel_leftDiv_sonDiv_ul" >
                           <li class="Pansonel_leftDiv_sonDiv_li" id="ShowDiv2" > 
-                         <a href="javasrcipt:;" style="color:#808080;font-size:10pt;">
+                         <a href="javasrcipt:;" style="color:#808080;font-size:10pt;cursor:not-allowed;">
                             <%-- <div class="Pansonel_leftDiv_sonDiv_div" ></div>--%>下架商品</a>
 
                      </li>
@@ -186,6 +197,9 @@
 </asp:Content>
 <%-- 右边内容 --%>
 <asp:Content ID="Content4" ContentPlaceHolderID="pansonelContent_Right" runat="server">
+    <div class="hint-view">
+        <div class="hint">删除成功！</div>
+    </div>
     <div style="width:100%;height:100%;border:0px solid #ff0000;">
         <div class="topTitle">
             <div class="divTitleName">
@@ -217,161 +231,34 @@
         </div>
         <%-- 内容 --%>
         <div class="Shop_Content ">
-            <div >
-                <div class="shopInfo-view">
-                <ul class="ulShopTitle">
-                   <li class="liChk"><input type="checkbox" class="chkSelect"   /></li>
-                   <li class="liShopInfo shopInfoCss">
-                       <div class="contentImage">商品图片</div>
-                       <div class="contentInfo">
-                           <div class="contentTitle">ERP-网店版(优惠促销)</div>
-                           <div class="contentText">内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息</div>
-                       </div>
-                   </li>
-                   <li class="liPrice lineHeight">￥<label class="lbPrice">199999.50</label></li>
-                   <li class="liNum lineHeight">
-                       <input type="number" class="txtNum" value="1" max="999" min="1" style="text-align:center;" />
-                   </li>
-                   <li class="liMoney lineHeight">199999.00</li>
-                   <li class="liOperation" >
-                            <br />
-                             <a href="javascript:;" class="aCollect">移入收藏</a><br />
-                            <a href="javascript:;" class="aDelete">删除</a>
-                   </li>
-                </ul>
-            </div>
-                <div class="shopInfo-view">
-                <ul class="ulShopTitle">
-                   <li class="liChk"><input type="checkbox"  class="chkSelect"   /></li>
-                   <li class="liShopInfo shopInfoCss">
-                       <div class="contentImage">商品图片</div>
-                       <div class="contentInfo">
-                           <div class="contentTitle">ERP-网店版(优惠促销)</div>
-                           <div class="contentText">内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息</div>
-                       </div>
-                   </li>
-                   <li class="liPrice lineHeight">￥<label class="lbPrice">199999.00</label></li>
-                   <li class="liNum lineHeight">
-                       <input type="number" class="txtNum" value="1" max="999" min="1" style="text-align:center;" />
-                   </li>
-                   <li class="liMoney lineHeight">199999.00</li>
-                   <li class="liOperation" >
-                            <br />
-                             <a href="javascript:;" class="aCollect">移入收藏</a><br />
-                            <a href="javascript:;" class="aDelete">删除</a>
-                   </li>
-                </ul>
-            </div>
-                <div class="shopInfo-view">
-                    <ul class="ulShopTitle"> 
-                       <li class="liChk"><input type="checkbox" class="chkSelect"   /></li>
-                       <li class="liShopInfo shopInfoCss">
-                           <div class="contentImage">商品图片</div>
-                           <div class="contentInfo">
-                               <div class="contentTitle">ERP-网店版(优惠促销)</div>
-                               <div class="contentText">内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息</div>
+            <div class="LoadContent">
+                <%--<div class="shopInfo-view">
+                    <ul class="ulShopTitle">
+                        <li class="liChk">
+                            <input type="checkbox" class="chkSelect" /></li>
+                        <li class="liShopInfo">
+                            <div class="shopInfoCss">
+
+                                <div class="contentImage">商品图片</div>
+                                <div class="contentInfo">
+                                <div class="contentTitle">ERP-网店版(优惠促销)</div>
+                                <div class="contentText">内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息</div>
+                            </div>
+
                            </div>
-                       </li>
-                       <li class="liPrice lineHeight">￥<label class="lbPrice">199999.00</label></li>
-                       <li class="liNum lineHeight">
-                           <input type="number" class="txtNum" value="1" max="999" min="1" style="text-align:center;" />
-                       </li>
-                       <li class="liMoney lineHeight">199999.00</li>
-                       <li class="liOperation" >
-                                <br />
-                                 <a href="javascript:;" class="aCollect">移入收藏</a><br />
-                                <a href="javascript:;" class="aDelete">删除</a>
-                       </li>
+                        </li>
+                        <li class="liPrice lineHeight">￥<label class="lbPrice">199999.00</label></li>
+                        <li class="liNum lineHeight">
+                            <input type="number" class="txtNum" value="1" max="999" min="1" style="text-align: center;" />
+                        </li>
+                        <li class="liMoney lineHeight">199999.00</li>
+                        <li class="liOperation">
+                            <br />
+                            <a href="javascript:;" class="aCollect">移入收藏</a><br />
+                            <a href="javascript:;" class="aDelete">删除</a>
+                        </li>
                     </ul>
-                </div>
-                <div class="shopInfo-view">
-                <ul class="ulShopTitle">
-                   <li class="liChk"><input type="checkbox" class="chkSelect"   /></li>
-                   <li class="liShopInfo shopInfoCss">
-                       <div class="contentImage">商品图片</div>
-                       <div class="contentInfo">
-                           <div class="contentTitle">ERP-网店版(优惠促销)</div>
-                           <div class="contentText">内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息</div>
-                       </div>
-                   </li>
-                   <li class="liPrice lineHeight">￥<label class="lbPrice">199999.00</label></li>
-                   <li class="liNum lineHeight">
-                       <input type="number" class="txtNum" value="1" max="999" min="1" style="text-align:center;" />
-                   </li>
-                   <li class="liMoney lineHeight">199999.00</li>
-                   <li class="liOperation" >
-                            <br />
-                             <a href="javascript:;" class="aCollect">移入收藏</a><br />
-                            <a href="javascript:;" class="aDelete">删除</a>
-                   </li>
-                </ul>
-            </div>
-                <div class="shopInfo-view">
-                <ul class="ulShopTitle">
-                   <li class="liChk"><input type="checkbox" class="chkSelect"   /></li>
-                   <li class="liShopInfo shopInfoCss">
-                       <div class="contentImage">商品图片</div>
-                       <div class="contentInfo">
-                           <div class="contentTitle">ERP-网店版(优惠促销)</div>
-                           <div class="contentText">内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息</div>
-                       </div>
-                   </li>
-                   <li class="liPrice lineHeight">￥<label class="lbPrice">199999.00</label></li>
-                   <li class="liNum lineHeight">
-                       <input type="number" class="txtNum" value="1" max="999" min="1" style="text-align:center;" />
-                   </li>
-                   <li class="liMoney lineHeight">199999.00</li>
-                   <li class="liOperation" >
-                            <br />
-                             <a href="javascript:;" class="aCollect">移入收藏</a><br />
-                            <a href="javascript:;" class="aDelete">删除</a>
-                   </li>
-                </ul>
-            </div>
-                <div class="shopInfo-view">
-                <ul class="ulShopTitle">
-                   <li class="liChk"><input type="checkbox" class="chkSelect"   /></li>
-                   <li class="liShopInfo shopInfoCss">
-                       <div class="contentImage">商品图片</div>
-                       <div class="contentInfo">
-                           <div class="contentTitle">ERP-网店版(优惠促销)</div>
-                           <div class="contentText">内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息</div>
-                       </div>
-                   </li>
-                   <li class="liPrice lineHeight">￥<label class="lbPrice">199999.00</label></li>
-                   <li class="liNum lineHeight">
-                       <input type="number" class="txtNum" value="1" max="999" min="1" style="text-align:center;" />
-                   </li>
-                   <li class="liMoney lineHeight">199999.00</li>
-                   <li class="liOperation" >
-                            <br />
-                             <a href="javascript:;" class="aCollect">移入收藏</a><br />
-                            <a href="javascript:;" class="aDelete">删除</a>
-                   </li>
-                </ul>
-            </div>
-                <div class="shopInfo-view">
-                <ul class="ulShopTitle">
-                   <li class="liChk"><input type="checkbox" class="chkSelect"   /></li>
-                   <li class="liShopInfo shopInfoCss">
-                       <div class="contentImage">商品图片</div>
-                       <div class="contentInfo">
-                           <div class="contentTitle">ERP-网店版(优惠促销)</div>
-                           <div class="contentText">内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息</div>
-                       </div>
-                   </li>
-                   <li class="liPrice lineHeight">￥<label class="lbPrice">199999.00</label></li>
-                   <li class="liNum lineHeight">
-                       <input type="number" class="txtNum" value="1" max="999" min="1" style="text-align:center;" />
-                   </li>
-                   <li class="liMoney lineHeight">199999.00</li>
-                   <li class="liOperation" >
-                            <br />
-                             <a href="javascript:;" class="aCollect">移入收藏</a><br />
-                            <a href="javascript:;" class="aDelete">删除</a>
-                   </li>
-                </ul>
-            </div>
+                </div>--%>
              </div>
              <%-- 结账 --%>
             <div class="divCloseAnAccount ">
@@ -379,8 +266,7 @@
                     <li><input type="checkbox"  class="chkAll" style="cursor:pointer;" />全选</li>
                     <li><a href="javascript:;" id="SelectDelete">删除</a></li>
                     <li><a href="javascript:;" id="SelectAddCollect">移入收藏</a></li>
-                    <li style="width:20%;">&nbsp;</li>
-                    <li>&nbsp;</li>
+                    <li style=" width:300px;">&nbsp;</li>
                     <li>已选商品&nbsp;<label style="font-size:18pt;color:#ff6a00;" id="lbSumNum">0</label>件</li>
                     <li>合计：<label style="font-size:12pt;color:#ff6a00;">￥</label><label style="font-size:25pt;color:#ff6a00;" id="lbSumMoney">0</label></li>
                     <li style="width:10%;"><input type="button"  value="结算" id="btnCloseAnAccount" /> </li>
@@ -390,6 +276,5 @@
                
             </div>
         </div>
-       
     </div>
 </asp:Content>

@@ -3,7 +3,7 @@
 <%-- CSS样式文件及样式类 --%>
 <asp:Content ID="Content1" ContentPlaceHolderID="pansonelContent_CSS" runat="server">
     <link href="css/Front_Pansonel_Collect.css" rel="stylesheet" />
-    <link href="css/Front_2.css" rel="stylesheet" />
+    <link href="css/Front_Prnsonel_SetHead.css" rel="stylesheet" />
 </asp:Content>
 <%-- JS(JQ文件已存在) --%>
 <asp:Content ID="Content2" ContentPlaceHolderID="pansonelContent_JS" runat="server">

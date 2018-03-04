@@ -23,6 +23,7 @@ GO
 	P_id INT ,							--产品编号
 	U_id INT ,							--购买人编号
 	O_LeaveWords NvarChar(200),			--客户留言
+	O_Money money,						--金额
 	O_DealWay NvarChar(20),				--支付方式
 	E_id INT ,							--受理人编号
 	O_DateTime Datetime,				--购买时间

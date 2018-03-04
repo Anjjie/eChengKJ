@@ -54,7 +54,7 @@ namespace eChengKJ_BLL
             {
                 obj.GetEmployee = FK_Employee.GetEmployeeTableByConn(obj.E_id + "");
                 obj.GetOrderState = FK_OrderState.GetOrderStateTableByConn(obj.OState_id + "");
-                obj.GetProduct = FK_Product.GetProductTableByConn(obj.P_id + "");
+                obj.GetProduct = FK_Product.GetProductTableByConn("P_id", obj.P_id + "");
                 obj.GetUser = FK_User.GetUserTableByConn(obj.U_id + "","id");
                 listNew.Add(obj);
             }
@@ -62,15 +62,25 @@ namespace eChengKJ_BLL
         }
         #endregion
 
-        #region 根据ID查询订单信息
+        #region 根据条件查询订单信息
         /// <summary>
-        /// 根据ID查询订单信息
+        /// 根据条件查询订单信息
         /// </summary>
         /// <param name="con"></param>
         /// <returns></returns>
-        public Order_Table GetOrderTableByConn(string con)
+        public List<Order_Table> GetOrderTableByConn(string attr, string con)
         {
-            return relevanceClass.GetOrderTableByConn(con);
+            List<Order_Table> list = relevanceClass.GetOrderTableByConn(attr, con);
+            List<Order_Table> listNew = new List<Order_Table>();
+            foreach (Order_Table obj in list)
+            {
+                obj.GetEmployee = FK_Employee.GetEmployeeTableByConn(obj.E_id + "");
+                obj.GetOrderState = FK_OrderState.GetOrderStateTableByConn(obj.OState_id + "");
+                obj.GetProduct = FK_Product.GetProductTableByConn("P_id", obj.P_id + "");
+                obj.GetUser = FK_User.GetUserTableByConn(obj.U_id + "", "id");
+                listNew.Add(obj);
+            }
+            return listNew;
         }
         #endregion
 
@@ -109,5 +119,28 @@ namespace eChengKJ_BLL
             return relevanceClass.Delete_OrderTableData(con);
         }
         #endregion
+
+        /// <summary>
+        /// 根据条件查询订单信息并且进行分页
+        /// </summary>
+        /// <param name="id">用户ID</param>
+        /// <param name="pageNo">当前页（用户选中的页数）</param>
+        /// <param name="pageSize">显示数据</param>
+        /// <returns></returns>
+        public List<Order_Table> GetOrderTableByConn_Page(int id, int pageNo, int pageSize)
+        {
+            List<Order_Table> list = relevanceClass.GetOrderTableByConn_Page(id,pageNo,pageSize);
+            List<Order_Table> listNew = new List<Order_Table>();
+            foreach (Order_Table obj in list)
+            {
+                obj.GetEmployee = FK_Employee.GetEmployeeTableByConn(obj.E_id + "");
+                obj.GetOrderState = FK_OrderState.GetOrderStateTableByConn(obj.OState_id + "");
+                obj.GetProduct = FK_Product.GetProductTableByConn("P_id", obj.P_id + "");
+                obj.GetUser = FK_User.GetUserTableByConn(obj.U_id + "", "id");
+                listNew.Add(obj);
+            }
+            return listNew;
+        }
+
     }
 }

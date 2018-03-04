@@ -65,6 +65,7 @@ namespace eChengKJ_DAL
                 list.Add(obj);
             }
             dr.Close();
+            DBHerlper.CloseConn();
             return list;
         }
         #endregion
@@ -75,17 +76,18 @@ namespace eChengKJ_DAL
         /// </summary>
         /// <param name="con"></param>
         /// <returns></returns>
-        public Shop_Table GetShopTableByConn(string con)
+        public Shop_Table GetShopTableByConn(string attrName, string con)
         {
+            string name = "@" + attrName;
             Shop_Table obj = null;
-            SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from Shop_Table where E_id=@E_id",
+             SqlDataReader dr = DBHerlper.ExecuteReader(
+                "Select * from Shop_Table where " + attrName + "=" + name,
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@E_id",con)
+                     new SqlParameter(name,con)
                  });
             if (dr.Read())
             {
-                obj = new Shop_Table()
+                 obj = new Shop_Table()
                 {
                     P_No = dr["P_No"].ToString(),
                     Shop_Date = dr["Shop_Date"].ToString(),
@@ -93,13 +95,38 @@ namespace eChengKJ_DAL
                     Shop_Number = dr["Shop_Number"].ToString(),
                     Shop_User = dr["Shop_User"].ToString()
                 };
-
             }
             dr.Close();
             DBHerlper.CloseConn();
             return obj;
         }
         #endregion
+
+        public List<Shop_Table> GetShopTableByConns(string attrName, string con)
+        {
+            string name = "@" + attrName;
+            List<Shop_Table> list = new List<Shop_Table>();
+            SqlDataReader dr = DBHerlper.ExecuteReader(
+               "Select * from Shop_Table where " + attrName + "=" + name,
+                CommandType.Text, new SqlParameter[] {
+                     new SqlParameter(name,con)
+                });
+            while (dr.Read())
+            {
+                Shop_Table obj = new Shop_Table()
+                {
+                    P_No = dr["P_No"].ToString(),
+                    Shop_Date = dr["Shop_Date"].ToString(),
+                    Shop_Id = Convert.ToInt32(dr["Shop_Id"]),
+                    Shop_Number = dr["Shop_Number"].ToString(),
+                    Shop_User = dr["Shop_User"].ToString()
+                };
+                list.Add(obj);
+            }
+            dr.Close();
+            DBHerlper.CloseConn();
+            return list;
+        }
 
         #region 添加购物车
         /// <summary>
@@ -154,6 +181,8 @@ namespace eChengKJ_DAL
                   new SqlParameter("@Shop_Id",con)
               });
         }
+
+       
         #endregion
 
 

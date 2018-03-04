@@ -39,6 +39,7 @@ GO
 	@P_id INT ,							--产品编号
 	@U_id INT ,							--购买人编号
 	@O_LeaveWords NvarChar(200),		--客户留言
+	@O_Money money,						--金额
 	@O_DealWay NvarChar(20),			--支付方式
 	@E_id INT ,							--受理人编号
 	@O_DateTime Datetime,				--购买时间
@@ -46,7 +47,7 @@ GO
 	@O_Remark NvarChar(200)				--备注
 	AS
 	Insert INTO  Order_Table
-	VALUES(@P_id,@U_id,@O_LeaveWords,@O_DealWay,@E_id,@O_DateTime,@OState_id,@O_Remark)
+	VALUES(@P_id,@U_id,@O_LeaveWords,@O_Money,@O_DealWay,@E_id,@O_DateTime,@OState_id,@O_Remark)
 GO
 
 -------------------修改--------------------------
@@ -58,13 +59,14 @@ GO
 	@P_id INT ,							--产品编号
 	@U_id INT ,							--购买人编号
 	@O_LeaveWords NvarChar(200),		--客户留言
+	@O_Money money,						--金额
 	@O_DealWay NvarChar(20),			--支付方式
 	@E_id INT ,							--受理人编号
 	@O_DateTime Datetime,				--购买时间
 	@OState_id int,						--订单状态编号
 	@O_Remark NvarChar(200)				--备注
 	AS
-	Update  Order_Table set P_id=@P_id,U_id=@U_id,O_LeaveWords=@O_LeaveWords,
+	Update  Order_Table set P_id=@P_id,U_id=@U_id,O_LeaveWords=@O_LeaveWords,O_Money=@O_Money,
 	O_DealWay=@O_DealWay,E_id=@E_id,O_DateTime=@O_DateTime,OState_id=@OState_id,O_Remark=@O_Remark 
 	where O_id=@O_id
 GO
@@ -1328,5 +1330,41 @@ GO
 	AS
 	DELETE FROM  Shop_Table where Shop_id=@Shop_id
 GO
+
+
+
+
+
+-------------------------------------------------------------------------
+--																	 -- *
+  --////////////////////////////////////////////////////////////////--  *
+  --																--  ****************************
+  --																--  ************************* 
+  --						复杂存储过程							--  **********************
+  --																--  *******************
+  --		   以上存储过程只是基础的存储过程，以下为实现更加复杂	--  **********************
+  --		 的存储过程，实现更加丰富的操作功能。					--  *************************
+  --																--  ****************************
+  --////////////////////////////////////////////////////////////////--  *
+--																	 -- *
+-------------------------------------------------------------------------
+
+
+
+--订单分页存储过程
+
+IF EXISTS(SELECT * FROM sys.procedures WHERE name='proc_OrderPage')
+	DROP PROC proc_OrderPage
+GO
+CREATE PROC proc_OrderPage
+@U_id INT ,		 --查询条件
+@PageNo int =1,   --当前页
+@PageSize int =10  --显示数
+AS
+SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY O_id DESC) id,* FROM  Order_Table WHERE U_id=@U_id) OrderPage
+WHERE id>=(@PageNo-1)*@PageSize+1 And id<=@PageNo*@PageSize
+
+
+
 
 

@@ -23,7 +23,15 @@ namespace eChengKJ_IDAL
         /// </summary>
         /// <param name="con">参数条件</param>
         /// <returns></returns>
-        Shop_Table GetShopTableByConn(string con);
+        Shop_Table GetShopTableByConn(string attrName, string con);
+
+        /// <summary>
+        ///  获取某条【购物】信息
+        /// </summary>
+        /// <param name="operation"></param>
+        /// <param name="con"></param>
+        /// <returns></returns>
+        List<Shop_Table> GetShopTableByConns(string attrName, string con);
 
         /// <summary>
         /// 添加购物信息

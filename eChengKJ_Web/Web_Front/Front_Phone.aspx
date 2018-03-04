@@ -140,7 +140,6 @@
             }
             $.getJSON("ashx/All-Powerful_GetBLL.ashx", data, function (ret) {
                 $.each(ret, function (i, obj) {
-                    
                     lbCheckPhone_val(obj.U_Phone);
                 });
             });

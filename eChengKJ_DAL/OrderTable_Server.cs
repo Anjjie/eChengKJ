@@ -72,23 +72,24 @@ namespace eChengKJ_DAL
         }
         #endregion
 
-        #region 根据ID查询订单信息
+        #region 根据条件查询订单信息
         /// <summary>
-        /// 根据ID查询订单信息
+        /// 根据条件查询订单信息
         /// </summary>
         /// <param name="con"></param>
         /// <returns></returns>
-        public Order_Table GetOrderTableByConn(string con)
+        public List<Order_Table> GetOrderTableByConn(string attr, string con)
         {
-            Order_Table obj = null;
+            List<Order_Table> list = new List<Order_Table> ();
+            string attrs = "@" + attr;
             SqlDataReader dr = DBHerlper.ExecuteReader(
-                "Select * from Order_Table where O_id=@O_id",
+                "Select * from Order_Table where "+ attr + "="+ attrs,
                  CommandType.Text, new SqlParameter[] {
-                     new SqlParameter("@O_id",con)
+                     new SqlParameter(attrs,con)
                  });
             if (dr.Read())
             {
-                obj = new Order_Table()
+                Order_Table obj = new Order_Table()
                 {
                     O_id = Convert.ToInt32(dr["O_id"]),
                     OState_id = (int)dr["OState_id"],
@@ -100,9 +101,10 @@ namespace eChengKJ_DAL
                     P_id = (int)dr["P_id"],
                     U_id = (int)dr["U_id"]
                 };
+                list.Add(obj);
             }
             dr.Close();
-            return obj;
+            return list;
         }
         #endregion
 
@@ -167,7 +169,46 @@ namespace eChengKJ_DAL
                      new SqlParameter("@O_id",con)
                  });
         }
+
+
         #endregion
+
+        /// <summary>
+        /// 根据条件查询订单信息并且进行分页
+        /// </summary>
+        /// <param name="id">用户ID</param>
+        /// <param name="pageNo">当前页（用户选中的页数）</param>
+        /// <param name="pageSize">显示数据</param>
+        /// <returns></returns>
+        public List<Order_Table> GetOrderTableByConn_Page(int id, int pageNo, int pageSize)
+        {
+            List<Order_Table> list = new List<Order_Table>();
+            SqlDataReader dr = DBHerlper.ExecuteReader(
+                "proc_OrderPage",
+                 CommandType.Text, new SqlParameter[] {
+                     new SqlParameter("@U_id",id),
+                     new SqlParameter("@PageNo",pageNo),
+                     new SqlParameter("@PageSize",pageSize)
+                 });
+            if (dr.Read())
+            {
+                Order_Table obj = new Order_Table()
+                {
+                    O_id = Convert.ToInt32(dr["O_id"]),
+                    OState_id = (int)dr["OState_id"],
+                    O_DateTime = (DateTime)dr["O_DateTime"],
+                    E_id = (int)dr["E_id"],
+                    O_DealWay = dr["O_DealWay"].ToString(),
+                    O_LeaveWords = dr["O_LeaveWords"].ToString(),
+                    O_Remark = dr["O_Remark"].ToString(),
+                    P_id = (int)dr["P_id"],
+                    U_id = (int)dr["U_id"]
+                };
+                list.Add(obj);
+            }
+            dr.Close();
+            return list;
+        }
 
     }
 }

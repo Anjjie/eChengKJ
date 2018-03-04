@@ -9,12 +9,18 @@
     width:150px;
     height:150px;
     /*border:1px solid #ff0000;*/
-    margin-left:100px;
-    background-color:#ffffff;
-    border-radius:75px;
+    margin-left:42%;
+    background-color:transparent;
+    /*border-radius:75px;*/
+}
+.adDiv{
+    margin-top:40px;
+    height:200px;
+    width:100%;
+    border:1px solid #ff0000;
 }
 .DivClothMax{
-    position:absolute;
+    position:fixed;
     top:0;
     left:0;
     display:none;
@@ -30,12 +36,11 @@
     width:700px;
     background-color:#ffffff;
     z-index:101;
-    border:1px solid #ffffff;
 }
 .selImage{
     color:#ffffff;
-    margin-left:13px;
-    margin-top:5px;
+    margin-left:20px;
+    margin-top:20px;
     width:100px;
     height:30px;
     background-color:coral;
@@ -97,4 +102,3 @@
     width:50px;
     border:1px solid #ff0000;
 }
-
